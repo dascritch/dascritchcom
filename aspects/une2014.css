@@ -120,6 +120,7 @@ section, aside, footer
 		position : absolute;
 		border : 1px grey solid;
 		box-shadow : #ddd 6px 10px 10px 5px;
+		box-shadow : rgba(0,0,0,0.3) 6px 10px 10px 5px;
 		top : -10px;
 		right : -30px;
 		z-index : 10;
