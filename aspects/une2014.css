@@ -1,3 +1,25 @@
+
+@charset "UTF-8";
+@font-face {
+	font-family: 'Titillium Web';
+	font-style: normal;
+	font-weight: 400;
+	src: local("Titillium"),
+	local("Titillium Web"),
+	local("TitilliumWeb-Regular"),
+	url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Regular.woff) format("woff"); 
+}
+
+@font-face { 
+	font-family: 'Titillium Web';
+	font-style: normal;
+	font-weight: 700;
+	src: local("Titillium Bold"),
+	local("Titillium WebBold"),
+	local("TitilliumWeb-Bold"),
+	url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Bold.woff) format("woff"); 
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126
 */
 
@@ -51,7 +73,7 @@ table {
 body {
 		width : 100%;
 		overflow-x : hidden;
- /*    background : url(/aspects/graphy.png); */
+     	background : url(./graphy.png);
 
 }
 
@@ -150,7 +172,6 @@ h3 {
 
 #carte p a {
 		padding : 4px 8px;
-		round-corner : 2px;
 }
 
 article {
@@ -340,21 +361,6 @@ footer
 		background-image: -moz-linear-gradient(center top, #e6e6e6 20%, #f5f5f5 60%, #fff 80%);
 	}
     
-    /*
-    #rea article
-    {
-        width : 100%;
-    }
-
-    #rea div
-    {
-        width : 100%;
-    }
-
-    #rea img {
-        width : 80%
-    }
-    */
 }
 
 
@@ -387,6 +393,4 @@ footer
         width : 45%;
         direction : ltr;
     }
-}
-
 }
