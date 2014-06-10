@@ -87,7 +87,7 @@ a , a:visited {
 }
 
 a:hover , a.active{
-		background : #ddf;
+		background : #ddf7;
 		color : black;
 }
 
@@ -250,6 +250,7 @@ article {
     width : 560px;
 }
 .describ {
+	/*
 	max-height : 0;
 	overflow: hidden;
 	text-align : left;
@@ -257,10 +258,11 @@ article {
 	transition-duration: 2s;
 	-moz-transition-duration: 2s;
 	-webkit-transition-duration: 2s;
+	*/
 }
 
 :target .describ {
-	max-height : 2000px;
+	/*max-height : 2000px;*/
 }
 
 

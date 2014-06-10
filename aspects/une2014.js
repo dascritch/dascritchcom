@@ -24,12 +24,13 @@
 		var $menu = $('#menu');
 
 		function movin() {
+			var courtoisie_offset = 0;
 		    var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
 		    var windowHeight = $(window).height(); // get the height of the window
 		    var docHeight = $(document).height();
 		    var found = '#';
 		    for (var id in heights) {
-		        if (windowPos > heights[id] )  {
+		        if ((windowPos+courtoisie_offset) > heights[id] )  {
 		            found = id;
 		        }
 		    }
@@ -64,8 +65,7 @@
 
 		recalc_heights();
 		$(window).on('resize',recalc_heights);
-		$(window).on('scroll',movin);
-
+		$(window).on('scroll hashchange',movin);
 	});
 
 })(document,$);
