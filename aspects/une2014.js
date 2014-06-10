@@ -30,7 +30,38 @@
 		}).on('mouseleave blur','a',function() {
 			$carte.find('span').css('opacity',1);
 		});
-	});
 
+
+/*		$(document).on('click','a[href*=#]',function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var hash = this.hash;
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top
+					}, 1000, function() {
+						document.location = hash;
+					});
+					return false;
+				}
+			}
+		});
+*/
+/*
+		window.onhashchange = function() {
+			var hash = document.location.hash;
+			var $hash = $(hash);
+			var hashtop =  $hash.length == ? $hash.offset().top : 0;
+			console.log('hash TODO ',hash, document.body.style.scrollTop);
+		};
+
+
+		$(document).on('scroll',function(){
+			console.log('scroll TODO');
+		});
+*/
+
+	});
 
 })(document,$);

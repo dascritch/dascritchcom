@@ -70,7 +70,6 @@ body {
 		width : 100%;
 		overflow-x : hidden;
      	background : url(./graphy.png);
-
 }
 
 * 	{
@@ -205,6 +204,10 @@ article {
 	text-align:center;
 }
 
+#rea header a {
+	color : black;
+}
+
 .teaser {
     position : absolute;
     bottom : 25px;
@@ -213,17 +216,19 @@ article {
     background : rgba(255,255,255,0.8);
     padding : 6px;
     width : 560px;
-    direction : ltr;
 }
 .describ {
 	max-height : 0;
 	overflow: hidden;
 	text-align : left;
-	direction : ltr;
+
+	transition-duration: 2s;
+	-moz-transition-duration: 2s;
+	-webkit-transition-duration: 2s;
 }
 
 :target .describ {
-	max-height : 10000px;
+	max-height : 2000px;
 }
 
 
@@ -387,6 +392,10 @@ footer
     
     #rea article:nth-child(even) {
         direction : rtl;
+    }
+
+    .teaser , .describ {
+    	direction : ltr;
     }
     
     .teaser {
