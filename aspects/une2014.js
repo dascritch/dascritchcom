@@ -17,7 +17,40 @@
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(ga, s);
 
+	var heights;
+
 	$(function(){
+		var $menu = $('#menu');
+
+		function recalc_heights() {
+			heights = {};
+			$menu.find('a').each(function(){
+				var href = '#'+this.href.split('#')[1];
+				heights[href] =  href==='#' ? 0 : $(href).offset().top;
+			});
+		}
+
+		function movin() {
+		    var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+		    var windowHeight = $(window).height(); // get the height of the window
+		    var docHeight = $(document).height();
+		    $menu.find('a').removeClass('active');
+		    /* 
+		    if (windowPos) {
+		    	$menu.find('a[href="#"]').addClass('active');
+		    }
+		    */
+		    var found = false;
+
+		    for (var id in heights) {
+		        if ( (windowPos < heights[id] ) && ( !found ) && (id!=='#') ) {
+		            $menu.find('a[href="'+id+'"]').addClass('active');
+		            found = true;
+		        }
+		    }
+
+		}
+
 		// obfuscation contre les malandrins . Évidemment, cela n'est pas accessible si javascript n'est pas là :(
 		document.getElementById('s2').innerHTML = '@';
 		document.getElementById('a4').href = 'mail'+'to:'+$('h2').text()+'?subject=J\'ai vu votre site professionnel';
@@ -31,36 +64,9 @@
 			$carte.find('span').css('opacity',1);
 		});
 
-
-/*		$(document).on('click','a[href*=#]',function() {
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-				var hash = this.hash;
-				var target = $(this.hash);
-				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-				if (target.length) {
-					$('html,body').animate({
-						scrollTop: target.offset().top
-					}, 1000, function() {
-						document.location = hash;
-					});
-					return false;
-				}
-			}
-		});
-*/
-/*
-		window.onhashchange = function() {
-			var hash = document.location.hash;
-			var $hash = $(hash);
-			var hashtop =  $hash.length == ? $hash.offset().top : 0;
-			console.log('hash TODO ',hash, document.body.style.scrollTop);
-		};
-
-
-		$(document).on('scroll',function(){
-			console.log('scroll TODO');
-		});
-*/
+		recalc_heights();
+		$(window).on('resize',recalc_heights);
+		$(window).on('scroll',movin);
 
 	});
 
