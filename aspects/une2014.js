@@ -18,6 +18,7 @@
 	s.parentNode.insertBefore(ga, s);
 
 	var heights;
+	var previous_active ='';
 
 	$(function(){
 		var $menu = $('#menu');
@@ -26,14 +27,17 @@
 		    var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
 		    var windowHeight = $(window).height(); // get the height of the window
 		    var docHeight = $(document).height();
-		    $menu.find('a').removeClass('active');
 		    var found = '#';
 		    for (var id in heights) {
 		        if (windowPos > heights[id] )  {
 		            found = id;
 		        }
 		    }
-		    $menu.find('a[href="'+found+'"]').addClass('active');
+		    if (previous_active !== found) {
+		    	$menu.find('a').removeClass('active');
+		    	$menu.find('a[href="'+found+'"]').addClass('active');
+			}
+			previous_active = found;
 		}
 
 		function recalc_heights() {
