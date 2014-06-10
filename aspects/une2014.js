@@ -22,33 +22,27 @@
 	$(function(){
 		var $menu = $('#menu');
 
+		function movin() {
+		    var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+		    var windowHeight = $(window).height(); // get the height of the window
+		    var docHeight = $(document).height();
+		    $menu.find('a').removeClass('active');
+		    var found = '#';
+		    for (var id in heights) {
+		        if (windowPos > heights[id] )  {
+		            found = id;
+		        }
+		    }
+		    $menu.find('a[href="'+found+'"]').addClass('active');
+		}
+
 		function recalc_heights() {
 			heights = {};
 			$menu.find('a').each(function(){
 				var href = '#'+this.href.split('#')[1];
 				heights[href] =  href==='#' ? 0 : $(href).offset().top;
 			});
-		}
-
-		function movin() {
-		    var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
-		    var windowHeight = $(window).height(); // get the height of the window
-		    var docHeight = $(document).height();
-		    $menu.find('a').removeClass('active');
-		    /* 
-		    if (windowPos) {
-		    	$menu.find('a[href="#"]').addClass('active');
-		    }
-		    */
-		    var found = false;
-
-		    for (var id in heights) {
-		        if ( (windowPos < heights[id] ) && ( !found ) && (id!=='#') ) {
-		            $menu.find('a[href="'+id+'"]').addClass('active');
-		            found = true;
-		        }
-		    }
-
+			movin();
 		}
 
 		// obfuscation contre les malandrins . Évidemment, cela n'est pas accessible si javascript n'est pas là :(
