@@ -110,6 +110,13 @@ section, aside, footer
 		margin : 100px 400px 10px 20px;
 }
 
+#nightshot {
+	width : 128px;
+	height : 128px;
+	float : left;
+	margin : 0 20px 10px 0 ;
+}
+
 #carte {
 		
 		width : 415px; /* 83mm x 52mm */
