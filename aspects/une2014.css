@@ -130,11 +130,13 @@ section, aside, footer {
 	}
 */
 
-
 h2 {
+	text-align : center;
+}
+
+#carte h2 {
 	position : absolute ;
 	bottom : 120px ; /* approx (415-36)÷2 */
-	text-align : center;
 	width : 100%;
 	font-size : 36px;
 }
@@ -219,12 +221,17 @@ article {
 	/*max-height : 2000px;*/
 }
 
+#blog {
+	text-align: center;
+}
+
 #blog article {
 	display : inline-block;
 	width : 300px;
 	height : 300px;
 	vertical-align: top;
 	margin : 20px;
+	text-align : left;
 }
 
 footer
@@ -276,9 +283,6 @@ footer
 		padding: 4px;
 	}
 
-    h2 {
-        font-size : 20px;
-    }
 
 }
 
