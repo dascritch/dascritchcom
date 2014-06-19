@@ -11,8 +11,10 @@
     -->
 	<script type="text/javascript" src="http://dascritch.net/themes/DSN13/js/jquery2.js"></script>
 	<script type="text/javascript" src="./aspects/une2014.js"></script>
-	<!-- <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css' /> -->
-    <link href='./aspects/une2014.css' rel='stylesheet' type='text/css' />
+
+    <link rel="stylesheet" type="text/css" href="./aspects/reset.css">
+    <link rel="stylesheet" type="text/css" href="./aspects/tinytypo.css">
+    <link rel="stylesheet" type="text/css" href="./aspects/une2014.css"/>
     <link rel="profile" href="http://microformats.org/profile/hcard" />
     <meta name="viewport" content="width=device-width, user-scalable=yes, target-densityDpi=medium-dpi, initial-scale=0.8" />
     <link rel="icon" type="image/png" href="/aspects/1107-Me.jpg,favicon" />
@@ -24,7 +26,7 @@
 </head>
 <body>
 
-    <menu id="menu">
+    <!--menu id="menu">
         <li><a href="#">Présentation</a></li>
         <li><a href="#rea">Réalisations</a><ul>
             <li><a href="#rea_simtie">Simtie</a></li>
@@ -34,13 +36,13 @@
         </ul></li>
         <li><a href="#talks">Conférences</a></li>
         <li><a href="#blog">Articles</a></li>
-    </menu>
+    </menu-->
 
 	<header id="carte">
 		<h2>
 			<span id="s1" class="l e">xavier</span><span id="s2" class="t e">(alias)</span><span id="s3" class="t b e g">dascritch</span><span id="s4" class="b e">.net</span>
 		</h2>
-		
+
 		<p>
 			<a id="a4" class="e" href="">m'écrire</a> <span>—</span> 
 			<a id="a1" class="l" href="https://www.linkedin.com/in/dascritch">cv</a> <span>—</span> 
@@ -50,241 +52,237 @@
 		</p>
 	</header>
 
-    <div id="calque">
-    	
+	<section id="me" class="vcard">
+        <img id="nightshot" src="./images/NightShot.jpg" alt="" />
 
-    	<section id="me" class="vcard">
-            <img id="nightshot" src="./images/NightShot.jpg" alt="" />
+		<h1 class="fn">
+			Je suis <strong><span class="given-name">Xavier</span> <span class="family-name">Mouton-Dubosc</span></strong>.
+		</h1>
+		<p>
+			<strong>Je suis <span class="role">lead développer</span> d'applications web</strong>. J'ai conçu <a href="http://simtie.fr">Simtie</a> pour <a href="http://notalus.fr" class="org">la société Notalus</a>. J'ai auparavant créé <a href="http://dagence.pro">dAgence.pro</a>, une solution hébergée pour le e-commerce à destination des agences web. J'aime défricher les prochaines normes comme le <a href="http://dascritch.net/tag/html">HTML5</a>, <a href="http://dascritch.net/tag/javascript">Javascript ECMA6</a>, <a href="http://dascritch.net/tag/dom">DOM3</a>, les microformats et le Single Page Application. Je suis sensibilisé aux problèmes de <a href="http://dascritch.net/tag/s%C3%A9curit%C3%A9">sécurité</a> et de <a href="http://dascritch.net/tag/privacy">vie privée</a> et je partage mes connaissances lors de <a href="http://dascritch.net/tag/talk">conférences</a>.
+		</p>
+		<p>
+            <strong>Ce site n'a intentionnellement aucun style</strong>&thinsp;: mon métier est derrière la présentation.
+            <br />
+			Je ne suis pas graphiste, je ne suis pas designer, mais je m'entoure de gens compétents.
+		</p>
+        <p>
+            <strong>Mes compétences</strong> font la part belle à la modernité, la solidité, l'accessibilité et surtout à l'expérience.<br />
+            Un projet&thinsp;? Un besoin&thinsp;? Un problème&thinsp;? Je peux vous conseiller, et vous aider à faire le meilleur choix possible pour le futur de votre activité.
+        </p>
+        <p><strong><a href="https://www.linkedin.com/in/dascritch">Je suis disponible</a></strong></p>
+	</section>
 
-    		<h1 class="fn">
-    			Je suis <strong><span class="given-name">Xavier</span> <span class="family-name">Mouton-Dubosc</span></strong>.
-    		</h1>
-    		<p>
-    			<strong>Je suis <span class="role">lead développer</span> d'applications web</strong>. J'ai conçu <a href="http://simtie.fr">Simtie</a> pour <a href="http://notalus.fr" class="org">la société Notalus</a>. J'ai auparavant créé <a href="http://dagence.pro">dAgence.pro</a>, une solution hébergée pour le e-commerce à destination des agences web. J'aime défricher les prochaines normes comme le <a href="http://dascritch.net/tag/html">HTML5</a>, <a href="http://dascritch.net/tag/javascript">Javascript ECMA6</a>, <a href="http://dascritch.net/tag/dom">DOM3</a>, les microformats et le Single Page Application. Je suis sensibilisé aux problèmes de <a href="http://dascritch.net/tag/s%C3%A9curit%C3%A9">sécurité</a> et de <a href="http://dascritch.net/tag/privacy">vie privée</a> et je partage mes connaissances lors de <a href="http://dascritch.net/tag/talk">conférences</a>.
-    		</p>
-    		<p>
-                <strong>Ce site n'a intentionnellement aucun style</strong>&thinsp;: mon métier est derrière la présentation.
+
+    <section id="rea">
+        <h3>
+            Quelques réalisations récentes&thinsp;:
+        </h3>
+
+        <article id="rea_simtie">
+            <header>
+                <img src="./images/Realisation-simtie.png" alt="Simtie">
+                <div class="teaser">
+                    <h4>Simtie</h4>
+                    <p><strong>Simtie</strong> est un service hébergé de Gestion Électronique de Documents destiné aux TPE/PME. Il est conçu dans les principes flexibles utilisés pour dAgence.</p>
+                </div>
+            </header>
+            <div class="describ">
+                <p>
+                Rôle&thinsp;: Lead-developer pour <a href="http://simtie.fr">Simtie.com</a>, Janvier 2013 à Février 2014.
+                </p>
+                <p>
+                Projet commandé construit avec deux co-développeurs, le responsable IT et le Product Owner. Planification agile Scrum, développement en TDD et usage de Git.
+                </p>
+                <p>
+                Développé sur un code PHP, framework CakePHP et une base PostGreSQL, avec des webservices backend d'indexation/OCR sous Windows écrits en C# asservissant Atalasoft Imaging. Interface en balisage HTML5 dans une optique d'application responsive web-design en Single Page Application. Javascript front-end sur des bases jQuery et PDF.js.
                 <br />
-    			Je ne suis pas graphiste, je ne suis pas designer, mais je m'entoure de gens compétents.
-    		</p>
-            <p>
-                <strong>Mes compétences</strong> font la part belle à la modernité, la solidité, l'accessibilité et surtout à l'expérience.<br />
-                Un projet&thinsp;? Un besoin&thinsp;? Un problème&thinsp;? Je peux vous conseiller, et vous aider à faire le meilleur choix possible pour le futur de votre activité.
-            </p>
-            <p><strong><a href="https://www.linkedin.com/in/dascritch">Je suis disponible</a></strong></p>
-    	</section>
+                Autres technologies employées&thinsp;: Vim, Kdevelop, SublimeText, Bash, XML, CSS, ASPX, Linux
+                </p>
+            </div>
+        </article>
+        <article id="rea_touchalize">
+            <header>
+                <img src="./images/Realisation-Touchalize.jpg" alt="Touchalize">
+                <div class="teaser">
+                    <h4>Touchalize</h4>
+                    <p><strong>Touchalize</strong> est une application mobile de personnalisation de vidéos publicitaires virales. Le back-office permet aux annonceurs de consultater de statistiques de vues.</p>
+                </div>
+            </header>
+            <div class="describ">
+                <p> Rôle&thinsp;: Developer freelance pour <a href="http://phonitive.fr">Phonitive</a>, Novembre à Décembre 2013.
+                </p>
+                <p>
+               Projet commandé. Construction d'un mock-up fonctionnel d'une interface de consultation de statistiques, en vue des salons LeWeb 12 et Mobile World Congress 2013 et d'un player vidéo HTML5 avec fallback vers l'application mobile. Utilisation de Git.
+               </p>
+               <p>Développeur principal du back-office sur une base NodeJS (Javascript backend) et des bases NoSQL CouchDB/MongoDB, hébergé sur AWS (EC2 et S3).
+               </p>
+               <p>
+               Interface en balisage HTML5 pensée pour des démonstrations fluides sur surfaces tactiles, avec graphiques animés en SVG (bibliothèques Ext.js et Sencha graphs).
+               <br />
+               Autres technologies : Vim, SublimeText, WebStorm, Bash, XML, CSS, Javascript, Mac, Linux, Android, iOS
+                </p>
+            </div>
+        </article>
 
+        <article id="rea_dagence">
+            <header>
+                <img src="./images/Realisation-dAgencePro.png" alt="dAgencePro">
+                <div class="teaser">
+                    <h4>Dagence</h4>
+                    <p><strong>Dagence</strong> est une solution d'hébergement/cocooning pour les agences web. Elles peuvent ainsi proposer des services d'e-commerce sans le tracas de la maintenance.</p>
+                </div>
+            </header>
+            <div class="describ">
+                <p> Rôle&thinsp;: Developer freelance, 2008 à 2011.
+                </p>
+                <p>
+               Projet commercial. Concepteur et développement. Interface responsive web-design et progressive enhancement co-conçue avec le webdesigner Nicolas Guilhou.  Planification par l'outil workflow créé et méthode kanban. Utilisation de Git.
+               </p>
+               <p>
+               Développé sur un code PHP et une base MySQL, avec un ensemble de bibliothèques maisons et de scripts Bash spécifiques. Javascript front-end sur des bases jQuery, jQueryUI et tinyMCE, avec des extensions et des fonctions maisons pour la manipulation SVG, l'envoi progressif de documents et les workflows de commandes.
+               </p>
+               <p>
+               Back-office fonctionnant en Single Page Application, et mettant en œuvre les balises HTML5, micro-formats hCard, hCalendar et data-*. L'usage de ces standards étaient parfois menés en proof of concept avec les développeurs de navigateurs et rédacteurs du WHAT-WG et du W3C.
+               </p>
+               <p>
+               Le système est commercialisé en marque blanche, chaque back-office permettant de gérer plusieurs services, certains avec des plugins réalisés sur demande.<br />
+               Autres technologies : KDevelop, Vim, SSH, XML, Less, CSS3, kits de paiement bancaires, VirtualBox, Linux
+                </p>
+            </div>
+        </article>
 
-        <section id="rea">
-            <h3>
-                Quelques réalisations récentes&thinsp;:
-            </h3>
-
-            <article id="rea_simtie">
-                <header>
-                    <img src="./images/Realisation-simtie.png" alt="Simtie">
-                    <div class="teaser">
-                        <h4>Simtie</h4>
-                        <p><strong>Simtie</strong> est un service hébergé de Gestion Électronique de Documents destiné aux TPE/PME. Il est conçu dans les principes flexibles utilisés pour dAgence.</p>
-                    </div>
-                </header>
-                <div class="describ">
-                    <p>
-                    Rôle&thinsp;: Lead-developer pour <a href="http://simtie.fr">Simtie.com</a>, Janvier 2013 à Février 2014.
-                    </p>
-                    <p>
-                    Projet commandé construit avec deux co-développeurs, le responsable IT et le Product Owner. Planification agile Scrum, développement en TDD et usage de Git.
-                    </p>
-                    <p>
-                    Développé sur un code PHP, framework CakePHP et une base PostGreSQL, avec des webservices backend d'indexation/OCR sous Windows écrits en C# asservissant Atalasoft Imaging. Interface en balisage HTML5 dans une optique d'application responsive web-design en Single Page Application. Javascript front-end sur des bases jQuery et PDF.js.
-                    <br />
-                    Autres technologies employées&thinsp;: Vim, Kdevelop, SublimeText, Bash, XML, CSS, ASPX, Linux
+        <article id="rea_swe">
+            <header>
+                <img src="./images/Realisation-supplementweekend.png" alt="Supplément Week-End">
+                <div class="teaser">
+                    <h4>Supplément Week-End</h4>
+                    <p>Site web d'une émission radio, le <strong>Supplément Week-End</strong>, support à la diffusion podcast. Site hébergé sur la plateforme dAgence avec agrégation de flux et service d'e-mailing.
                     </p>
                 </div>
-            </article>
-            <article id="rea_touchalize">
-                <header>
-                    <img src="./images/Realisation-Touchalize.jpg" alt="Touchalize">
-                    <div class="teaser">
-                        <h4>Touchalize</h4>
-                        <p><strong>Touchalize</strong> est une application mobile de personnalisation de vidéos publicitaires virales. Le back-office permet aux annonceurs de consultater de statistiques de vues.</p>
-                    </div>
-                </header>
-                <div class="describ">
-                    <p> Rôle&thinsp;: Developer freelance pour <a href="http://phonitive.fr">Phonitive</a>, Novembre à Décembre 2013.
-                    </p>
-                    <p>
-                   Projet commandé. Construction d'un mock-up fonctionnel d'une interface de consultation de statistiques, en vue des salons LeWeb 12 et Mobile World Congress 2013 et d'un player vidéo HTML5 avec fallback vers l'application mobile. Utilisation de Git.
-                   </p>
-                   <p>Développeur principal du back-office sur une base NodeJS (Javascript backend) et des bases NoSQL CouchDB/MongoDB, hébergé sur AWS (EC2 et S3).
-                   </p>
-                   <p>
-                   Interface en balisage HTML5 pensée pour des démonstrations fluides sur surfaces tactiles, avec graphiques animés en SVG (bibliothèques Ext.js et Sencha graphs).
-                   <br />
-                   Autres technologies : Vim, SublimeText, WebStorm, Bash, XML, CSS, Javascript, Mac, Linux, Android, iOS
-                    </p>
-                </div>
-            </article>
+            </header>
+            <div class="describ">
+                <p> Rôle&thinsp;: Co-producteur et réalisateur, 2004 à 2014.
+                </p>
+                <p>
+               Projet personnel, support de tests. Co-producteur de l'émission, chargé de la réalisation, programmation musicale et habillage, en collaboration avec 3 autres animateurs. Écriture du conducteur, traduction des interviewes en Anglais, planification des agendas et des opérations extérieures.
+               </p>
+               <p>
+               Agrégation de flux RSS/Atom sur dAgence, alimenté à partir des blogs des animateurs et de différents réseaux sociaux. Montages sonores à partir d'Audacity et de Protools. Conformations des podcasts avec Bash, Sox, Oggenc, LibLame.
+               <br />
+                Autres technologies : LibreOffice, GoogleDrive, DropBox, IceCast, SSH, Mac, Linux, Autocom, Airlab D&amp;R
+                </p>
+            </div>
+        </article>
 
-            <article id="rea_dagence">
-                <header>
-                    <img src="./images/Realisation-dAgencePro.png" alt="dAgencePro">
-                    <div class="teaser">
-                        <h4>Dagence</h4>
-                        <p><strong>Dagence</strong> est une solution d'hébergement/cocooning pour les agences web. Elles peuvent ainsi proposer des services d'e-commerce sans le tracas de la maintenance.</p>
-                    </div>
-                </header>
-                <div class="describ">
-                    <p> Rôle&thinsp;: Developer freelance, 2008 à 2011.
-                    </p>
-                    <p>
-                   Projet commercial. Concepteur et développement. Interface responsive web-design et progressive enhancement co-conçue avec le webdesigner Nicolas Guilhou.  Planification par l'outil workflow créé et méthode kanban. Utilisation de Git.
-                   </p>
-                   <p>
-                   Développé sur un code PHP et une base MySQL, avec un ensemble de bibliothèques maisons et de scripts Bash spécifiques. Javascript front-end sur des bases jQuery, jQueryUI et tinyMCE, avec des extensions et des fonctions maisons pour la manipulation SVG, l'envoi progressif de documents et les workflows de commandes.
-                   </p>
-                   <p>
-                   Back-office fonctionnant en Single Page Application, et mettant en œuvre les balises HTML5, micro-formats hCard, hCalendar et data-*. L'usage de ces standards étaient parfois menés en proof of concept avec les développeurs de navigateurs et rédacteurs du WHAT-WG et du W3C.
-                   </p>
-                   <p>
-                   Le système est commercialisé en marque blanche, chaque back-office permettant de gérer plusieurs services, certains avec des plugins réalisés sur demande.<br />
-                   Autres technologies : KDevelop, Vim, SSH, XML, Less, CSS3, kits de paiement bancaires, VirtualBox, Linux
-                    </p>
-                </div>
-            </article>
+    </section>
 
-            <article id="rea_swe">
-                <header>
-                    <img src="./images/Realisation-supplementweekend.png" alt="Supplément Week-End">
-                    <div class="teaser">
-                        <h4>Supplément Week-End</h4>
-                        <p>Site web d'une émission radio, le <strong>Supplément Week-End</strong>, support à la diffusion podcast. Site hébergé sur la plateforme dAgence avec agrégation de flux et service d'e-mailing.
-                        </p>
-                    </div>
-                </header>
-                <div class="describ">
-                    <p> Rôle&thinsp;: Co-producteur et réalisateur, 2004 à 2014.
-                    </p>
-                    <p>
-                   Projet personnel, support de tests. Co-producteur de l'émission, chargé de la réalisation, programmation musicale et habillage, en collaboration avec 3 autres animateurs. Écriture du conducteur, traduction des interviewes en Anglais, planification des agendas et des opérations extérieures.
-                   </p>
-                   <p>
-                   Agrégation de flux RSS/Atom sur dAgence, alimenté à partir des blogs des animateurs et de différents réseaux sociaux. Montages sonores à partir d'Audacity et de Protools. Conformations des podcasts avec Bash, Sox, Oggenc, LibLame.
-                   <br />
-                    Autres technologies : LibreOffice, GoogleDrive, DropBox, IceCast, SSH, Mac, Linux, Autocom, Airlab D&amp;R
-                    </p>
-                </div>
-            </article>
+    <aside id="talks">
+        <h3>
+            Conférences&thinsp;:
+        </h3>
+        <article>
+            image + résumé de l'article
+        </article>
+        <p>
+            Je peux aussi vous proposer de faire un brown bag avec votre équipe.
+        </p>
+    </aside>
 
-        </section>
+	<aside id="blog">
+        <h3>
+            Retours d'expériences&thinsp;:
+        </h3>
+        <p>
+            Je rapporte des bugs aux navigateurs, je signale et corrige des problèmes sur des bibliothèques, j'écris parfois dans la presse spécialisée et je donne épisodiquement des conférences. Et il m'arrive d'aborder des sujets techniques sur mon blog&thinsp;:
+    	</p>
+    	    		<dl>
+                <dt><a href="http://dascritch.net/post/2014/05/20/Un-Sud-Web-en-hauteur">
+        				<strong>Un Sud Web en hauteur</strong>
+        		</a></dt>
+                <dd><p>Si vous ne le saviez pas, ceux qui y vont font partie d'une caste de privilégiés car construisent le web. Nous sommes les fameux 1%.		<span class="tags"><br /><a href="http://dascritch.net/category/Sortons">Sortons</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/avatardisme">avatardisme</a> <a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/css">css</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/html">html</a> <a href="http://dascritch.net/tag/javascript">javascript</a> <a href="http://dascritch.net/tag/mobilit%C3%A9">mobilité</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/self-business">self-business</a> </span>
+	</p></dd>
+    		</dl>
+    	    		<dl>
+                <dt><a href="http://dascritch.net/post/2014/05/14/Pourquoi-je-porte-un-treillis-customise">
+        				<strong>Pourquoi je porte un treillis customisé</strong>
+        		</a></dt>
+                <dd><p>Quel sens a ce costume que j'arbore aux conférences sur le web, ce que signifient les badges et décorations et surtout… est-ce ridicule ou aide-t-il à porter un message ?		<span class="tags"><br /><a href="http://dascritch.net/category/Gizmo">Gizmo</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/avatardisme">avatardisme</a> <a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/dotclear">dotclear</a> <a href="http://dascritch.net/tag/dresscode">dresscode</a> <a href="http://dascritch.net/tag/drm">drm</a> <a href="http://dascritch.net/tag/en%20costume">en costume</a> <a href="http://dascritch.net/tag/libre">libre</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/photo">photo</a> <a href="http://dascritch.net/tag/politique">politique</a> <a href="http://dascritch.net/tag/privacy">privacy</a> <a href="http://dascritch.net/tag/self-business">self-business</a> </span>
+	</p></dd>
+    		</dl>
+    	    		<dl>
+                <dt><a href="http://dascritch.net/post/2014/05/13/Pourquoi-nous-collons-des-stickers-sur-nos-portables">
+        				<strong>Pourquoi nous collons des stickers sur nos portables</strong>
+        		</a></dt>
+                <dd><p>Nos machines valent un certain prix, elles sont nos outils de travail et de communication, et pourtant, nous les bariolons de gomettes et d'images Panini™. Quel est la raison de ce comportement chez les professionnels du web ?		<span class="tags"><br /><a href="http://dascritch.net/category/Gizmo">Gizmo</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/avatardisme">avatardisme</a> <a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/dresscode">dresscode</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/photo">photo</a> <a href="http://dascritch.net/tag/self-business">self-business</a> <a href="http://dascritch.net/tag/SudWeb2012">SudWeb2012</a> </span>
+	</p></dd>
+    		</dl>
+    	    		<dl>
+                <dt><a href="http://dascritch.net/post/2014/05/12/Bricolages-en-img">
+        				<strong>Bricolages en ‹img /›</strong>
+        		</a></dt>
+                <dd><p>Où l'on apprendra comment les images sont gérées par les serveur web, et comment les navigateurs utilisent le document et ses méta-données header http. Avec une très belle astuce pour les CMS.		<span class="tags"><br /><a href="http://dascritch.net/category/Webdev">Webdev</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/apache">apache</a> <a href="http://dascritch.net/tag/css">css</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/dom">dom</a> <a href="http://dascritch.net/tag/html">html</a> <a href="http://dascritch.net/tag/regex">regex</a> <a href="http://dascritch.net/tag/svg">svg</a> <a href="http://dascritch.net/tag/xml">xml</a> </span>
+	</p></dd>
+    		</dl>
+    	    		<dl>
+                <dt><a href="http://dascritch.net/post/2014/05/06/Apr%C3%A8s-la-Crypto-Party-d-Avril">
+        				<strong>Après la Crypto Party d'Avril</strong>
+        		</a></dt>
+                <dd><p>Debrief d'une soirée qui a très bien marché, leçons et suggestions de vous tous, et tout plein d'échanges lors de cette chiffrofête. Ma contribution à la Journée Internationale contre les DRM.		<span class="tags"><br /><a href="http://dascritch.net/category/Sortons">Sortons</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/drm">drm</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/politique">politique</a> <a href="http://dascritch.net/tag/privacy">privacy</a> <a href="http://dascritch.net/tag/self-business">self-business</a> <a href="http://dascritch.net/tag/s%C3%A9curit%C3%A9">sécurité</a> </span>
+	</p></dd>
+    		</dl>
+    	    		<dl>
+                <dt><a href="http://dascritch.net/post/2014/04/29/Ressources-en-img">
+        				<strong>Ressources en ‹img /›</strong>
+        		</a></dt>
+                <dd><p>Bon, coco, ton logo, je te l'exporte en quel format ? en bitmap ? dégradé ? paletté ? avec alpha-transparence ? sans animation ? ni support MSIE 7 ?		<span class="tags"><br /><a href="http://dascritch.net/category/Webdev">Webdev</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/css">css</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/dom">dom</a> <a href="http://dascritch.net/tag/html">html</a> <a href="http://dascritch.net/tag/javascript">javascript</a> <a href="http://dascritch.net/tag/mobilit%C3%A9">mobilité</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/photo">photo</a> <a href="http://dascritch.net/tag/svg">svg</a> <a href="http://dascritch.net/tag/xml">xml</a> </span>
+	</p></dd>
+    		</dl>
+    	    		<dl>
+                <dt><a href="http://dascritch.net/post/2014/04/22/Pourquoi-la-Cryptoparty">
+        				<strong>Pourquoi la Cryptoparty</strong>
+        		</a></dt>
+                <dd><p>Recouper, partager, apprendre, faire progresser. Petit guide historique de la protestation technologique à la surveillance de masse.		<span class="tags"><br /><a href="http://dascritch.net/category/Sortons">Sortons</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/javascript">javascript</a> <a href="http://dascritch.net/tag/mobilit%C3%A9">mobilité</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/politique">politique</a> <a href="http://dascritch.net/tag/privacy">privacy</a> <a href="http://dascritch.net/tag/self-business">self-business</a> <a href="http://dascritch.net/tag/s%C3%A9curit%C3%A9">sécurité</a> <a href="http://dascritch.net/tag/talk">talk</a> </span>
+	</p></dd>
+    		</dl>
+    	    		<dl>
+                <dt><a href="http://dascritch.net/post/2014/04/16/J-ai-march%C3%A9-sur-la-queue-du-Renard-de-Feu">
+        				<strong>J'ai marché sur la queue du Renard de Feu</strong>
+        		</a></dt>
+                <dd><p>Exceptionnellement, je refais la conférence sur la licence JSON pour les non-chocolatinistes. Jeudi 17 à 19h30 chez Mozilla Paris (16 bis Boulevard Montmartre).		<span class="tags"><br /><a href="http://dascritch.net/category/Sortons">Sortons</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/libre">libre</a> <a href="http://dascritch.net/tag/mobilit%C3%A9">mobilité</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/self-business">self-business</a> <a href="http://dascritch.net/tag/super-h%C3%A9ros">super-héros</a> </span>
+	</p></dd>
+    		</dl>
+    	    		<dl>
+                <dt><a href="http://dascritch.net/post/2014/04/15/Bient%C3%B4t-la-Cryptoparty-3">
+        				<strong>Bientôt la Cryptoparty 3</strong>
+        		</a></dt>
+                <dd><p>Mardi 29 Avril 2014, de 19h à 22h, venez à Epitech Toulouse pour poser vos questions, pour comprendre comment remettre du  personnel dans l'informatique personnelle. Et surtout pour célébrer le prix Pulitzer aux journalistes qui ont travaillé sur les documents Snowden.		<span class="tags"><br /><a href="http://dascritch.net/category/Sortons">Sortons</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/drm">drm</a> <a href="http://dascritch.net/tag/mobilit%C3%A9">mobilité</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/politique">politique</a> <a href="http://dascritch.net/tag/privacy">privacy</a> <a href="http://dascritch.net/tag/self-business">self-business</a> <a href="http://dascritch.net/tag/s%C3%A9curit%C3%A9">sécurité</a> </span>
+	</p></dd>
+    		</dl>
+    	    		<dl>
+                <dt><a href="http://dascritch.net/post/2014/04/09/Manuel-en-img">
+        				<strong>Manuel en ‹img /›</strong>
+        		</a></dt>
+                <dd><p>Comment est appelé, paramétré, configuré la balise &lt;img /&gt; dans le source html. Milles et une petites plaisanteries, hacks malheureux ou astuces qui furent standards à un moment.		<span class="tags"><br /><a href="http://dascritch.net/category/Webdev">Webdev</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/css">css</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/dom">dom</a> <a href="http://dascritch.net/tag/html">html</a> <a href="http://dascritch.net/tag/javascript">javascript</a> <a href="http://dascritch.net/tag/svg">svg</a> <a href="http://dascritch.net/tag/xml">xml</a> </span>
+	</p></dd>
+    		</dl>
+    	    
+        <p>
+            <a href="http://dascritch.net/category/Webdev">En lire plus…</a>
+        </p>
 
-        <aside id="talks">
-            <h3>
-                Conférences&thinsp;:
-            </h3>
-            <article>
-                image + résumé de l'article
-            </article>
-            <p>
-                Je peux aussi vous proposer de faire un brown bag avec votre équipe.
-            </p>
-        </aside>
+	</aside>
 
-    	<aside id="blog">
-            <h3>
-                Retours d'expériences&thinsp;:
-            </h3>
-            <p>
-                Je rapporte des bugs aux navigateurs, je signale et corrige des problèmes sur des bibliothèques, j'écris parfois dans la presse spécialisée et je donne épisodiquement des conférences. Et il m'arrive d'aborder des sujets techniques sur mon blog&thinsp;:
-        	</p>
-        	    		<dl>
-                    <dt><a href="http://dascritch.net/post/2014/05/20/Un-Sud-Web-en-hauteur">
-            				<strong>Un Sud Web en hauteur</strong>
-            		</a></dt>
-                    <dd><p>Si vous ne le saviez pas, ceux qui y vont font partie d'une caste de privilégiés car construisent le web. Nous sommes les fameux 1%.		<span class="tags"><br /><a href="http://dascritch.net/category/Sortons">Sortons</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/avatardisme">avatardisme</a> <a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/css">css</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/html">html</a> <a href="http://dascritch.net/tag/javascript">javascript</a> <a href="http://dascritch.net/tag/mobilit%C3%A9">mobilité</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/self-business">self-business</a> </span>
-    	</p></dd>
-        		</dl>
-        	    		<dl>
-                    <dt><a href="http://dascritch.net/post/2014/05/14/Pourquoi-je-porte-un-treillis-customise">
-            				<strong>Pourquoi je porte un treillis customisé</strong>
-            		</a></dt>
-                    <dd><p>Quel sens a ce costume que j'arbore aux conférences sur le web, ce que signifient les badges et décorations et surtout… est-ce ridicule ou aide-t-il à porter un message ?		<span class="tags"><br /><a href="http://dascritch.net/category/Gizmo">Gizmo</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/avatardisme">avatardisme</a> <a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/dotclear">dotclear</a> <a href="http://dascritch.net/tag/dresscode">dresscode</a> <a href="http://dascritch.net/tag/drm">drm</a> <a href="http://dascritch.net/tag/en%20costume">en costume</a> <a href="http://dascritch.net/tag/libre">libre</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/photo">photo</a> <a href="http://dascritch.net/tag/politique">politique</a> <a href="http://dascritch.net/tag/privacy">privacy</a> <a href="http://dascritch.net/tag/self-business">self-business</a> </span>
-    	</p></dd>
-        		</dl>
-        	    		<dl>
-                    <dt><a href="http://dascritch.net/post/2014/05/13/Pourquoi-nous-collons-des-stickers-sur-nos-portables">
-            				<strong>Pourquoi nous collons des stickers sur nos portables</strong>
-            		</a></dt>
-                    <dd><p>Nos machines valent un certain prix, elles sont nos outils de travail et de communication, et pourtant, nous les bariolons de gomettes et d'images Panini™. Quel est la raison de ce comportement chez les professionnels du web ?		<span class="tags"><br /><a href="http://dascritch.net/category/Gizmo">Gizmo</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/avatardisme">avatardisme</a> <a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/dresscode">dresscode</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/photo">photo</a> <a href="http://dascritch.net/tag/self-business">self-business</a> <a href="http://dascritch.net/tag/SudWeb2012">SudWeb2012</a> </span>
-    	</p></dd>
-        		</dl>
-        	    		<dl>
-                    <dt><a href="http://dascritch.net/post/2014/05/12/Bricolages-en-img">
-            				<strong>Bricolages en ‹img /›</strong>
-            		</a></dt>
-                    <dd><p>Où l'on apprendra comment les images sont gérées par les serveur web, et comment les navigateurs utilisent le document et ses méta-données header http. Avec une très belle astuce pour les CMS.		<span class="tags"><br /><a href="http://dascritch.net/category/Webdev">Webdev</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/apache">apache</a> <a href="http://dascritch.net/tag/css">css</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/dom">dom</a> <a href="http://dascritch.net/tag/html">html</a> <a href="http://dascritch.net/tag/regex">regex</a> <a href="http://dascritch.net/tag/svg">svg</a> <a href="http://dascritch.net/tag/xml">xml</a> </span>
-    	</p></dd>
-        		</dl>
-        	    		<dl>
-                    <dt><a href="http://dascritch.net/post/2014/05/06/Apr%C3%A8s-la-Crypto-Party-d-Avril">
-            				<strong>Après la Crypto Party d'Avril</strong>
-            		</a></dt>
-                    <dd><p>Debrief d'une soirée qui a très bien marché, leçons et suggestions de vous tous, et tout plein d'échanges lors de cette chiffrofête. Ma contribution à la Journée Internationale contre les DRM.		<span class="tags"><br /><a href="http://dascritch.net/category/Sortons">Sortons</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/drm">drm</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/politique">politique</a> <a href="http://dascritch.net/tag/privacy">privacy</a> <a href="http://dascritch.net/tag/self-business">self-business</a> <a href="http://dascritch.net/tag/s%C3%A9curit%C3%A9">sécurité</a> </span>
-    	</p></dd>
-        		</dl>
-        	    		<dl>
-                    <dt><a href="http://dascritch.net/post/2014/04/29/Ressources-en-img">
-            				<strong>Ressources en ‹img /›</strong>
-            		</a></dt>
-                    <dd><p>Bon, coco, ton logo, je te l'exporte en quel format ? en bitmap ? dégradé ? paletté ? avec alpha-transparence ? sans animation ? ni support MSIE 7 ?		<span class="tags"><br /><a href="http://dascritch.net/category/Webdev">Webdev</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/css">css</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/dom">dom</a> <a href="http://dascritch.net/tag/html">html</a> <a href="http://dascritch.net/tag/javascript">javascript</a> <a href="http://dascritch.net/tag/mobilit%C3%A9">mobilité</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/photo">photo</a> <a href="http://dascritch.net/tag/svg">svg</a> <a href="http://dascritch.net/tag/xml">xml</a> </span>
-    	</p></dd>
-        		</dl>
-        	    		<dl>
-                    <dt><a href="http://dascritch.net/post/2014/04/22/Pourquoi-la-Cryptoparty">
-            				<strong>Pourquoi la Cryptoparty</strong>
-            		</a></dt>
-                    <dd><p>Recouper, partager, apprendre, faire progresser. Petit guide historique de la protestation technologique à la surveillance de masse.		<span class="tags"><br /><a href="http://dascritch.net/category/Sortons">Sortons</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/javascript">javascript</a> <a href="http://dascritch.net/tag/mobilit%C3%A9">mobilité</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/politique">politique</a> <a href="http://dascritch.net/tag/privacy">privacy</a> <a href="http://dascritch.net/tag/self-business">self-business</a> <a href="http://dascritch.net/tag/s%C3%A9curit%C3%A9">sécurité</a> <a href="http://dascritch.net/tag/talk">talk</a> </span>
-    	</p></dd>
-        		</dl>
-        	    		<dl>
-                    <dt><a href="http://dascritch.net/post/2014/04/16/J-ai-march%C3%A9-sur-la-queue-du-Renard-de-Feu">
-            				<strong>J'ai marché sur la queue du Renard de Feu</strong>
-            		</a></dt>
-                    <dd><p>Exceptionnellement, je refais la conférence sur la licence JSON pour les non-chocolatinistes. Jeudi 17 à 19h30 chez Mozilla Paris (16 bis Boulevard Montmartre).		<span class="tags"><br /><a href="http://dascritch.net/category/Sortons">Sortons</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/libre">libre</a> <a href="http://dascritch.net/tag/mobilit%C3%A9">mobilité</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/self-business">self-business</a> <a href="http://dascritch.net/tag/super-h%C3%A9ros">super-héros</a> </span>
-    	</p></dd>
-        		</dl>
-        	    		<dl>
-                    <dt><a href="http://dascritch.net/post/2014/04/15/Bient%C3%B4t-la-Cryptoparty-3">
-            				<strong>Bientôt la Cryptoparty 3</strong>
-            		</a></dt>
-                    <dd><p>Mardi 29 Avril 2014, de 19h à 22h, venez à Epitech Toulouse pour poser vos questions, pour comprendre comment remettre du  personnel dans l'informatique personnelle. Et surtout pour célébrer le prix Pulitzer aux journalistes qui ont travaillé sur les documents Snowden.		<span class="tags"><br /><a href="http://dascritch.net/category/Sortons">Sortons</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/communaut%C3%A9">communauté</a> <a href="http://dascritch.net/tag/drm">drm</a> <a href="http://dascritch.net/tag/mobilit%C3%A9">mobilité</a> <a href="http://dascritch.net/tag/ordinateur">ordinateur</a> <a href="http://dascritch.net/tag/politique">politique</a> <a href="http://dascritch.net/tag/privacy">privacy</a> <a href="http://dascritch.net/tag/self-business">self-business</a> <a href="http://dascritch.net/tag/s%C3%A9curit%C3%A9">sécurité</a> </span>
-    	</p></dd>
-        		</dl>
-        	    		<dl>
-                    <dt><a href="http://dascritch.net/post/2014/04/09/Manuel-en-img">
-            				<strong>Manuel en ‹img /›</strong>
-            		</a></dt>
-                    <dd><p>Comment est appelé, paramétré, configuré la balise &lt;img /&gt; dans le source html. Milles et une petites plaisanteries, hacks malheureux ou astuces qui furent standards à un moment.		<span class="tags"><br /><a href="http://dascritch.net/category/Webdev">Webdev</a> <img src="http://dascritch.net/nav/tag.png" alt="tag" title="tag" /><a href="http://dascritch.net/tag/css">css</a> <a href="http://dascritch.net/tag/design">design</a> <a href="http://dascritch.net/tag/dom">dom</a> <a href="http://dascritch.net/tag/html">html</a> <a href="http://dascritch.net/tag/javascript">javascript</a> <a href="http://dascritch.net/tag/svg">svg</a> <a href="http://dascritch.net/tag/xml">xml</a> </span>
-    	</p></dd>
-        		</dl>
-        	    
-            <p>
-                <a href="http://dascritch.net/category/Webdev">En lire plus…</a>
-            </p>
-
-    	</aside>
-
-        <footer>
-            © Xavier Mouton-Dubosc 2011—2014. Capture des sites avec les autorisations des propriétaires.
-            
-            <ul class="no" id="breadcrumb">
-              <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://dascritch.net/" itemprop="url"><span itemprop="title">da scritch</span></a></li>
-                <li>›</li>
-              <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://dascritch.com" itemprop="url"><strong itemprop="title">com works</strong></a></li>
-            </ul>
-            
-        </footer>
-    </div>
+    <footer>
+        © Xavier Mouton-Dubosc 2011—2014. Capture des sites avec les autorisations des propriétaires.
+        
+        <ul class="no" id="breadcrumb">
+          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://dascritch.net/" itemprop="url"><span itemprop="title">da scritch</span></a></li>
+            <li>›</li>
+          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://dascritch.com" itemprop="url"><strong itemprop="title">com works</strong></a></li>
+        </ul>
+        
+    </footer>
 
 
 </body>
