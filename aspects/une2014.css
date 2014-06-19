@@ -65,7 +65,6 @@ section, aside, footer {
 #nightshot {
 	width : 128px;
 	height : 128px;
-	float : left;
 	margin : 0 20px 10px 0 ;
 }
 
@@ -215,12 +214,13 @@ article {
 	text-align : left
 }
 
-#talks a {
-	text-decoration : none;
+#talks img {
+	width : 200px;
+	margin : 0 10px 10px 0;
 }
 
-#talks img {
-	width : 300px;
+#talks p {
+	clear : both;
 }
 
 #blog {
