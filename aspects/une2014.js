@@ -16,11 +16,12 @@
 	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(ga, s);
-
+/*
 	var heights;
 	var previous_active ='';
-
+*/
 	$(function(){
+		/*
 		var $menu = $('#menu');
 
 		function movin() {
@@ -49,10 +50,10 @@
 			});
 			movin();
 		}
-
+*/
 		// obfuscation contre les malandrins . Évidemment, cela n'est pas accessible si javascript n'est pas là :(
 		document.getElementById('s2').innerHTML = '@';
-		document.getElementById('a4').href = 'mail'+'to:'+$('h2').text()+'?subject=J\'ai vu votre site professionnel';
+		document.getElementById('a0').href = 'mail'+'to:'+$('h2').text()+'?subject=J\'ai vu votre site professionnel';
 
 		var $carte = $('#carte');
 		// cela doit être faisable en css pur, à méditer
