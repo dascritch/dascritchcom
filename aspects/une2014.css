@@ -70,6 +70,7 @@ body {
 	width : 100%;
 	overflow-x : hidden;
  	background : url(./graphy-light.png);
+ 	font-size: 1.1em;
 }
 
 * {
@@ -96,9 +97,7 @@ a img {
 }
 
 p {
-    font-size : 16px;
     margin : 10px 0;
-    line-height: 20px;
 }
 
 section, aside, footer {
