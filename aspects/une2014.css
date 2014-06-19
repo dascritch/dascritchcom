@@ -205,20 +205,22 @@ article {
     padding : 6px;
     width : 560px;
 }
-.describ {
-	/*
-	max-height : 0;
-	overflow: hidden;
-	text-align : left;
 
-	transition-duration: 2s;
-	-moz-transition-duration: 2s;
-	-webkit-transition-duration: 2s;
-	*/
+#talks article {
+	display : inline-block;
+	width : 500px;
+	height : 300px;
+	vertical-align: top;
+	margin : 20px;
+	text-align : left
 }
 
-:target .describ {
-	/*max-height : 2000px;*/
+#talks a {
+	text-decoration : none;
+}
+
+#talks img {
+	width : 300px;
 }
 
 #blog {
