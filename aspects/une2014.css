@@ -24,11 +24,11 @@ body {
 	width : 100%;
 	overflow-x : hidden;
  	background : url(./graphy-light.png);
+ 	font-family: 'Titillium Web','Ubuntu', sans-serif;
  	font-size: 1.1em;
 }
 
 * {
-	font-family: 'Titillium Web','Ubuntu', sans-serif;
 	transition-property: opacity background color max-height transform ; 
 	-moz-transition-property: opacity background color max-height transform ;
 	-webkit-transition-property: opacity background color max-height transform ;
