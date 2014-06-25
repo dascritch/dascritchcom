@@ -58,6 +58,11 @@ section, aside, footer {
 	margin : 50px 20px 10px 20px;
 }
 
+section {
+	border : 1px #A2A2A2 dashed;
+	padding : 6px;
+}
+
 #me {
 	margin : 100px 400px 10px 20px;
 }

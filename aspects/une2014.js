@@ -64,9 +64,10 @@
 			$carte.find('span').css('opacity',1);
 		});
 
-		recalc_heights();
+		/*recalc_heights();
 		$(window).on('resize',recalc_heights);
 		$(window).on('scroll hashchange',movin);
+		*/
 	});
 
 })(document,$);
