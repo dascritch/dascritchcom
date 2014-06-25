@@ -38,12 +38,14 @@ body {
 }
 
 a , a:visited {
-		color : blue;
+	color : #00F;
+	border : 1px #A2A2FF dashed;
+	padding : 0 2px;
 }
 
 a:hover , a.active{
-		background : #ddf7;
-		color : black;
+	background : rgba(0,0,255,0.2);
+	border : 1px #0000FF dashed;
 }
 
 a img {
@@ -101,6 +103,10 @@ section {
 		color-stop(0.2, #e6e6e6), color-stop(0.6, #f5f5f5), color-stop(0.8, #fff)
 	);
 	background-image: -moz-linear-gradient(center bottom, #e6e6e6 20%, #f5f5f5 60%, #fff 80%);
+}
+#carte a {
+	border : none;
+	padding : 0;
 }
 
 /*
@@ -167,28 +173,16 @@ h1 {
 
 article {
     clear:both;
-    margin-left : 20px ;
+    padding:  10px ;
+    margin:  10px ;
     position : relative;
+    border : 1px #A2A2A2 dashed;
 }
 
 #rea article {
-    width : 600px;
+    /*width : 600px;*/
     margin : 10px auto;
     padding : 10px;
-    border : 1px grey solid;
-    background-image: gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0.2, #f5f5f5), color-stop(0.6, #fafafa), color-stop(0.8, #fff)
-	);
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0.2, #f5f5f5), color-stop(0.6, #fafafa), color-stop(0.8, #fff)
-	);
-	background-image: -moz-linear-gradient(center bottom, #f5f5f5 20%, #fafafa 60%, #fff 80%);
 }
 
 #rea header {
@@ -196,18 +190,16 @@ article {
 	text-align:center;
 }
 
-#rea header a {
-	color : black;
-}
-
 .teaser {
+	/*
+	width : 560px;
     position : absolute;
     bottom : 25px;
-    left : 10px;
+    left : 10px;*/
+    display : inline-block;
     background : #fff;
     background : rgba(255,255,255,0.8);
     padding : 6px;
-    width : 560px;
 }
 
 #talks article {
@@ -215,7 +207,6 @@ article {
 	width : 500px;
 	height : 250px;
 	vertical-align: top;
-	margin : 20px;
 	text-align : left
 }
 
@@ -237,7 +228,6 @@ article {
 	width : 300px;
 	height : 300px;
 	vertical-align: top;
-	margin : 20px;
 	text-align : left;
 }
 
