@@ -65,6 +65,10 @@ section {
 	padding : 6px;
 }
 
+.no {
+    display : none;
+}
+
 #me {
 	margin : 100px 400px 10px 20px;
 }
@@ -155,11 +159,6 @@ h1 {
     font-weight : normal;
 }
 
-
-.no {
-    display : none;
-}
-
 #carte p {
 	position : absolute ;
 	bottom : 5% ;
@@ -173,8 +172,8 @@ h1 {
 
 article {
     clear:both;
-    padding:  10px ;
-    margin:  10px ;
+    padding :  10px ;
+    margin :  10px ;
     position : relative;
     border : 1px #A2A2A2 dashed;
 }
@@ -204,7 +203,7 @@ article {
 
 #talks article {
 	display : inline-block;
-	width : 500px;
+	width : 48%;
 	height : 250px;
 	vertical-align: top;
 	text-align : left
@@ -225,7 +224,7 @@ article {
 
 #blog article {
 	display : inline-block;
-	width : 300px;
+	width : 30%;
 	height : 300px;
 	vertical-align: top;
 	text-align : left;
