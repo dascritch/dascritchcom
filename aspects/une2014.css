@@ -6,6 +6,7 @@
 	src: local("Titillium"),
 	local("Titillium Web"),
 	local("TitilliumWeb-Regular"),
+	/* Temporaire */ url(./TitilliumWeb-Regular.woff) format("woff");
 	url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Regular.woff) format("woff");
 }
 
@@ -16,6 +17,7 @@
 	src: local("Titillium Bold"),
 	local("Titillium WebBold"),
 	local("TitilliumWeb-Bold"),
+	/* Temporaire */ url(./TitilliumWeb-Bold.woff) format("woff");
 	url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Bold.woff) format("woff");
 }
 
@@ -67,6 +69,25 @@ section {
 
 .no {
     display : none;
+}
+
+menu {
+	display : none;
+	border : 1px #A2A2A2 dashed;
+	/* TODO : passage en propriété CSS3 semi fixe; */
+}
+
+menu li {
+	display : inline;
+}
+
+menu ul {
+	display : none;
+}
+
+.favicon {
+	width : 16px;
+	height : 16px;
 }
 
 .family-name {
