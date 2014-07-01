@@ -154,6 +154,10 @@ article {
     margin : 10px auto;
     padding : 10px;
 }
+#rea img {
+	float : right;
+	max-width : 50%;
+}
 
 #rea header {
 	position : relative;
