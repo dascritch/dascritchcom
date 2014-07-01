@@ -91,7 +91,7 @@ menu ul {
 }
 
 .family-name {
-	white-space: nowrap
+	white-space: nowrap;
 }
 
 #nightshot {
@@ -231,6 +231,10 @@ footer {
     text-align : center;
 }
 
+footer span {
+	display : inline-block ;
+}
+
 
 @media all and (min-width: 1320px)
 {
@@ -266,6 +270,27 @@ footer {
         direction : ltr;
     }
 
+}
+
+@media all and (max-width: 824px)
+{
+	#carte {
+		width : 375px; /* 415 - (4px de rognés × 2 × 5 <a> */
+	}
+
+	#carte p a {
+		padding : 4px;
+	}
+
+	#nightshot {
+		width : 96px;
+		height : 96px;
+	    margin-right: 10px;
+	}
+
+	h1 {
+		font-size : 1.8em;
+	}
 }
 
 @media all and (max-width: 720px)
