@@ -6,7 +6,7 @@
 	src: local("Titillium"),
 	local("Titillium Web"),
 	local("TitilliumWeb-Regular"),
-	url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Regular.woff) format("woff"); 
+	url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Regular.woff) format("woff");
 }
 
 @font-face {
@@ -16,7 +16,7 @@
 	src: local("Titillium Bold"),
 	local("Titillium WebBold"),
 	local("TitilliumWeb-Bold"),
-	url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Bold.woff) format("woff"); 
+	url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Bold.woff) format("woff");
 }
 
 
@@ -29,7 +29,7 @@ body {
 }
 
 * {
-	transition-property: opacity background color max-height transform ; 
+	transition-property: opacity background color max-height transform ;
 	-moz-transition-property: opacity background color max-height transform ;
 	-webkit-transition-property: opacity background color max-height transform ;
 	transition-duration: 0.5s;
@@ -67,10 +67,6 @@ section {
 
 .no {
     display : none;
-}
-
-#me {
-	
 }
 
 .family-name {
@@ -118,37 +114,6 @@ section {
 	border : none;
 	padding : 0;
 }
-
-/*
-#menu {
-	position : fixed;
-	right : 0;
-	top : 0;
-	bottom : 0;
-	padding : 400px 0 100px;
-	width : 20%;
-	background : url(./graphy-blueprint.png);
-	color : #ccc;
-	list-style: none;
-
-}
-
-#menu li {
-	padding : 0;
-}
-
-#menu a {
-	display : block;
-	padding : 10px;
-	color : #aaa;
-}
-
-#menu ul a {
-	font-size :x-small;
-	padding-left : 20px;
-	padding-top : 5px;
-	}
-*/
 
 h2 {
 	text-align : center;
@@ -209,14 +174,15 @@ article {
 
 #talks article {
 	display : inline-block;
-	width : 48%;
-	height : 250px;
+	width : 45%;
+	min-height : 250px;
 	vertical-align: top;
-	text-align : left
+	text-align : left;
 }
 
 #talks img {
 	width : 200px;
+	max-width : 50%;
 	margin : 0 10px 10px 0;
 }
 
@@ -325,8 +291,7 @@ footer {
 
 @media all and (max-width: 720px)
 {
-	#me
-	{
+	#me {
 		margin : 10px 10px;
 	}
 
@@ -352,6 +317,14 @@ footer {
 		);
 		background-image: -moz-linear-gradient(center top, #e6e6e6 20%, #f5f5f5 60%, #fff 80%);
 	}
+
+	#talks article {
+	display : block;
+	width : auto;
+	min-height : 170px;
+	}
+
+
 }
 
 
