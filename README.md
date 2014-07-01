@@ -4,3 +4,8 @@ Refactorisation à partir de ce qui est actuellement hébergé par le service da
 
 La source des "news" vient de mon blog http://dascritch.net , les réalisations étaient éditées dans le service dagence
 
+TODO
+----
+* refaire les captures des sites
+* flux rss géré côté navigateur
+* ré-écriture des textes
