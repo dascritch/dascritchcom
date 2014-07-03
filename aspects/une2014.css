@@ -291,6 +291,10 @@ footer span {
 	h1 {
 		font-size : 1.7em;
 	}
+
+	#blog article {
+		width : 45%;
+	}
 }
 
 @media all and (max-width: 720px)
