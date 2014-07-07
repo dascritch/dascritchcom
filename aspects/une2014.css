@@ -6,7 +6,7 @@
 	src: local("Titillium"),
 	local("Titillium Web"),
 	local("TitilliumWeb-Regular"),
-	/* Temporaire */ url(./TitilliumWeb-Regular.woff) format("woff");
+	/* Temporaire */ url(./TitilliumWeb-Regular.woff) format("woff"),
 	url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Regular.woff) format("woff");
 }
 
@@ -17,7 +17,7 @@
 	src: local("Titillium Bold"),
 	local("Titillium WebBold"),
 	local("TitilliumWeb-Bold"),
-	/* Temporaire */ url(./TitilliumWeb-Bold.woff) format("woff");
+	/* Temporaire */ url(./TitilliumWeb-Bold.woff) format("woff"),
 	url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Bold.woff) format("woff");
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 * {
-	transition-property: opacity background color max-height transform ;
+	transition-property : opacity background color max-height transform ;
 	-moz-transition-property: opacity background color max-height transform ;
 	-webkit-transition-property: opacity background color max-height transform ;
 	transition-duration: 0.5s;
