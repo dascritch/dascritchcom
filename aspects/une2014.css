@@ -215,7 +215,7 @@ p {
 
 #talks img {
 	width : 200px;
-	max-width : 50%;
+	max-width : 50% /*WTF?*/ !important;
 	margin : 0 10px 10px 0;
 }
 
@@ -236,7 +236,7 @@ p {
 }
 
 #blog img {
-	max-width : 50%;
+	max-width : 35% /*WTF?*/ !important;
 	margin : 0 0 10px  10px;
 }
 
