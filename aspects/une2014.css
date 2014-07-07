@@ -132,6 +132,9 @@ menu ul {
 		color-stop(0.2, #e6e6e6), color-stop(0.6, #f5f5f5), color-stop(0.8, #fff)
 	);
 	background-image: -moz-linear-gradient(center bottom, #e6e6e6 20%, #f5f5f5 60%, #fff 80%);
+	background-image: -o-linear-gradient(center bottom, #e6e6e6 20%, #f5f5f5 60%, #fff 80%);
+	background-image: -ms-linear-gradient(center bottom, #e6e6e6 20%, #f5f5f5 60%, #fff 80%);
+	background-image: linear-gradient(center bottom, #e6e6e6 20%, #f5f5f5 60%, #fff 80%);
 }
 #carte a {
 	border : none;
