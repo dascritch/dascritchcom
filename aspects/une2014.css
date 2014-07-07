@@ -113,9 +113,11 @@ menu ul {
 	margin-bottom : -60px;
 	margin-left : -40px;
 	z-index : 10;
-	transform 			: rotate(10deg) translateX(40px) translateY(-100px);
 	-moz-transform 		: rotate(10deg) translateX(40px) translateY(-100px);
+	-o-transform 		: rotate(10deg) translateX(40px) translateY(-100px);
+	-ms-transform 		: rotate(10deg) translateX(40px) translateY(-100px);
 	-webkit-transform	: rotate(10deg) translateX(40px) translateY(-100px);
+	transform 			: rotate(10deg) translateX(40px) translateY(-100px);
 	background-color : white;
 	background-image: -webkit-gradient(
 		linear,
