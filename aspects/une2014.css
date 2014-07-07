@@ -137,8 +137,27 @@ menu ul {
 	padding : 0;
 }
 
+h1 {
+    font-weight : normal;
+    text-align: left;
+}
+
 h2 {
 	text-align : center;
+	margin : 4px auto;
+}
+
+article {
+    clear:both;
+    padding :  10px ;
+    margin :  10px ;
+    position : relative;
+    border : 1px #A2A2A2 dashed;
+    text-align : left;
+}
+
+p {
+	text-align: left;
 }
 
 #carte h2 {
@@ -146,10 +165,6 @@ h2 {
 	bottom : 120px ; /* approx (415-36)÷2 */
 	width : 100%;
 	font-size : 36px;
-}
-
-h1 {
-    font-weight : normal;
 }
 
 #carte p {
@@ -161,19 +176,6 @@ h1 {
 
 #carte p a {
 	padding : 4px 8px;
-}
-
-h2 {
-	margin : 4px auto;
-}
-
-article {
-    clear:both;
-    padding :  10px ;
-    margin :  10px ;
-    position : relative;
-    border : 1px #A2A2A2 dashed;
-    text-align : left;
 }
 
 #rea article {

@@ -18,20 +18,37 @@
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(ga, s);
 
-/*
+	function rebase(link) {
+		return (link[0]==='/' ? 'http://dascritch.net/' : '') + link ;
+	}
+
         $.ajax({
         	type: "GET",
-        	url:'./data/webdev.html',
-        	dataType: 'html',
+        	url:'./data/listing.json',
+        	dataType: 'json',
         	error: function(){
-            	alert('Unable to load feed, Incorrect path or invalid feed');
+            	console.error('Unable to load feed, Incorrect path or invalid feed');
         	},
-        	success: function(xml){
-            	values = xml;
-            	console.log(values);
+        	success: function(values){
+        		var $blog = $('#blog');
+        		$blog.find('article[id!="plussurleblog"]').remove();
+        		var $plussurleblog = $('#plussurleblog');
+            	for(var index in values) {
+            		if (values.hasOwnProperty(index)) {
+            			var article = values[index];
+console.log(article);
+						$plussurleblog.before(
+								'<article>'
+								+'<img alt="" src="'+rebase(article.img)+'" class="right" />'
+								+'<h3><a href="'+rebase(article.url)+'">'+article.title+'</a></h3>'
+								+'<p>'+article.intro+'</p>'
+								+'</article>'
+								);
+            		}
+            	}
         	}
     	});
-    	*/
+
 
 
 	$(function(){
