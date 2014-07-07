@@ -118,6 +118,7 @@ menu ul {
 	transform 			: rotate(10deg) translateX(40px) translateY(-100px);
 	-moz-transform 		: rotate(10deg) translateX(40px) translateY(-100px);
 	-webkit-transform	: rotate(10deg) translateX(40px) translateY(-100px);
+	background-color : white;
 	background-image: gradient(
 		linear,
 		left bottom,
