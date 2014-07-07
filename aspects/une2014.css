@@ -65,6 +65,7 @@ section, aside, footer {
 section {
 	border : 1px #A2A2A2 dashed;
 	padding : 6px;
+	text-align : center;
 }
 
 .no {
@@ -162,12 +163,17 @@ h1 {
 	padding : 4px 8px;
 }
 
+h2 {
+	margin : 4px auto;
+}
+
 article {
     clear:both;
     padding :  10px ;
     margin :  10px ;
     position : relative;
     border : 1px #A2A2A2 dashed;
+    text-align : left;
 }
 
 #rea article {
