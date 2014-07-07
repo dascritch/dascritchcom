@@ -18,16 +18,24 @@
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(ga, s);
 
+	var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+
 	function rebase(link) {
 		return (link[0]==='/' ? 'http://dascritch.net/' : '') + link ;
 	}
+
+	$(function(){
+
+		// obfuscation contre les malandrins . Évidemment, cela n'est pas accessible si javascript n'est pas là :(
+		document.getElementById('s2').innerHTML = '@';
+		document.getElementById('a0').href = 'mail'+'to:'+$('h2').text()+'?subject=J\'ai vu votre site professionnel';
 
         $.ajax({
         	type: "GET",
         	url:'./data/listing.json',
         	dataType: 'json',
         	error: function(){
-            	console.error('Unable to load feed, Incorrect path or invalid feed');
+            	console.error('Unable to load feed');
         	},
         	success: function(values){
         		var $blog = $('#blog');
@@ -36,7 +44,6 @@
             	for(var index in values) {
             		if (values.hasOwnProperty(index)) {
             			var article = values[index];
-console.log(article);
 						$plussurleblog.before(
 								'<article>'
 								+'<img alt="" src="'+rebase(article.img)+'" class="right" />'
@@ -49,13 +56,15 @@ console.log(article);
         	}
     	});
 
-
-
-	$(function(){
-
-		// obfuscation contre les malandrins . Évidemment, cela n'est pas accessible si javascript n'est pas là :(
-		document.getElementById('s2').innerHTML = '@';
-		document.getElementById('a0').href = 'mail'+'to:'+$('h2').text()+'?subject=J\'ai vu votre site professionnel';
+        $(document).on('keydown',function(e) {
+                // pour faire vite, http://css-tricks.com/snippets/jquery/konomi-code/
+                kkeys.push( e.keyCode );
+                if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+                // do something awesome
+                        alert('Désolé, pas de Konami code');
+                        kkeys = [];
+                }
+        });
 
 		var $carte = $('#carte');
 		// cela doit être faisable en css pur, à méditer
