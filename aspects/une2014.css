@@ -235,6 +235,11 @@ p {
 	text-align : left;
 }
 
+#blog img {
+	max-width : 50%;
+	margin : 0 0 10px  10px;
+}
+
 footer {
     text-align : center;
 }
