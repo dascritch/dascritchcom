@@ -4,7 +4,7 @@
 
 	if (document.all) {
 		// compatibilité MSIE 8 -, je garde car parfois, des clients sont taquins ou vraiment pas à jour
-	    var IEtristechose = ["section","nav","header","article","aside","footer"];
+	    var IEtristechose = ["section","nav","header","menu","article","aside","footer"];
 	    for (var i in IEtristechose) document.createElement(IEtristechose[i]);
 	}
 

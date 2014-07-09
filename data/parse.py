@@ -61,7 +61,7 @@ class ArticlesExtractor(HTMLParser):
     def handle_data(self, data):
         if (self.inmain) :
             data = data.strip()
-            
+
             if (data != '') :
                 if (self.inintro) :
                     self.intro += data
@@ -74,8 +74,6 @@ class ArticlesExtractor(HTMLParser):
         if (self.inintro) :
                 self.intro += '&'+name+';'
 
-    #def handle_charref(name) :
-
 for theme in ['webdev','self-business'] :
     document = open('data/'+theme+'.html', 'r')
 
@@ -83,7 +81,6 @@ for theme in ['webdev','self-business'] :
     for line in document :
         parser.feed(line)
 
-articles_ordered = {}
 articles_ordered = OrderedDict([(k, articles[k]) for k in reversed(sorted(articles.keys()))])
 
 json.dump(articles_ordered, listing, ensure_ascii=False)
