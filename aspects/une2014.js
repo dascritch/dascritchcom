@@ -45,25 +45,25 @@
             		if (values.hasOwnProperty(index)) {
             			var article = values[index];
 						$plussurleblog.before(
-								'<article>'
+							'<article>'
 								+'<img alt="" src="'+rebase(article.img)+'" class="right" />'
 								+'<h3><a href="'+rebase(article.url)+'">'+article.title+'</a></h3>'
 								+'<p>'+article.intro+'</p>'
-								+'</article>'
-								);
+							+'</article>'
+							);
             		}
             	}
         	}
     	});
 
         $(document).on('keydown',function(e) {
-                // pour faire vite, http://css-tricks.com/snippets/jquery/konomi-code/
-                kkeys.push( e.keyCode );
-                if ( kkeys.toString().indexOf( konami ) >= 0 ) {
-                // do something awesome
-                        alert('Désolé, pas de Konami code');
-                        kkeys = [];
-                }
+            // pour faire vite, http://css-tricks.com/snippets/jquery/konomi-code/
+            kkeys.push( e.keyCode );
+            if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+            // do something awesome
+                    alert('Désolé, pas de Konami code');
+                    kkeys = [];
+            }
         });
 
 		var $carte = $('#carte');

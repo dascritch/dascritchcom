@@ -87,19 +87,20 @@ menu {
 	box-shadow : #ddd 0px 10px 5px 0px;
 	box-shadow : rgba(0,0,0,0.3) 0px 3px 5px 0px;
 	z-index : 10;
+	padding : 0px;
+	margin : 0px;
 }
 
 menu li {
-	display : inline;
-		padding : 0 5px;
-}
-
-menu ul {
-	display : none;
+	display : inline-block;
+	padding : 0px;
+	margin : 0px;
 }
 
 menu a , menu a:visited , menu a:hover , menu a:active {
+	display : inline-block;
 	border : none;
+	padding : 4px;
 }
 
 .favicon {
