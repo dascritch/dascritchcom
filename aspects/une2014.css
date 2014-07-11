@@ -272,24 +272,11 @@ footer span {
 	display : inline-block ;
 }
 
-.describ {
-		-moz-column-width : 400px;
-		-webkit-column-width : 400px;
-		-ms-column-width : 400px;
-		-o-column-width : 400px;
-		column-width : 400px;
-
-		-moz-column-gap : 25px;
-		-webkit-column-gap : 25px;
-		-ms-column-gap : 25px;
-		-o-column-gap : 25px;
-		column-gap : 25px;
-	}
-
-
-@media all and (min-width: 1320px)
+@media all and (min-width: 1024px)
 {
-	.columns  {
+	.describ , .columns  {
+		clear : both;
+
 		-moz-column-width : 400px;
 		-webkit-column-width : 400px;
 		-ms-column-width : 400px;
