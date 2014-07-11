@@ -252,41 +252,41 @@ footer span {
 	display : inline-block ;
 }
 
+.describ {
+		-moz-column-width : 400px;
+		-webkit-column-width : 400px;
+		-ms-column-width : 400px;
+		-o-column-width : 400px;
+		column-width : 400px;
+
+		-moz-column-gap : 25px;
+		-webkit-column-gap : 25px;
+		-ms-column-gap : 25px;
+		-o-column-gap : 25px;
+		column-gap : 25px;
+	}
+
 
 @media all and (min-width: 1320px)
 {
-    #rea article img {
-        position : relative;
-        display : inline-block;
-        vertical-align :middle;
-    }
+	.columns  {
+		-moz-column-width : 400px;
+		-webkit-column-width : 400px;
+		-ms-column-width : 400px;
+		-o-column-width : 400px;
+		column-width : 400px;
 
-    #rea article {
-        width : 95%;
-        vertical-align :middle;
-    }
+		-moz-column-gap : 25px;
+		-webkit-column-gap : 25px;
+		-ms-column-gap : 25px;
+		-o-column-gap : 25px;
+		column-gap : 25px;
+	}
 
-    #rea article:nth-child(even) {
-        direction : rtl;
-    }
-
-    .teaser , .describ {
-    	direction : ltr;
-    }
-
-    .teaser {
-        position : relative;
-        display : inline-block;
-        left: auto;
-        top : auto;
-        vertical-align : bottom;
-        margin-left : 20px;
-        background : none;
-        padding : 6px;
-        width : 45%;
-        direction : ltr;
-    }
-
+	#talks article , #blog article{
+		max-width : 800px;
+		min-height : 0;
+	}
 }
 
 @media all and (max-width: 849px)
