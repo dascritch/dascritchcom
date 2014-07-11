@@ -73,17 +73,33 @@ section {
 }
 
 menu {
-	display : none;
-	border : 1px #A2A2A2 dashed;
+	background : #fff;
+	position: fixed;
 	/* TODO : passage en propriété CSS3 semi fixe; */
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	position: sticky;
+	top: 0px;
+	width : 100%;
+	border-bottom : 1px #A2A2A2 solid;
+	box-shadow : #ddd 0px 10px 5px 0px;
+	box-shadow : rgba(0,0,0,0.3) 0px 10px 5px 0px;
+	z-index : 10;
 }
 
 menu li {
 	display : inline;
+		padding : 0 5px;
 }
 
 menu ul {
 	display : none;
+}
+
+menu a , menu a:visited , menu a:hover , menu a:active {
+	border : none;
 }
 
 .favicon {
