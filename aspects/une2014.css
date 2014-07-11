@@ -85,7 +85,7 @@ menu {
 	width : 100%;
 	border-bottom : 1px #A2A2A2 solid;
 	box-shadow : #ddd 0px 10px 5px 0px;
-	box-shadow : rgba(0,0,0,0.3) 0px 10px 5px 0px;
+	box-shadow : rgba(0,0,0,0.3) 0px 3px 5px 0px;
 	z-index : 10;
 }
 
@@ -127,13 +127,14 @@ menu a , menu a:visited , menu a:hover , menu a:active {
 	box-shadow : #ddd 6px 10px 10px 5px;
 	box-shadow : rgba(0,0,0,0.3) 6px 10px 10px 5px;
 	margin-bottom : -60px;
-	margin-left : -40px;
+	margin-left : -20px;
 	z-index : 10;
-	-moz-transform 		: rotate(10deg) translateX(40px) translateY(-100px);
-	-o-transform 		: rotate(10deg) translateX(40px) translateY(-100px);
-	-ms-transform 		: rotate(10deg) translateX(40px) translateY(-100px);
-	-webkit-transform	: rotate(10deg) translateX(40px) translateY(-100px);
-	transform 			: rotate(10deg) translateX(40px) translateY(-100px);
+	/*  translateX was 40px, but incredibely hard to tune */
+	-moz-transform 		: rotate(10deg) translateX(5px) translateY(-100px);
+	-o-transform 		: rotate(10deg) translateX(5px) translateY(-100px);
+	-ms-transform 		: rotate(10deg) translateX(5px) translateY(-100px);
+	-webkit-transform	: rotate(10deg) translateX(5px) translateY(-100px);
+	transform 			: rotate(10deg) translateX(5px) translateY(-100px);
 	background-color : white;
 	background-image: -webkit-gradient(
 		linear,
