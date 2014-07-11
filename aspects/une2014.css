@@ -64,7 +64,7 @@ section, aside, footer {
 
 section {
 	border : 1px #A2A2A2 dashed;
-	padding : 25px 6px 6px;
+	padding : 28px 6px 6px;
 	text-align : center;
 }
 
@@ -101,7 +101,7 @@ menu li {
 menu a , menu a:visited , menu a:hover , menu a:active {
 	display : inline-block;
 	border : none;
-	padding : 4px;
+	padding : 3px 4px;
 	color : white;
 }
 
