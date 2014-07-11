@@ -11,7 +11,7 @@ class ArticlesExtractor(HTMLParser):
     intitle = False
     inintro = False
     intro = '';
-    articlePattern = { 'url' : '', 'title' : '', 'date' : '', 'img' : '', 'intro' : '' }
+    articlePattern = { 'url' : '', 'title' : '', 'img' : '', 'intro' : '' }
     article = {}
     lastTagStart = ''
     date = '0'
@@ -54,7 +54,7 @@ class ArticlesExtractor(HTMLParser):
         if (self.inmain) and (tag == 'article') :
             self.article['intro'] = self.intro
             articles[ self.date ] = self.article.copy()
-            print("article     :", self.article)
+            print(self.date +' : '+ self.article['title'])
             self.article = self.articlePattern
             self.intro = '';
 
@@ -70,11 +70,10 @@ class ArticlesExtractor(HTMLParser):
                     self.article['title'] = data
 
     def handle_entityref(self,name) :
-        print("Data     :", name)
         if (self.inintro) :
                 self.intro += '&'+name+';'
 
-for theme in ['webdev','self-business'] :
+for theme in ['webdev','self-business','javascript','html'] :
     document = open('data/'+theme+'.html', 'r')
 
     parser = ArticlesExtractor()
