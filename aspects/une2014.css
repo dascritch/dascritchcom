@@ -41,13 +41,11 @@ body {
 
 a , a:visited {
 	color : #00F;
-	border : 1px #A2A2FF dashed;
-	padding : 0 2px;
+	text-decoration: none;
 }
 
 a:hover , a.active{
 	background : rgba(0,0,255,0.2);
-	border : 1px #0000FF dashed;
 }
 
 a img {
@@ -63,7 +61,6 @@ section, aside, footer {
 }
 
 section {
-	border : 1px #A2A2A2 dashed;
 	padding : 28px 6px 6px;
 	text-align : center;
 }
@@ -89,7 +86,8 @@ menu {
 	box-shadow : rgba(0,0,0,0.3) 0px 3px 5px 0px;
 	z-index : 10;
 	padding : 0px;
-	margin : 0px;
+	margin : 0px auto;
+	text-align : center;
 }
 
 menu li {
@@ -379,7 +377,6 @@ footer span {
 	}
 
 	section {
-		border : 1px #A2A2A2 dashed;
 		padding : 2px;
 	}
 
