@@ -61,7 +61,7 @@ section, aside, footer {
 }
 
 section {
-	padding : 28px 6px 6px;
+	padding : 28px 0px 6px;
 	text-align : center;
 }
 
@@ -172,7 +172,7 @@ h2 {
 article {
     clear:both;
     padding :  10px ;
-    margin :  10px ;
+    margin :  5px 5px;
     position : relative;
     border : 1px #A2A2A2 dashed;
     text-align : left;
@@ -201,9 +201,7 @@ p {
 }
 
 #rea article {
-    /*width : 600px;*/
     margin : 10px auto;
-    padding : 10px;
 }
 #rea img {
 	float : right;
@@ -216,11 +214,6 @@ p {
 }
 
 .teaser {
-	/*
-	width : 560px;
-    position : absolute;
-    bottom : 25px;
-    left : 10px;*/
     display : inline-block;
     background : #fff;
     background : rgba(255,255,255,0.4);
@@ -373,11 +366,7 @@ footer span {
 {
 
 	section, aside, footer {
-		margin : 20px 6px 10px;
-	}
-
-	section {
-		padding : 2px;
+		margin : 20px 0px 10px;
 	}
 
 	#rea article img {
