@@ -80,6 +80,6 @@ for theme in ['webdev','self-business'] :
     for line in document :
         parser.feed(line)
 
-articles_ordered = OrderedDict([(k, articles[k]) for k in reversed(sorted(articles.keys()))])
+articles_ordered = OrderedDict([(k, articles[k]) for k in reversed(sorted(articles.keys())[-14:])])
 
 json.dump(articles_ordered, listing, ensure_ascii=False)
