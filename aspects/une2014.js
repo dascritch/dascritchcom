@@ -1,6 +1,6 @@
-"use strict";
 
 (function(document,$) {
+	"use strict";
 
 	if (document.all) {
 		// compatibilité MSIE 8 -, je garde car parfois, des clients sont taquins ou vraiment pas à jour
@@ -77,4 +77,4 @@
 
 	});
 
-})(document,$);
+})(document,jQuery);
