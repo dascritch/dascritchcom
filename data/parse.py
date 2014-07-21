@@ -73,7 +73,7 @@ class ArticlesExtractor(HTMLParser):
         if (self.inintro) :
                 self.intro += '&'+name+';'
 
-for theme in ['webdev','self-business','javascript','html'] :
+for theme in ['webdev','self-business'] :
     document = open('data/'+theme+'.html', 'r')
 
     parser = ArticlesExtractor()
