@@ -220,7 +220,7 @@ p {
     padding : 6px;
 }
 
-#talks article {
+.level2 article {
 	display : inline-block;
 	width : 45%;
 	min-height : 250px;
@@ -228,21 +228,21 @@ p {
 	text-align : left;
 }
 
-#talks img {
+.level2 img {
 	width : 200px;
 	max-width : 50% /*WTF?*/ !important;
 	margin : 0 10px 10px 0;
 }
 
-#talks p {
+.level2 p {
 	clear : both;
 }
 
-#blog {
+.level3 {
 	text-align: center;
 }
 
-#blog article {
+.level3 article {
 	display : inline-block;
 	width : 30%;
 	min-height : 300px;
@@ -250,7 +250,7 @@ p {
 	text-align : left;
 }
 
-#blog img {
+.level3 img {
 	max-width : 35% /*WTF?*/ !important;
 	margin : 0 0 10px  10px;
 }
@@ -281,7 +281,7 @@ footer span {
 		column-gap : 25px;
 	}
 
-	#talks article , #blog article{
+	.level2 article , .level3 article{
 		max-width : 800px;
 		min-height : 0;
 	}
@@ -307,7 +307,7 @@ footer span {
 		font-size : 1.7em;
 	}
 
-	#blog article {
+	.level3 article {
 		width : 45%;
 	}
 }
@@ -350,13 +350,13 @@ footer span {
 		clear : left;
 	}
 
-	#talks article {
+	.level2 article {
 		display : block;
 		width : auto;
 		min-height : 0;
 	}
 
-	#blog article {
+	.level3 article {
 		width : 45%;
 		min-height : 300px;
 	}
@@ -389,7 +389,7 @@ footer span {
 		background : none;
     }
 
-	#blog article {
+	.level3 article {
 		display : block;
 		width : auto;
 		min-height : 0;
