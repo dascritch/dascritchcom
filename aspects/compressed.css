@@ -494,40 +494,40 @@ p { text-align: left; }
 
 .teaser { display: inline-block; background: #fff; background: rgba(255, 255, 255, 0.4); padding: 6px; }
 
-#talks article { display: inline-block; width: 45%; min-height: 250px; vertical-align: top; text-align: left; }
+.level2 article { display: inline-block; width: 45%; min-height: 250px; vertical-align: top; text-align: left; }
 
-#talks img { width: 200px; max-width: 50% !important; margin: 0 10px 10px 0; }
+.level2 img { width: 200px; max-width: 50% !important; margin: 0 10px 10px 0; }
 
-#talks p { clear: both; }
+.level2 p { clear: both; }
 
-#blog { text-align: center; }
+.level3 { text-align: center; }
 
-#blog article { display: inline-block; width: 30%; min-height: 300px; vertical-align: top; text-align: left; }
+.level3 article { display: inline-block; width: 30%; min-height: 300px; vertical-align: top; text-align: left; }
 
-#blog img { max-width: 35% !important; margin: 0 0 10px  10px; }
+.level3 img { max-width: 35% !important; margin: 0 0 10px  10px; }
 
 footer { text-align: center; }
 
 footer span { display: inline-block; }
 
 @media all and (min-width: 1024px) { .describ, .columns { clear: both; -moz-column-width: 400px; -webkit-column-width: 400px; -ms-column-width: 400px; -o-column-width: 400px; column-width: 400px; -moz-column-gap: 25px; -webkit-column-gap: 25px; -ms-column-gap: 25px; -o-column-gap: 25px; column-gap: 25px; }
-  #talks article, #blog article { max-width: 800px; min-height: 0; } }
+  .level2 article, .level3 article { max-width: 800px; min-height: 0; } }
 @media all and (max-width: 849px) { #carte { width: 375px; /* 415 - (4px de rognés × 2 × 5 <a> */ }
   #carte p a { padding: 4px; }
   #nightshot { width: 96px; height: 96px; margin-right: 10px; }
   h1 { font-size: 1.7em; }
-  #blog article { width: 45%; } }
+  .level3 article { width: 45%; } }
 @media all and (max-width: 720px) { #carte { position: relative; float: none; top: -90px; margin: 5px auto -60px; transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); background-image: gradient(linear, left bottom, left top, color-stop(0.8, #e6e6e6), color-stop(0.4, whitesmoke), color-stop(0.2, white)); background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.8, #e6e6e6), color-stop(0.4, whitesmoke), color-stop(0.2, white)); background-image: -moz-linear-gradient(center top, #e6e6e6 20%, whitesmoke 60%, white 80%); }
   #nightshot { display: inline-block; vertical-align: middle; }
   #me { margin: 10px 10px; }
   #me p { clear: left; }
-  #talks article { display: block; width: auto; min-height: 0; }
-  #blog article { width: 45%; min-height: 300px; } }
+  .level2 article { display: block; width: auto; min-height: 0; }
+  .level3 article { width: 45%; min-height: 300px; } }
 @media all and (max-width: 620px) { section, aside, footer { margin: 20px 0px 10px; }
   #rea article img { display: block; margin: 0 auto; width: 100%; }
   #rea article { width: 95%; vertical-align: middle; }
   #rea .teaser { position: relative; padding: 6px; width: auto; top: 0; left: 0; background: none; }
-  #blog article { display: block; width: auto; min-height: 0; } }
+  .level3 article { display: block; width: auto; min-height: 0; } }
 @media all and (max-width: 420px) { p { font-size: 0.9em; }
   #me { margin: 10px 10px; }
   #carte { width: 260px; top: -90px; left: -20px; margin: 5px auto -60px; transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); background-image: gradient(linear, left bottom, left top, color-stop(0.8, #e6e6e6), color-stop(0.4, whitesmoke), color-stop(0.2, white)); background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.8, #e6e6e6), color-stop(0.4, whitesmoke), color-stop(0.2, white)); background-image: -moz-linear-gradient(center top, #e6e6e6 20%, whitesmoke 60%, white 80%); }
