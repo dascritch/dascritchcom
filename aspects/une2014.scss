@@ -116,6 +116,7 @@ menu a , menu a:visited , menu a:hover , menu a:active {
 	width : 128px;
 	height : 128px;
 	margin : 0 20px 10px 0 ;
+	vertical-align: bottom;
 }
 
 #carte {
@@ -169,6 +170,12 @@ h2 {
 	margin : 4px auto;
 }
 
+.chapeau {
+	text-align : center;
+	max-width : 800px;
+	margin : 0 auto;
+}
+
 article {
     clear:both;
     padding :  10px ;
@@ -176,6 +183,7 @@ article {
     position : relative;
     border : 1px #A2A2A2 dashed;
     text-align : left;
+    background-color : rgba(255,255,255,0.2);
 }
 
 p {
@@ -339,7 +347,6 @@ footer span {
 
 	#nightshot {
 		display : inline-block;
-		vertical-align: middle;
 	}
 
 	#me {
