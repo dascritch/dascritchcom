@@ -4,8 +4,8 @@
 
 	if (document.all) {
 		// compatibilité MSIE 8 -, je garde car parfois, des clients sont taquins ou vraiment pas à jour
-	    var IEtristechose = ["section","nav","header","menu","article","aside","footer"];
-	    for (var i in IEtristechose) document.createElement(IEtristechose[i]);
+		var IEtristechose = ["section","nav","header","menu","article","aside","footer"];
+		for (var i in IEtristechose) document.createElement(IEtristechose[i]);
 	}
 
 	var _gaq = _gaq || [];
@@ -30,20 +30,20 @@
 		document.getElementById('s2').innerHTML = '@';
 		document.getElementById('a0').href = 'mail'+'to:'+$('h2').text()+'?subject=J\'ai vu votre site professionnel';
 
-        $.ajax({
-        	type: "GET",
-        	url:'./data/listing.json',
-        	dataType: 'json',
-        	error: function(){
-            	console.error('Unable to load feed');
-        	},
-        	success: function(values){
-        		var $blog = $('#blog');
-        		$blog.find('article[id!="plussurleblog"]').remove();
-        		var $plussurleblog = $('#plussurleblog');
-            	for(var index in values) {
-            		if (values.hasOwnProperty(index)) {
-            			var article = values[index];
+		$.ajax({
+			type: "GET",
+			url:'./data/listing.json',
+			dataType: 'json',
+			error: function(){
+				console.error('Unable to load feed');
+			},
+			success: function(values){
+				var $blog = $('#blog');
+				$blog.find('article[id!="plussurleblog"]').remove();
+				var $plussurleblog = $('#plussurleblog');
+				for(var index in values) {
+					if (values.hasOwnProperty(index)) {
+						var article = values[index];
 						$plussurleblog.before(
 							'<article>'
 								+'<img alt="" src="'+rebase(article.img)+'" class="right" />'
@@ -51,20 +51,20 @@
 								+'<p>'+article.intro+'</p>'
 							+'</article>'
 							);
-            		}
-            	}
-        	}
-    	});
+					}
+				}
+			}
+		});
 
-        $(document).on('keydown',function(e) {
-            // pour faire vite, http://css-tricks.com/snippets/jquery/konomi-code/
-            kkeys.push( e.keyCode );
-            if ( kkeys.toString().indexOf( konami ) >= 0 ) {
-            // do something awesome
-                    alert('Désolé, pas de Konami code');
-                    kkeys = [];
-            }
-        });
+		$(document).on('keydown',function(e) {
+			// pour faire vite, http://css-tricks.com/snippets/jquery/konomi-code/
+			kkeys.push( e.keyCode );
+			if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+				// do something awesome
+				kkeys = [];
+				document.body.id='konami';
+			}
+		});
 
 		var $carte = $('#carte');
 		// cela doit être faisable en css pur, à méditer

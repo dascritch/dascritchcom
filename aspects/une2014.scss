@@ -23,11 +23,11 @@
 
 
 body {
-	width : 100%;
+/*	width : 100%;*/
 	overflow-x : hidden;
- 	background : url(./graphy-light.png);
- 	font-family: 'Titillium Web','Ubuntu', sans-serif;
- 	font-size: 1.1em;
+	background : url(./graphy-light.png);
+	font-family: 'Titillium Web','Ubuntu', sans-serif;
+	font-size: 1.1em;
 }
 
 section, article, h1, h2, h3, img, a, #carte {
@@ -49,11 +49,11 @@ a:hover , a.active{
 }
 
 a img {
-        border : 0;
+		border : 0;
 }
 
 p {
-    margin : 10px 0;
+	margin : 10px 0;
 }
 
 section, aside, footer {
@@ -66,7 +66,7 @@ section {
 }
 
 .no {
-    display : none;
+	display : none;
 }
 
 menu {
@@ -116,7 +116,10 @@ menu a , menu a:visited , menu a:hover , menu a:active {
 	width : 128px;
 	height : 128px;
 	margin : 0 20px 10px 0 ;
-	vertical-align: bottom;
+}
+
+#me .columns {
+	clear : left;
 }
 
 #carte {
@@ -161,8 +164,8 @@ menu a , menu a:visited , menu a:hover , menu a:active {
 }
 
 h1 {
-    font-weight : normal;
-    text-align: left;
+	font-weight : normal;
+	text-align: left;
 }
 
 h2 {
@@ -177,13 +180,13 @@ h2 {
 }
 
 article {
-    clear:both;
-    padding :  10px ;
-    margin :  5px 5px;
-    position : relative;
-    border : 1px #A2A2A2 dashed;
-    text-align : left;
-    background-color : rgba(255,255,255,0.2);
+	clear:both;
+	padding :  10px ;
+	margin :  5px 5px;
+	position : relative;
+	border : 1px #A2A2A2 dashed;
+	text-align : left;
+	background-color : rgba(255,255,255,0.3);
 }
 
 p {
@@ -209,7 +212,7 @@ p {
 }
 
 #rea article {
-    margin : 10px auto;
+	margin : 10px auto;
 }
 #rea img {
 	float : right;
@@ -222,10 +225,10 @@ p {
 }
 
 .teaser {
-    display : inline-block;
-    background : #fff;
-    background : rgba(255,255,255,0.4);
-    padding : 6px;
+	display : inline-block;
+	background : #fff;
+	background : rgba(255,255,255,0.4);
+	padding : 6px;
 }
 
 .level2 article {
@@ -264,7 +267,7 @@ p {
 }
 
 footer {
-    text-align : center;
+	text-align : center;
 }
 
 footer span {
@@ -308,7 +311,7 @@ footer span {
 	#nightshot {
 		width : 96px;
 		height : 96px;
-	    margin-right: 10px;
+		margin-right: 10px;
 	}
 
 	h1 {
@@ -347,6 +350,7 @@ footer span {
 
 	#nightshot {
 		display : inline-block;
+		vertical-align: middle;
 	}
 
 	#me {
@@ -380,21 +384,21 @@ footer span {
 		display : block;
 		margin : 0 auto;
 		width : 100%;
-    }
+	}
 
-    #rea article {
-        width : 95%;
-        vertical-align :middle;
-    }
+	#rea article {
+		width : 95%;
+		vertical-align :middle;
+	}
 
-    #rea .teaser {
+	#rea .teaser {
 		position : relative;
 		padding : 6px;
 		width : auto;
 		top : 0;
 		left : 0;
 		background : none;
-    }
+	}
 
 	.level3 article {
 		display : block;
@@ -407,17 +411,17 @@ footer span {
 @media all and (max-width: 420px)
 {
 	p {
-     	font-size: 0.9em;
+		font-size: 0.9em;
 	}
 
-    #me {
+	#me {
 		margin : 10px 10px;
 	}
 
 	#carte {
 		width : 260px;
 		top : -90px;
-        left : -20px;
+		left : -20px;
 		margin : 5px auto -60px ;
 		transform:rotate(0deg); 
 		-moz-transform:rotate(0deg);
@@ -438,7 +442,7 @@ footer span {
 	}
 
 	#carte h2 {
-	    font-size: 24px;
+		font-size: 24px;
 	}
 
 	#carte p span {
@@ -459,4 +463,14 @@ footer span {
 	h1 {
 		font-size: 1.5em;
 	}
+}
+
+
+#konami * {
+	border : 1px #A2A2A2 dashed;
+}
+
+
+#konami *:hover {
+	border : 1px #A2A2A2 solid;
 }
