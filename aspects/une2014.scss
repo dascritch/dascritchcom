@@ -234,7 +234,6 @@ p {
 .level2 article {
 	display : inline-block;
 	width : 45%;
-	min-height : 250px;
 	vertical-align: top;
 	text-align : left;
 }
@@ -256,7 +255,6 @@ p {
 .level3 article {
 	display : inline-block;
 	width : 30%;
-	min-height : 300px;
 	vertical-align: top;
 	text-align : left;
 }
@@ -294,7 +292,6 @@ footer span {
 
 	.level2 article , .level3 article{
 		max-width : 800px;
-		min-height : 0;
 	}
 }
 
@@ -364,12 +361,10 @@ footer span {
 	.level2 article {
 		display : block;
 		width : auto;
-		min-height : 0;
 	}
 
 	.level3 article {
 		width : 45%;
-		min-height : 300px;
 	}
 }
 
@@ -403,7 +398,6 @@ footer span {
 	.level3 article {
 		display : block;
 		width : auto;
-		min-height : 0;
 	}
 
 }
