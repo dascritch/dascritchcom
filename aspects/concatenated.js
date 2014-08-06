@@ -32,7 +32,7 @@
 
 		// obfuscation contre les malandrins . Évidemment, cela n'est pas accessible si javascript n'est pas là :(
 		document.getElementById('s2').innerHTML = '@';
-		document.getElementById('a0').href = 'mail'+'to:'+$('h2').text()+'?subject=J\'ai vu votre site professionnel';
+		document.getElementById('a0').href = 'mail'+'to:'+$('h2').eq(0).text().trim()+'?subject=J\'ai vu votre site professionnel';
 
 		$.ajax({
 			type: "GET",
