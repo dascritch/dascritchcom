@@ -21,17 +21,17 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 */
-		var r = 'ga'
-		window.GoogleAnalyticsObject = r;
-		window.ga = window.ga || function(){
-			(window.ga.q = window.ga.q || []).push(arguments)
-		}
-		window.ga.l = 1*new Date();
-		var a = document.createElement('script');
-		var m = document.getElementsByTagName('script')[0];
-		a.async = 1;
-		a.src = '//www.google-analytics.com/analytics.js';
-		m.parentNode.insertBefore(a, m)
+		// http://www.ignoredbydinosaurs.com/2014/09/deconstructing-the-google-analytics-tag
+		var a, m;
+        window['GoogleAnalyticsObject'] = 'ga';
+        window['ga'] = window['ga'] || function() {
+                (window['ga'].q = window['ga'].q || []).push(arguments)
+        }, window['ga'].l = 1 * new Date();
+        a = document.createElement('script'),
+        m = document.getElementsByTagName('script')[0];
+        a.async = 1;
+        a.src = '//www.google-analytics.com/analytics.js';
+        m.parentNode.insertBefore(a, m)
 
 	ga('create', 'UA-81365-6', 'auto');
 	ga('send', 'pageview');
