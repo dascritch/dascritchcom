@@ -440,7 +440,7 @@ figure.right { margin-left: 1.5em; }
 
 body { /*	width : 100%;*/ overflow-x: hidden; background: url(./graphy-light.png); font-family: 'Titillium Web','Ubuntu', sans-serif; font-size: 1.1em; }
 
-section, article, h1, h2, h3, img, a, #carte { transition-property: opacity background color max-height transform; -moz-transition-property: opacity background color max-height transform; -webkit-transition-property: opacity background color max-height transform; transition-duration: 0.5s; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; }
+section, article, h1, h2, h3, img, a, span, #carte { transition-property: opacity background color max-height transform; -moz-transition-property: opacity background color max-height transform; -webkit-transition-property: opacity background color max-height transform; transition-duration: 0.5s; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; }
 
 a, a:visited { color: #00F; text-decoration: none; }
 
