@@ -46,9 +46,11 @@
 						var article = values[index];
 						$plussurleblog.before(
 							'<article>'
-								+'<img alt="" src="'+rebase(article.img)+'" class="right" />'
-								+'<h3><a href="'+rebase(article.url)+'">'+article.title+'</a></h3>'
-								+'<p>'+article.intro+'</p>'
+								+'<a class="bloc" href="'+rebase(article.url)+'">'
+									+'<img alt="" src="'+rebase(article.img)+'" class="right" />'
+									+'<h3>'+article.title+'</h3>'
+									+'<p>'+article.intro+'</p>'
+								+'</a>'
 							+'</article>'
 							);
 					}

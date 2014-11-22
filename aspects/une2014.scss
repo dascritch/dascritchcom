@@ -181,12 +181,27 @@ h2 {
 
 article {
 	clear:both;
-	padding :  10px ;
+	padding : 0;
 	margin :  5px 5px;
 	position : relative;
 	border : 1px #A2A2A2 dashed;
 	text-align : left;
+
+}
+
+.bloc {
+	display : block;
 	background-color : rgba(255,255,255,0.3);
+	margin : 0;
+	padding :  10px ;
+}
+
+a.bloc {
+	color : #000;
+}
+
+a.bloc h3 {
+	color : #00F;
 }
 
 p {
