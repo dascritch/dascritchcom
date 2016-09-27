@@ -11,7 +11,12 @@ class ArticlesExtractor(HTMLParser):
     intitle = False
     inintro = False
     intro = '';
-    articlePattern = { 'url' : '', 'title' : '', 'img' : '', 'intro' : '' }
+    articlePattern = { 
+        'url' : '',
+        'title' : '',
+        'img' : '',
+        'intro' : ''
+    }
     article = {}
     lastTagStart = ''
     date = '0'
