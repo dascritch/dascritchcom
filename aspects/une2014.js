@@ -1,31 +1,6 @@
 
 (function(window,document,$) {
 	"use strict";
-
-	if (document.all) {
-		// compatibilité MSIE 8 -, je garde car parfois, des clients sont taquins ou vraiment pas à jour
-		var IEtristechose = ["section","nav","header","menu","article","aside","footer"];
-		for (var i in IEtristechose) document.createElement(IEtristechose[i]);
-	}
-
-
-	var google_a_id = 'UA-81365-6';
-		// http://www.ignoredbydinosaurs.com/2014/09/deconstructing-the-google-analytics-tag
-		var e_script, this_tag;
-        window['GoogleAnalyticsObject'] = 'ga';
-        window['ga'] = window['ga'] || function() {
-                (window['ga'].q = window['ga'].q || []).push(arguments)
-        }, window['ga'].l = 1 * new Date();
-        e_script = document.createElement('script'),
-        this_tag = document.getElementsByTagName('script')[0];
-        e_script.async = 1;
-        e_script.src = '//www.google-analytics.com/analytics.js';
-        this_tag.parentNode.insertBefore(e_script, this_tag)
-
-	ga('create', google_a_id, 'auto');
-	ga('send', 'pageview');
-
-
 	var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
 
 	function rebase(link) {
