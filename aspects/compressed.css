@@ -434,9 +434,9 @@ figure.right { margin-left: 1.5em; }
 
 .album .thumb { margin: 0; }
 
-@font-face { font-family: 'Titillium Web'; font-style: normal; font-weight: 400; src: local("Titillium"), local("Titillium Web"), local("TitilliumWeb-Regular"), url(./TitilliumWeb-Regular.woff) format("woff"), url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Regular.woff) format("woff"); }
+@font-face { font-family: 'Titillium Web'; font-style: normal; font-weight: 400; src: local("Titillium"), local("Titillium Web"), local("TitilliumWeb-Regular"), url(./TitilliumWeb-Regular.woff) format("woff"), url(https://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Regular.woff) format("woff"); }
 
-@font-face { font-family: 'Titillium Web'; font-style: normal; font-weight: 700; src: local("Titillium Bold"), local("Titillium WebBold"), local("TitilliumWeb-Bold"), url(./TitilliumWeb-Bold.woff) format("woff"), url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Bold.woff) format("woff"); }
+@font-face { font-family: 'Titillium Web'; font-style: normal; font-weight: 700; src: local("Titillium Bold"), local("Titillium WebBold"), local("TitilliumWeb-Bold"), url(./TitilliumWeb-Bold.woff) format("woff"), url(https://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Bold.woff) format("woff"); }
 
 body { /*	width : 100%;*/ overflow-x: hidden; background: url(./graphy-light.png); font-family: "Titillium Web", "Ubuntu", sans-serif; font-size: 1.1em; }
 
