@@ -33,7 +33,7 @@
 	var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
 
 	function rebase(link) {
-		return (link[0]==='/' ? 'https://dascritch.net/' : '') + link ;
+		return (link[0]==='/' ? 'https://dascritch.net' : '') + link ;
 	}
 
 	$(function(){
