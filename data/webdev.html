@@ -7,12 +7,14 @@
 	<meta name="description" lang="fr" content="Construction de site web, réflexions sur l'accessibilité, les interfaces, les normes et les langages techniques." />
 	<meta name="copyright" content="CC pour les textes" />
 	<meta name="author" content="Xavier Mouton-Dubosc" />
-	<meta name="date" scheme="W3CDTF" content="2018-01-23T05:32:33+01:00" />
+	<meta name="date" scheme="W3CDTF" content="2018-11-06T19:27:27+01:00" />
 
 	<link rel="contents" href="https://dascritch.net/archive" title="Archives" />
 																<link rel="prev" title="billets précédents" href="https://dascritch.net/category/Webdev/page/2" />
 				
-											<link rel="chapter" href="https://dascritch.net/post/2018/01/08/En-20-lignes-pas-plus-%3A-g%C3%A9rer-les-options-d-appel-de-tes-scripts-bash" title="En 20 lignes pas plus : gérer les options d'appel de tes scripts bash" />
+											<link rel="chapter" href="https://dascritch.net/post/2018/11/06/Reconstruire-son-lecteur-audio-pour-le-web" title="Reconstruire son lecteur audio pour le web" />
+					<link rel="chapter" href="https://dascritch.net/post/2018/08/17/En-20-lignes-pas-plus-%3A-Le-focus-sur-le-champ-de-recherche" title="En 20 lignes pas plus : Le focus sur le champ de recherche" />
+					<link rel="chapter" href="https://dascritch.net/post/2018/01/08/En-20-lignes-pas-plus-%3A-g%C3%A9rer-les-options-d-appel-de-tes-scripts-bash" title="En 20 lignes pas plus : gérer les options d'appel de tes scripts bash" />
 					<link rel="chapter" href="https://dascritch.net/post/2017/09/25/En-20-lignes-pas-plus-%3A-un-verrou-non-concurrentiel-pour-tes-scripts-bash" title="En 20 lignes pas plus : un verrou non-concurrentiel pour tes scripts bash" />
 					<link rel="chapter" href="https://dascritch.net/post/2017/09/04/Les-joies-de-la-communaut%C3%A9-open-source" title="Les joies de la communauté open-source" />
 					<link rel="chapter" href="https://dascritch.net/post/2017/02/15/Une-%28pompeuse%29-histoire-de-la-cryptographie" title="Une (pompeuse) histoire de la cryptographie" />
@@ -30,8 +32,6 @@
 					<link rel="chapter" href="https://dascritch.net/post/2014/08/19/Formulaire-de-contact-ou-mailto" title="Formulaire de contact ou mailto: ?" />
 					<link rel="chapter" href="https://dascritch.net/post/2014/07/08/Travaux-d-%C3%A9t%C3%A9" title="Travaux d'été" />
 					<link rel="chapter" href="https://dascritch.net/post/2014/06/24/Sniffeur-d-ancre" title="Sniffeur d'ancre" />
-					<link rel="chapter" href="https://dascritch.net/post/2014/06/18/Proposals-about-img" title="Proposals about ‹img /›" />
-					<link rel="chapter" href="https://dascritch.net/post/2014/06/17/Propositions-en-img" title="Propositions en ‹img /›" />
 	
 	<!--
 	Merci de vous intéresser au code source généré.
@@ -49,10 +49,10 @@
 	<link rel="stylesheet" type="text/css" href="/themes/DSN13/ie.css" media="screen" />
 <![endif]-->
 
-<link rel="stylesheet" type="text/css" href="/themes/DSN13/compressed.css?25112017" />
-<script async="async" src="/themes/DSN13/compressed.js?25112017"></script>
+<link rel="stylesheet" type="text/css" href="/themes/DSN13/compressed.css?21092018" />
+<script async="async" src="/themes/DSN13/compressed.js?21092018"></script>
 
-<script type="text/javascript" src="//playlist.dascritch.net/ondeplayer.js" async defer></script>
+<script type="text/javascript" src="/themes/DSN13/cpu-audio.js?21092018" async defer></script>
 
 <link rel="shortcut icon" type="image/x-icon" href="/nav/favicon/dasmile.png" />
 <link rel="search" type="application/opensearchdescription+xml" title="Da Scritch blog" href="/blogfind.xml" />
@@ -97,7 +97,7 @@
 			<a title="DaScritch.com" href="http://dascritch.com" class="nobackground"><img src="/themes/DSN13/img/entete1.svg#com" alt="DaScritch.com"></a>
 		</li>
 		<li class="li1">
-			<a href="http://dascritch.net/category/Radio" class="nobackground"><img src="https://dascritch.net/vrac/.blog2/radio/.cpu_logo_liseret_t.png" alt="CPU" width="34" height="34" /></a>
+			<a href="http://cpu.pm" class="nobackground"><img src="https://dascritch.net/vrac/.blog2/radio/.cpu_logo_liseret_t.png" alt="CPU" width="34" height="34" /></a>
 		</li>
 		<li class="li1">
 			<a href="http://dascritch.net/tag/privacy" class="nobackground">Confidentialité</a>
@@ -121,7 +121,90 @@
 											</div>
 
 					<div class="content-inner">
-																			<article id="p2454" class="post short odd first" lang="fr" xml:lang="fr">
+																			<article id="p3135" class="post short odd first" lang="fr" xml:lang="fr">
+
+	<p class="day-date"><time datetime="2018-11-06T12:25:00+01:00">mardi  6 novembre 2018</time></p>	
+	<h2 class="post-title"><a href="https://dascritch.net/post/2018/11/06/Reconstruire-son-lecteur-audio-pour-le-web">Reconstruire son lecteur audio pour le web</a></h2>
+	
+	<div class="post-attr">
+		<p class="post-info">
+						<span class="post-date"><abbr title="mardi 6 novembre">hier</abbr> à 12:25</span>
+
+							<span class="post-cat"><a 
+				href="https://dascritch.net/category/Webdev">Webdev</a></span>
+					</p>
+		
+									<ul class="post-tags">
+							<li><a href="https://dascritch.net/tag/cpu">cpu</a></li> 
+												<li><a href="https://dascritch.net/tag/css">css</a></li> 
+												<li><a href="https://dascritch.net/tag/github">github</a></li> 
+												<li><a href="https://dascritch.net/tag/html">html</a></li> 
+												<li><a href="https://dascritch.net/tag/javascript">javascript</a></li> 
+												<li><a href="https://dascritch.net/tag/libre">libre</a></li> 
+												<li><a href="https://dascritch.net/tag/projet">projet</a></li> 
+												<li><a href="https://dascritch.net/tag/self-business">self-business</a></li> 
+							</ul>
+						</div>    
+
+	
+			<div class="post-content">
+			<a href="https://dascritch.net/post/2018/11/06/Reconstruire-son-lecteur-audio-pour-le-web" class="post-summary">
+				<img alt="" src="/vrac/.blog2/webdev/1810-tagcpupm/.1810-tagcpupm-realplayerplus_t.png" class="post-icon" />				<p>
+					Ou comment j'ai bricolé longtemps les pages web pour mettre du son, les différents players que j'ai essayé, que j'ai écrit et la livraison du petit dernier.				</p>
+			</a>
+		</div>
+	
+	
+			<p class="post-info-co">
+						<a href="https://dascritch.net/post/2018/11/06/Reconstruire-son-lecteur-audio-pour-le-web#comments" class="comment_count">
+								un commentaire				</a>
+									
+
+				</p>
+	</article>
+
+																				<article id="p3134" class="post short  " lang="fr" xml:lang="fr">
+
+	<p class="day-date"><time datetime="2018-08-17T13:42:00+02:00">vendredi 17 août 2018</time></p>	
+	<h2 class="post-title"><a href="https://dascritch.net/post/2018/08/17/En-20-lignes-pas-plus-%3A-Le-focus-sur-le-champ-de-recherche">En 20 lignes pas plus : Le focus sur le champ de recherche</a></h2>
+	
+	<div class="post-attr">
+		<p class="post-info">
+						<span class="post-date">le vendredi 17 août 2018 à 13:42</span>
+
+							<span class="post-cat"><a 
+				href="https://dascritch.net/category/Webdev">Webdev</a></span>
+					</p>
+		
+									<ul class="post-tags">
+							<li><a href="https://dascritch.net/tag/cpu">cpu</a></li> 
+												<li><a href="https://dascritch.net/tag/css">css</a></li> 
+												<li><a href="https://dascritch.net/tag/design">design</a></li> 
+												<li><a href="https://dascritch.net/tag/dom">dom</a></li> 
+												<li><a href="https://dascritch.net/tag/html">html</a></li> 
+												<li><a href="https://dascritch.net/tag/javascript">javascript</a></li> 
+												<li><a href="https://dascritch.net/tag/projet">projet</a></li> 
+							</ul>
+						</div>    
+
+	
+			<div class="post-content">
+			<a href="https://dascritch.net/post/2018/08/17/En-20-lignes-pas-plus-%3A-Le-focus-sur-le-champ-de-recherche" class="post-summary">
+				<img alt="" src="/vrac/.blog2/webdev/1808-Cpu-Focus/.1808-cpu-focus-layout_t.jpg" class="post-icon" />				<p>
+					Tout est une question d'accessibilité, donc de praticité de votre site web : moins y'a de clics, mieux c'est.				</p>
+			</a>
+		</div>
+	
+	
+			<p class="post-info-co">
+						<a href="https://dascritch.net/post/2018/08/17/En-20-lignes-pas-plus-%3A-Le-focus-sur-le-champ-de-recherche#comments" class="comment_count">
+												</a>
+									
+
+				</p>
+	</article>
+
+																				<article id="p2454" class="post short odd " lang="fr" xml:lang="fr">
 
 	<p class="day-date"><time datetime="2018-01-08T05:07:00+01:00">lundi  8 janvier 2018</time></p>	
 	<h2 class="post-title"><a href="https://dascritch.net/post/2018/01/08/En-20-lignes-pas-plus-%3A-g%C3%A9rer-les-options-d-appel-de-tes-scripts-bash">En 20 lignes pas plus : gérer les options d'appel de tes scripts bash</a></h2>
@@ -863,92 +946,6 @@
 				</p>
 	</article>
 
-																				<article id="p2246" class="post short odd " lang="en" xml:lang="en">
-
-	<p class="day-date"><time datetime="2014-06-18T09:51:00+02:00">mercredi 18 juin 2014</time></p>	
-	<h2 class="post-title"><a href="https://dascritch.net/post/2014/06/18/Proposals-about-img">Proposals about ‹img /›</a></h2>
-	
-	<div class="post-attr">
-		<p class="post-info">
-						<span class="post-date">le mercredi 18 juin 2014 à 09:51</span>
-
-							<span class="post-cat"><a 
-				href="https://dascritch.net/category/Webdev">Webdev</a></span>
-					</p>
-		
-									<ul class="post-tags">
-							<li><a href="https://dascritch.net/tag/communaut%C3%A9">communauté</a></li> 
-												<li><a href="https://dascritch.net/tag/css">css</a></li> 
-												<li><a href="https://dascritch.net/tag/design">design</a></li> 
-												<li><a href="https://dascritch.net/tag/dom">dom</a></li> 
-												<li><a href="https://dascritch.net/tag/html">html</a></li> 
-												<li><a href="https://dascritch.net/tag/javascript">javascript</a></li> 
-												<li><a href="https://dascritch.net/tag/mobilit%C3%A9">mobilité</a></li> 
-												<li><a href="https://dascritch.net/tag/ordinateur">ordinateur</a></li> 
-												<li><a href="https://dascritch.net/tag/regex">regex</a></li> 
-							</ul>
-						</div>    
-
-	
-			<div class="post-content">
-			<a href="https://dascritch.net/post/2014/06/18/Proposals-about-img" class="post-summary">
-				<img alt="Placer iconographie du dossier ici" src="/vrac/.blog2/webdev/1403-Img/.1403-Img-iconograp_ie_t.png" class="post-icon" />				<p>
-					This is the translated final part of a series about the ‹img /› tag. I'm focusing on the srcset="" attribute,  created to resolve the problem to load a source accordingly to the device pixel density. I believe in a better solution. So let's try to make a proposal to the W3C…				</p>
-			</a>
-		</div>
-	
-	
-			<p class="post-info-co">
-						<a href="https://dascritch.net/post/2014/06/18/Proposals-about-img#comments" class="comment_count">
-												</a>
-									
-
-				</p>
-	</article>
-
-																				<article id="p2241" class="post short  " lang="fr" xml:lang="fr">
-
-	<p class="day-date"><time datetime="2014-06-17T10:57:00+02:00">mardi 17 juin 2014</time></p>	
-	<h2 class="post-title"><a href="https://dascritch.net/post/2014/06/17/Propositions-en-img">Propositions en ‹img /›</a></h2>
-	
-	<div class="post-attr">
-		<p class="post-info">
-						<span class="post-date">le mardi 17 juin 2014 à 10:57</span>
-
-							<span class="post-cat"><a 
-				href="https://dascritch.net/category/Webdev">Webdev</a></span>
-					</p>
-		
-									<ul class="post-tags">
-							<li><a href="https://dascritch.net/tag/communaut%C3%A9">communauté</a></li> 
-												<li><a href="https://dascritch.net/tag/css">css</a></li> 
-												<li><a href="https://dascritch.net/tag/design">design</a></li> 
-												<li><a href="https://dascritch.net/tag/dom">dom</a></li> 
-												<li><a href="https://dascritch.net/tag/html">html</a></li> 
-												<li><a href="https://dascritch.net/tag/javascript">javascript</a></li> 
-												<li><a href="https://dascritch.net/tag/mobilit%C3%A9">mobilité</a></li> 
-												<li><a href="https://dascritch.net/tag/ordinateur">ordinateur</a></li> 
-												<li><a href="https://dascritch.net/tag/regex">regex</a></li> 
-							</ul>
-						</div>    
-
-	
-			<div class="post-content">
-			<a href="https://dascritch.net/post/2014/06/17/Propositions-en-img" class="post-summary">
-				<img alt="Placer iconographie du dossier ici" src="/vrac/.blog2/webdev/1403-Img/.1403-Img-iconograp_ie_t.png" class="post-icon" />				<p>
-					Fin du dossier sur la balise ‹img /› avec l'attribut srcset="", sensé résoudre le problème de source en fonction de la finesse d'image. Oui, mais je pense qu'on pouvait faire bien mieux. Bien bien mieux. Cela mérite proposition au W3C…				</p>
-			</a>
-		</div>
-	
-	
-			<p class="post-info-co">
-						<a href="https://dascritch.net/post/2014/06/17/Propositions-en-img#comments" class="comment_count">
-								6 commentaires				</a>
-									
-
-				</p>
-	</article>
-
 																<p class="pagination">
 					<a href="https://dascritch.net/category/Webdev/page/2" class="prev">&#171; billets précédents</a> - 
 				
@@ -966,7 +963,7 @@
 <a href="//cpu.dascritch.net" class="c"><img src="//dascritch.net/vrac/.blog2/radio/cpu_logo_liseret.png" alt="C.P.U. Carré Petit Utile" /></a>
 </div>
 <div class="widget" id="search">
-<h2><label for="q">Recherche</label></h2><form action="https://dascritch.net/" method="get" role="search"><fieldset><p><input type="text" size="10" maxlength="255" id="q" name="q" value="" /> <input type="submit" class="submit" value="ok" /></p></fieldset></form>
+<h2><label for="q">Recherche</label></h2><form action="https://dascritch.net/" method="get" role="search"><fieldset><p><input type="text" size="10" maxlength="255" id="q" name="q" value=""  aria-label="Recherche"/> <input type="submit" class="submit" value="ok" /></p></fieldset></form>
 </div>
 <div class="widget categories ">
 <h2>Catégories</h2><ul><li><a href="https://dascritch.net/category/General">General</a></li><li><a href="https://dascritch.net/category/Vide-grenier">Vide-Grenier</a></li><li><a href="https://dascritch.net/category/Radio">Radio</a></li><li><a href="https://dascritch.net/category/Lu">Lu</a></li><li><a href="https://dascritch.net/category/Vu">Vu</a></li><li><a href="https://dascritch.net/category/Entendu">Entendu</a></li><li><a href="https://dascritch.net/category/Ma-vie-est-une-sitcom">Ma vie est une sitcom</a></li><li><a href="https://dascritch.net/category/Deuxcents-dhumour">2 ¢ d'humour</a></li><li><a href="https://dascritch.net/category/Gizmo">Gizmo</a></li><li class="category-current"><a href="https://dascritch.net/category/Webdev">Webdev</a></li><li><a href="https://dascritch.net/category/Sortons">Sortons</a></li></ul>
@@ -987,10 +984,10 @@
         </div>
 
 		<div class="widget selected ">
-<h2>À retenir</h2><ul> <li><a href="https://dascritch.net/post/2017/10/30/%C3%89coutez-la-cryptoparty-d-automne">Écoutez la cryptoparty d'automne</a></li>  <li><a href="https://dascritch.net/post/2014/05/14/Pourquoi-je-porte-un-treillis-customise">Pourquoi je porte un treillis customisé</a></li>  <li><a href="https://dascritch.net/post/2014/05/13/Pourquoi-nous-collons-des-stickers-sur-nos-portables">Pourquoi nous collons des stickers sur nos portables</a></li>  <li><a href="https://dascritch.net/post/2014/05/07/Je-suis-un-Bagger">Je suis un Bagger. M'inviteras-tu à Brown Bag Luncher ?</a></li>  <li><a href="https://dascritch.net/post/2014/03/25/Histoires-en-img">Histoires en ‹img /›</a></li>  <li><a href="https://dascritch.net/post/2014/01/28/CryptoParty-2-%3A-Votre-vie-priv%C3%A9e-avant-celles-des-pr%C3%A9sidents">CryptoParty 2 : Votre vie privée avant celles des présidents</a></li>  <li><a href="https://dascritch.net/post/2014/01/07/Json-ou-l-histoire-d-une-licence-presque-libre">Json ou l'histoire d'une licence presque libre</a></li>  <li><a href="https://dascritch.net/post/2013/10/15/Vers-une-nouvelle-%C3%A9thique">Vers une nouvelle éthique</a></li>  <li><a href="https://dascritch.net/post/2013/07/09/Conditions-G%C3%A9n%C3%A9rales-de-Mise-En-Relation">Conditions Générales de Mise En Relation</a></li>  <li><a href="https://dascritch.net/post/2013/03/26/Dirty-Hacky-%3A-je-parse-en-HTML-.357-SW">Dirty Hacky : je parse en HTML .357 S&amp;W</a></li>  <li><a href="https://dascritch.net/post/2012/11/30/2012%2C-fin-d-un-monde-du-web">2012, fin d'un monde du web ?</a></li>  <li><a href="https://dascritch.net/post/2012/03/06/Des-emojis-dans-l-Unicode-1">Des emoji dans l'Unicode ① Ces smilies chatoyants</a></li>  <li><a href="https://dascritch.net/post/2011/05/25/Comment-se-retrouver-dans-mon-blog">Comment se retrouver dans mon blog</a></li>  <li><a href="https://dascritch.net/post/2011/05/16/Sony%2C-Playstation-Network-%3A-N%C3%A9gligence-caract%C3%A9ris%C3%A9e-%281/3%29">Sony, Playstation Network : Négligence caractérisée (1/3)</a></li>  <li><a href="https://dascritch.net/post/2011/01/19/Badges">Badges</a></li>  <li><a href="https://dascritch.net/post/2008/10/21/Psychanalyse-du-clavier-la-premiere-consultation">Psychanalyse du clavier, la première consultation</a></li>  <li><a href="https://dascritch.net/post/2008/09/02/Le-Logiciel-Libre-explique-par-dexcellents-pedagogues">Reprenez le contrôle de votre ordinateur</a></li>  <li><a href="https://dascritch.net/post/2007/02/23/695-quatre-choses-chainmail">Quatre choses (chainmail)</a></li>  <li><a href="https://dascritch.net/post/2006/10/13/562-la-seconde-guerre-du-web-n-aura-pas-lieu">La seconde guerre du web n'aura pas lieu</a></li>  <li><a href="https://dascritch.net/post/2006/05/30/438-desinfectez-nos-machines">Désinfectez nos machines</a></li>  <li><a href="https://dascritch.net/post/2006/04/13/374-dadvsi-brazil-tout-de-suite">DADVSI : Brazil tout de suite</a></li>  <li><a href="https://dascritch.net/post/2005/11/07/263-it-s-a-bit-strong">It's a bit strong...</a></li> </ul>
+<h2>À retenir</h2><ul> <li><a href="https://dascritch.net/post/2018/11/06/Reconstruire-son-lecteur-audio-pour-le-web">Reconstruire son lecteur audio pour le web</a></li>  <li><a href="https://dascritch.net/post/2018/10/08/La-s%C3%A9curit%C3%A9-informatique-grand-public-est-un-%C3%A9chec">La sécurité informatique grand public est un échec</a></li>  <li><a href="https://dascritch.net/post/2017/10/30/%C3%89coutez-la-cryptoparty-d-automne">Écoutez la cryptoparty d'automne</a></li>  <li><a href="https://dascritch.net/post/2014/05/14/Pourquoi-je-porte-un-treillis-customise">Pourquoi je porte un treillis customisé</a></li>  <li><a href="https://dascritch.net/post/2014/05/13/Pourquoi-nous-collons-des-stickers-sur-nos-portables">Pourquoi nous collons des stickers sur nos portables</a></li>  <li><a href="https://dascritch.net/post/2014/05/07/Je-suis-un-Bagger">Je suis un Bagger. M'inviteras-tu à Brown Bag Luncher ?</a></li>  <li><a href="https://dascritch.net/post/2014/03/25/Histoires-en-img">Histoires en ‹img /›</a></li>  <li><a href="https://dascritch.net/post/2014/01/28/CryptoParty-2-%3A-Votre-vie-priv%C3%A9e-avant-celles-des-pr%C3%A9sidents">CryptoParty 2 : Votre vie privée avant celles des présidents</a></li>  <li><a href="https://dascritch.net/post/2014/01/07/Json-ou-l-histoire-d-une-licence-presque-libre">Json ou l'histoire d'une licence presque libre</a></li>  <li><a href="https://dascritch.net/post/2013/10/15/Vers-une-nouvelle-%C3%A9thique">Vers une nouvelle éthique</a></li>  <li><a href="https://dascritch.net/post/2013/07/09/Conditions-G%C3%A9n%C3%A9rales-de-Mise-En-Relation">Conditions Générales de Mise En Relation</a></li>  <li><a href="https://dascritch.net/post/2013/03/26/Dirty-Hacky-%3A-je-parse-en-HTML-.357-SW">Dirty Hacky : je parse en HTML .357 S&amp;W</a></li>  <li><a href="https://dascritch.net/post/2012/11/30/2012%2C-fin-d-un-monde-du-web">2012, fin d'un monde du web ?</a></li>  <li><a href="https://dascritch.net/post/2012/03/06/Des-emojis-dans-l-Unicode-1">Des emoji dans l'Unicode ① Ces smilies chatoyants</a></li>  <li><a href="https://dascritch.net/post/2011/05/25/Comment-se-retrouver-dans-mon-blog">Comment se retrouver dans mon blog</a></li>  <li><a href="https://dascritch.net/post/2011/05/16/Sony%2C-Playstation-Network-%3A-N%C3%A9gligence-caract%C3%A9ris%C3%A9e-%281/3%29">Sony, Playstation Network : Négligence caractérisée (1/3)</a></li>  <li><a href="https://dascritch.net/post/2011/01/19/Badges">Badges</a></li>  <li><a href="https://dascritch.net/post/2008/10/21/Psychanalyse-du-clavier-la-premiere-consultation">Psychanalyse du clavier, la première consultation</a></li>  <li><a href="https://dascritch.net/post/2008/09/02/Le-Logiciel-Libre-explique-par-dexcellents-pedagogues">Reprenez le contrôle de votre ordinateur</a></li>  <li><a href="https://dascritch.net/post/2007/02/23/695-quatre-choses-chainmail">Quatre choses (chainmail)</a></li>  <li><a href="https://dascritch.net/post/2006/10/13/562-la-seconde-guerre-du-web-n-aura-pas-lieu">La seconde guerre du web n'aura pas lieu</a></li>  <li><a href="https://dascritch.net/post/2006/05/30/438-desinfectez-nos-machines">Désinfectez nos machines</a></li>  <li><a href="https://dascritch.net/post/2006/04/13/374-dadvsi-brazil-tout-de-suite">DADVSI : Brazil tout de suite</a></li>  <li><a href="https://dascritch.net/post/2005/11/07/263-it-s-a-bit-strong">It's a bit strong...</a></li> </ul>
 </div>
 <div class="widget lastposts ">
-<h2>Derniers billets</h2><ul><li><a href="https://dascritch.net/post/2018/01/12/CPU-Ex0071-Bonjour-%C3%A0-toi%2C-Enfant-du-Futur-Imm%C3%A9diat-%3A-P%C3%A9nible-%C3%A0-table">CPU Ex0071 Bonjour à toi, Enfant du Futur Immédiat : Pénible à table</a></li><li><a href="https://dascritch.net/post/2018/01/08/En-20-lignes-pas-plus-%3A-g%C3%A9rer-les-options-d-appel-de-tes-scripts-bash">En 20 lignes pas plus : gérer les options d'appel de tes scripts bash</a></li><li><a href="https://dascritch.net/post/2018/01/05/CPU-Ex0070-Bonjour-%C3%A0-toi%2C-Enfant-du-Futur-Imm%C3%A9diat-%3A-Compact">CPU Ex0070 Bonjour à toi, Enfant du Futur Immédiat : Compact</a></li><li><a href="https://dascritch.net/post/2018/01/02/%E2%99%AB-Happy-New-Yeeeaaar-2018">♫ Happy New Yeeeaaar 2018 !</a></li><li><a href="https://dascritch.net/post/2017/12/14/CPU-Ex0069-Bonsoir-%C3%A0-vous%2C-entre-IA%2C-p%C3%A9riph%C3%A9riques-et-adultes-consentants">CPU Ex0069 Bonsoir à vous, entre IA, périphériques et adultes consentants</a></li><li><a href="https://dascritch.net/post/2017/12/14/Teasing-avant-un-CPU-exceptionnel">Teasing avant un CPU exceptionnel</a></li><li><a href="https://dascritch.net/post/2017/12/07/CPU-Ex0068-Bonjour-%C3%A0-toi%2C-Enfant-du-Futur-Imm%C3%A9diat-%3A-Homme-orchestre">CPU Ex0068 Bonjour à toi, Enfant du Futur Immédiat : Homme-orchestre</a></li><li><a href="https://dascritch.net/post/2017/11/30/CPU-Ex0067-Avant-de-d%C3%A9mystifier-le-RGPD">CPU Ex0067 Avant de démystifier le RGPD</a></li><li><a href="https://dascritch.net/post/2017/11/10/CPU-Ex0066-%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D1%83%D1%8E-%D0%B2%D0%B0%D1%81%2C-%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B8%D1%89-Enfant-du-Futur-Imm%C3%A9diat-%3A-L-informatique-derri%C3%A8re-le-Mur">CPU Ex0066 Приветствую вас, товарищ Enfant du Futur Immédiat : L'informatique derrière le Mur</a></li><li><a href="https://dascritch.net/post/2017/11/07/Des-ordinateurs-familiaux-sovi%C3%A9tiques-en-studio">Des ordinateurs familiaux soviétiques en studio</a></li></ul>
+<h2>Derniers billets</h2><ul><li><a href="https://dascritch.net/post/2018/11/06/Reconstruire-son-lecteur-audio-pour-le-web">Reconstruire son lecteur audio pour le web</a></li><li><a href="https://dascritch.net/post/2018/10/22/Enregistrements-en-public-de-CPU-le-1er-Novembre">Enregistrements en public de CPU le 1er Novembre</a></li><li><a href="https://dascritch.net/post/2018/08/17/CPU-Ex0093-Bonjour-%C3%A0-toi%2C-Enfant-du-Futur-Imm%C3%A9diat-%3A-Guerre-froide%2C-th%C3%A9%C3%A2tre-d-ombres-%28Des-espions-et-des-ondes%29">CPU Ex0093 Bonjour à toi, Enfant du Futur Immédiat : Guerre froide, théâtre d'ombres</a></li><li><a href="https://dascritch.net/post/2018/10/11/CPU-Ex0092">CPU Ex0092 Bonjour à toi, Enfant du Futur Immédiat : La mission évangélique</a></li><li><a href="https://dascritch.net/post/2018/10/08/La-s%C3%A9curit%C3%A9-informatique-grand-public-est-un-%C3%A9chec">La sécurité informatique grand public est un échec</a></li><li><a href="https://dascritch.net/post/2018/09/27/CPU-Ex0090-Bonjour-%C3%A0-toi%2C-Enfant-du-Futur-Imm%C3%A9diat-%3A-Le-crayon-optique-et-l-hexagone">CPU Ex0090 Bonjour à toi, Enfant du Futur Immédiat : Le crayon optique et l'hexagone</a></li><li><a href="https://dascritch.net/post/2018/09/20/CPU-Ex0089-Bonjour-%C3%A0-toi%2C-Enfant-du-Futur-Imm%C3%A9diat-%3A-%C3%89coutez-et-r%C3%A9p%C3%A9tez">CPU Ex0089 Bonjour à toi, Enfant du Futur Immédiat : Écoutez et répétez</a></li><li><a href="https://dascritch.net/post/2018/09/13/CPU-Ex0088-Bonjour-%C3%A0-toi%2C-Enfant-du-Futur-Imm%C3%A9diat-%3A-Dompter-la-puce">CPU Ex0088 Bonjour à toi, Enfant du Futur Immédiat : Dompter la puce</a></li><li><a href="https://dascritch.net/post/2018/08/24/La-rentr%C3%A9e-de-CPU-en-public">La rentrée de CPU en public</a></li><li><a href="https://dascritch.net/post/2018/08/17/En-20-lignes-pas-plus-%3A-Le-focus-sur-le-champ-de-recherche">En 20 lignes pas plus : Le focus sur le champ de recherche</a></li></ul>
 </div>
 		
 		<div id="aussi">
