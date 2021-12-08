@@ -23,8 +23,8 @@
 
 
 body {
-/*	width : 100%;*/
 	overflow-x : hidden;
+	color : black;
 	background : url(./graphy-light.png);
 	font-family: 'Titillium Web','Ubuntu', sans-serif;
 	font-size: 1.1em;
@@ -46,6 +46,7 @@ a , a:visited {
 
 a:hover , a.active{
 	background : rgba(0,0,255,0.2);
+	text-decoration: underline;
 }
 
 a img {
@@ -241,7 +242,6 @@ p {
 
 .teaser {
 	display : inline-block;
-	background : #fff;
 	background : rgba(255,255,255,0.4);
 	padding : 6px;
 }
@@ -435,6 +435,7 @@ footer span {
 		transform:rotate(0deg); 
 		-moz-transform:rotate(0deg);
 		-webkit-transform:rotate(0deg); 
+		background : black ;
 		background-image: gradient(
 			linear,
 			left bottom,
@@ -482,4 +483,34 @@ footer span {
 
 #konami *:hover {
 	border : 1px #A2A2A2 solid;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+	body, a.bloc {
+		color : #ccc;
+	}
+	body {
+		background : url(./graphy-dark.png);
+	}
+
+	a , a:visited, a.bloc h3 {
+		color : #aaF;
+	}
+
+	a:hover , a.active{
+		background : rgba(0,0,255,0.2);
+	}
+
+	.bloc, .teaser {
+		background-color : rgba(255,255,255,0.1);
+	}
+
+	#carte {
+		color : black;
+	}
+	#carte a {
+		color : #007;
+	}
 }
