@@ -172,11 +172,12 @@ h2 {
 	margin : 4px auto;
 }
 
-#me {
+#me, .describ {
 	display: grid;
 	max-width: 800px;
 	place-items: center center;
 	margin: auto;
+	padding : 10px 10px;
 }
 
 .chapeau {
@@ -355,10 +356,6 @@ footer span {
 		vertical-align: middle;
 	}
 
-	#me {
-		margin : 10px 10px;
-	}
-
 	#me p {
 		clear : left;
 	}
@@ -411,10 +408,6 @@ footer span {
 {
 	p {
 		font-size: 0.9em;
-	}
-
-	#me {
-		margin : 10px 10px;
 	}
 
 	#carte {
