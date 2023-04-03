@@ -464,9 +464,7 @@ menu a, menu a:visited, menu a:hover, menu a:active { display: inline-block; bor
 
 .family-name { white-space: nowrap; }
 
-#nightshot { width: 128px; height: 128px; margin: 0 20px 10px 0; }
-
-#me .columns { clear: left; }
+#nightshot { width: 128px; height: 128px; margin: 0 20px 10px 0; display: inline-block; vertical-align: middle; }
 
 #carte { width: 415px; /* 83mm x 52mm */ height: 260px; text-align: center; position: relative; float: right; border: 1px grey solid; box-shadow: #ddd 6px 10px 10px 5px; box-shadow: rgba(0, 0, 0, 0.3) 6px 10px 10px 5px; margin-bottom: -60px; margin-left: -20px; z-index: 10; /*  translateX was 40px, but incredibely hard to tune */ -moz-transform: rotate(10deg) translateX(5px) translateY(-100px); -o-transform: rotate(10deg) translateX(5px) translateY(-100px); -ms-transform: rotate(10deg) translateX(5px) translateY(-100px); -webkit-transform: rotate(10deg) translateX(5px) translateY(-100px); transform: rotate(10deg) translateX(5px) translateY(-100px); background-color: white; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #e6e6e6), color-stop(0.6, #f5f5f5), color-stop(0.8, #fff)); background-image: -moz-linear-gradient(center bottom, #e6e6e6 20%, #f5f5f5 60%, #fff 80%); background-image: -o-linear-gradient(center bottom, #e6e6e6 20%, #f5f5f5 60%, #fff 80%); background-image: -ms-linear-gradient(center bottom, #e6e6e6 20%, #f5f5f5 60%, #fff 80%); background-image: gradient(linear, left bottom, left top, color-stop(0.2, #e6e6e6), color-stop(0.6, #f5f5f5), color-stop(0.8, #fff)); background-image: linear-gradient(center bottom, #e6e6e6 20%, #f5f5f5 60%, #fff 80%); }
 
@@ -475,6 +473,8 @@ menu a, menu a:visited, menu a:hover, menu a:active { display: inline-block; bor
 h1 { font-weight: normal; text-align: left; }
 
 h2 { text-align: center; margin: 4px auto; }
+
+#me { display: grid; max-width: 800px; place-items: center center; margin: auto; }
 
 .chapeau { text-align: center; max-width: 800px; margin: 0 auto; }
 
@@ -518,8 +518,7 @@ footer { text-align: center; }
 
 footer span { display: inline-block; }
 
-@media all and (min-width: 1024px) { .describ, .columns { clear: both; -moz-column-width: 400px; -webkit-column-width: 400px; -ms-column-width: 400px; -o-column-width: 400px; column-width: 400px; -moz-column-gap: 25px; -webkit-column-gap: 25px; -ms-column-gap: 25px; -o-column-gap: 25px; column-gap: 25px; }
-  .level2 article, .level3 article { max-width: 800px; } }
+@media all and (min-width: 1024px) { .level2 article, .level3 article { max-width: 800px; } }
 @media all and (max-width: 849px) { #carte { width: 375px; /* 415 - (4px de rognés × 2 × 5 <a> */ }
   #carte p a { padding: 4px; }
   #nightshot { width: 96px; height: 96px; margin-right: 10px; }

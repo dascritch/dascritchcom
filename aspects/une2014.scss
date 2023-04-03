@@ -116,11 +116,9 @@ menu a , menu a:visited , menu a:hover , menu a:active {
 #nightshot {
 	width : 128px;
 	height : 128px;
-	margin : 0 20px 10px 0 ;
-}
-
-#me .columns {
-	clear : left;
+	margin : 0 20px 10px 0;
+	display : inline-block;
+	vertical-align: middle;
 }
 
 #carte {
@@ -172,6 +170,13 @@ h1 {
 h2 {
 	text-align : center;
 	margin : 4px auto;
+}
+
+#me {
+	display: grid;
+	max-width: 800px;
+	place-items: center center;
+	margin: auto;
 }
 
 .chapeau {
@@ -289,21 +294,6 @@ footer span {
 
 @media all and (min-width: 1024px)
 {
-	.describ , .columns  {
-		clear : both;
-
-		-moz-column-width : 400px;
-		-webkit-column-width : 400px;
-		-ms-column-width : 400px;
-		-o-column-width : 400px;
-		column-width : 400px;
-
-		-moz-column-gap : 25px;
-		-webkit-column-gap : 25px;
-		-ms-column-gap : 25px;
-		-o-column-gap : 25px;
-		column-gap : 25px;
-	}
 
 	.level2 article , .level3 article{
 		max-width : 800px;
