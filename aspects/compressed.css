@@ -496,7 +496,7 @@ p { text-align: left; }
 
 #rea article { margin: 10px auto; }
 
-#rea img { float: right; max-width: 50%; }
+#rea img { float: right; max-width: 600px; }
 
 #rea header { position: relative; text-align: center; }
 

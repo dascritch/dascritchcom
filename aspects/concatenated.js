@@ -65,7 +65,7 @@
 				}
 				for (const entry of Object.values(data)) {
 					const article = document.createElement('article');
-					article.innerHTML = `<a class="bloc" href="'${rebase(entry.url)}"><img alt="" src="${rebase(entry.img)}" class="right" /><h3>${entry.title}</h3><p>${entry.intro}</p></a>`;
+					article.innerHTML = `<a class="bloc" href="'${rebase(entry.url)}"><img alt="" src="${rebase(entry.img)}" class="right" loading="lazy" /><h3>${entry.title}</h3><p>${entry.intro}</p></a>`;
 					contenant_element.insertBefore(article, plussurleblog_element);
 				}
 			})
