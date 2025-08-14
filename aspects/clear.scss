@@ -52,29 +52,7 @@ br.clear {
   line-height: 1px;
   font-size: 1px;
 }
-hr.clear {
-  visibility: hidden;
-}
-/* clearfix : http://www.positioniseverything.net/easyclearing.html */
-.clearfix:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-  overflow: hidden;
-}
-.clearfix {
-  display: inline-table;
-}
-/* Hides from IE-mac \*/
-.clearfix {
-  height: 1%;
-}
-.clearfix {
-  display: block;
-}
-/* End hide from IE-mac */
+
 /* Not visible */
 .offscreen {
   position: absolute;
@@ -86,14 +64,4 @@ hr.clear {
 }
 .none {
   display: none;
-}
-/* debug */
-.todo {
-  opacity: 0.5;
-}
-.todo:hover {
-  opacity: 1;
-}
-.blink {
-  text-decoration: blink;
 }

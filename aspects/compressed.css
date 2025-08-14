@@ -450,7 +450,9 @@ p { margin: 10px 0; }
 
 section, aside, footer { margin: 50px 20px 10px; }
 
-section { padding: 28px 0px 6px; text-align: center; }
+main { display: flex; flex-direction: column; align-items: baseline; }
+
+section { max-width: 1800px; padding: 28px 0px 6px; text-align: center; backdrop-filter: blur(2px); }
 
 .no { display: none; }
 
