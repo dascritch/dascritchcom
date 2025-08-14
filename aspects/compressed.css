@@ -450,7 +450,7 @@ p { margin: 10px 0; }
 
 section, aside, footer { margin: 50px 20px 10px; }
 
-main { display: flex; flex-direction: column; align-items: baseline; }
+main { display: flex; flex-direction: column; width: 100vw; align-items: center; }
 
 section { max-width: 1800px; padding: 28px 0px 6px; text-align: center; backdrop-filter: blur(2px); }
 
@@ -463,6 +463,8 @@ menu li { display: inline-block; padding: 0px; margin: 0px; }
 menu a, menu a:visited, menu a:hover, menu a:active { display: inline-block; border: none; padding: 3px 4px; color: white; }
 
 .favicon { width: 16px; height: 16px; }
+
+.fn strong { white-space: nowrap; }
 
 .family-name { white-space: nowrap; }
 
@@ -498,13 +500,15 @@ p { text-align: left; }
 
 #rea article { margin: 10px auto; }
 
-#rea img { float: right; max-width: 600px; }
+#rea header { display: flex; flex-direction: row; justify-content: center; position: relative; text-align: center; }
 
-#rea header { position: relative; text-align: center; }
+#rea img { flex: 0 0 600px; max-width: 600px; }
 
-.teaser { display: inline-block; background: rgba(255, 255, 255, 0.4); padding: 6px; }
+.teaser { flex: 0 0 600px; /*display : inline-block;*/ background: rgba(255, 255, 255, 0.4); padding: 6px; }
 
-.level2 article { display: inline-block; width: 45%; vertical-align: top; text-align: left; }
+.level2 div, .level3 div { display: flex; justify-content: center; flex-wrap: wrap; flex-basis: 50%; }
+
+.level2 article { display: grid; width: 45%; vertical-align: top; text-align: left; }
 
 .level2 img { width: 200px; max-width: 50% !important; margin: 0 10px 10px 0; }
 
@@ -512,7 +516,9 @@ p { text-align: left; }
 
 .level3 { text-align: center; }
 
-.level3 article { display: inline-block; width: 30%; vertical-align: top; text-align: left; }
+.level3 div { flex-basis: 33%; }
+
+.level3 article { display: grid; width: 30%; vertical-align: top; text-align: left; }
 
 .level3 img { max-width: 35% !important; margin: 0 0 10px  10px; }
 
@@ -521,20 +527,24 @@ footer { text-align: center; }
 footer span { display: inline-block; }
 
 @media all and (min-width: 1024px) { .level2 article, .level3 article { max-width: 800px; } }
+@media all and (max-width: 1200px) { #rea header { display: block; }
+  #rea article img { display: block; margin: 0 auto; width: 100%; } }
 @media all and (max-width: 849px) { #carte { width: 375px; /* 415 - (4px de rognés × 2 × 5 <a> */ }
   #carte p a { padding: 4px; }
   #nightshot { width: 96px; height: 96px; margin-right: 10px; }
   h1 { font-size: 1.7em; }
-  .level3 article { width: 45%; } }
+  .level3 article { width: 45%; }
+  #rea header { display: block; }
+  #rea article img { display: block; margin: 0 auto; width: 100%; } }
 @media all and (max-width: 720px) { #carte { position: relative; float: none; top: -90px; margin: 5px auto -60px; transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); background-image: gradient(linear, left bottom, left top, color-stop(0.8, #e6e6e6), color-stop(0.4, #f5f5f5), color-stop(0.2, #fff)); background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.8, #e6e6e6), color-stop(0.4, #f5f5f5), color-stop(0.2, #fff)); background-image: -moz-linear-gradient(center top, #e6e6e6 20%, #f5f5f5 60%, #fff 80%); }
   #nightshot { display: inline-block; vertical-align: middle; }
   #me p { clear: left; }
   .level2 article { display: block; width: auto; }
   .level3 article { width: 45%; } }
 @media all and (max-width: 620px) { section, aside, footer { margin: 20px 0px 10px; }
-  #rea article img { display: block; margin: 0 auto; width: 100%; }
   #rea article { width: 95%; vertical-align: middle; }
   #rea .teaser { position: relative; padding: 6px; width: auto; top: 0; left: 0; background: none; }
+  .level3 div { display: block; }
   .level3 article { display: block; width: auto; } }
 @media all and (max-width: 420px) { p { font-size: 0.9em; }
   #carte { width: 260px; top: -90px; left: -20px; margin: 5px auto -60px; transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); background: black; background-image: gradient(linear, left bottom, left top, color-stop(0.8, #e6e6e6), color-stop(0.4, #f5f5f5), color-stop(0.2, #fff)); background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.8, #e6e6e6), color-stop(0.4, #f5f5f5), color-stop(0.2, #fff)); background-image: -moz-linear-gradient(center top, #e6e6e6 20%, #f5f5f5 60%, #fff 80%); }

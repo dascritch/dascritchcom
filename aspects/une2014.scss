@@ -273,8 +273,15 @@ p {
 	padding : 6px;
 }
 
+.level2 div, .level3 div {
+	display : flex;
+	justify-content: center;
+	flex-wrap : wrap;
+	flex-basis : 50%;
+}
+
 .level2 article {
-	display : inline-block;
+	display : grid;
 	width : 45%;
 	vertical-align: top;
 	text-align : left;
@@ -294,8 +301,12 @@ p {
 	text-align: center;
 }
 
+.level3 div {
+	flex-basis : 33%;
+}
+
 .level3 article {
-	display : inline-block;
+	display : grid;
 	width : 30%;
 	vertical-align: top;
 	text-align : left;
@@ -435,6 +446,10 @@ footer span {
 		top : 0;
 		left : 0;
 		background : none;
+	}
+
+	.level3 div {
+		display : block
 	}
 
 	.level3 article {
