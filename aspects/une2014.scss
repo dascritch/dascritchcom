@@ -61,9 +61,19 @@ section, aside, footer {
 	margin : 50px 20px 10px;
 }
 
+main {
+	display : flex;
+	flex-direction : column;
+	align-items : baseline;
+	width: 100vw;
+	align-items : center;
+}
+
 section {
+	max-width : 1800px;
 	padding : 28px 0px 6px;
 	text-align : center;
+	backdrop-filter: blur(2px);
 }
 
 .no {
@@ -367,6 +377,15 @@ footer span {
 
 	.level3 article {
 		width : 45%;
+	}
+}
+
+
+@media all and (max-width: 1900px)
+{
+
+	section {
+
 	}
 }
 
