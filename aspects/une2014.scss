@@ -64,7 +64,6 @@ section, aside, footer {
 main {
 	display : flex;
 	flex-direction : column;
-	align-items : baseline;
 	width: 100vw;
 	align-items : center;
 }
@@ -247,21 +246,29 @@ p {
 	padding : 4px 8px;
 }
 
+
+
 #rea article {
 	margin : 10px auto;
 }
-#rea img {
-	float : right;
-	max-width : 600px;
-}
 
 #rea header {
+	display : flex;
+	flex-direction: row;
+	justify-content : center;
 	position : relative;
 	text-align:center;
 }
 
+
+#rea img {
+	flex :  0 0 600px;
+	max-width: 600px;
+}
+
 .teaser {
-	display : inline-block;
+	flex :  0 0 600px;
+	/*display : inline-block;*/
 	background : rgba(255,255,255,0.4);
 	padding : 6px;
 }
@@ -315,6 +322,19 @@ footer span {
 	}
 }
 
+@media all and (max-width: 1200px)
+{
+	#rea header {
+		display : block;
+	}
+
+	#rea article img {
+		display : block;
+		margin : 0 auto;
+		width : 100%;
+	}
+}
+
 @media all and (max-width: 849px)
 {
 	#carte {
@@ -337,6 +357,16 @@ footer span {
 
 	.level3 article {
 		width : 45%;
+	}
+
+	#rea header {
+		display : block;
+	}
+
+	#rea article img {
+		display : block;
+		margin : 0 auto;
+		width : 100%;
 	}
 }
 
@@ -382,28 +412,15 @@ footer span {
 	.level3 article {
 		width : 45%;
 	}
+
 }
 
-
-@media all and (max-width: 1900px)
-{
-
-	section {
-
-	}
-}
 
 @media all and (max-width: 620px)
 {
 
 	section, aside, footer {
 		margin : 20px 0px 10px;
-	}
-
-	#rea article img {
-		display : block;
-		margin : 0 auto;
-		width : 100%;
 	}
 
 	#rea article {
