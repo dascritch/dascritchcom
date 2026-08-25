@@ -46,60 +46,84 @@ function datasheets() {
 	sections.forEach(s => io.observe(s));
 }
 
-function feeder(url, element) {
-	const childrenNamed = (parent, name) =>
-	Array.from(parent.children).filter((el) => el.localName === name);
+async function feeder(url, element) {
 
-	const childNamed = (parent, name) => childrenNamed(parent, name)[0] ?? null;
+	async function fetch_feed(url, { proxy = null, signal, timeout = 10000 } = {}) {
+		const target = proxy ? proxy + encodeURIComponent(url) : url;
 
-	const textOf = (parent, ...names) => {
+		const controller = new AbortController();
+		const timer = setTimeout(() => controller.abort(), timeout);
+		signal?.addEventListener('abort', () => controller.abort(), { once: true });
+
+		try {
+			const response = await fetch(target, {
+				signal: controller.signal,
+				headers: { Accept: 'application/rss+xml, application/atom+xml, application/xml, text/xml' },
+			});
+			if (!response.ok) throw new Error(`HTTP ${response.status} ${response.statusText}`);
+			return parseFeed(await response.text());
+		} finally {
+			clearTimeout(timer);
+		}
+	}
+
+	const children_named = (parent, name) => Array.from(parent.children).filter((el) => el.localName === name);
+
+	function child_named(parent, name) {
+		return children_named(parent, name)[0] ?? null;
+	}
+
+	function text_of(parent, ...names) {
 		for (const name of names) {
-			const el = childNamed(parent, name);
-			if (el) return el.textContent.trim();
+			const el = child_named(parent, name);
+			if (el) {
+				return el.textContent.trim();
+			}
 		}
 		return '';
 	};
 
-	function parseFeed(xmlText) {
-		const doc = new DOMParser().parseFromString(xmlText, 'application/xml');
+	function parse_feed(xml_string) {
+		const doc = new DOMParser().parseFromString(xml_string, 'application/xml');
 
 		// DOMParser ne lève pas d'exception : il injecte un <parsererror>.
 		const error = doc.querySelector('parsererror');
-		if (error) throw new Error('XML invalide : ' + error.textContent.trim());
+		if (error) {
+			throw new Error('XML invalide : ' + error.textContent.trim());
+		} 
 
 		const root = doc.documentElement;
 
-		if (root.localName === 'feed') return parseAtom(root);          // Atom 1.0
 		if (root.localName === 'rss') {
-			const channel = childNamed(root, 'channel');
-			if (channel) return parseRss(channel);                        // RSS 2.0
+			const channel = child_named(root, 'channel');
+			if (channel) return parse_rss(channel);                        // RSS 2.0
 		}
 		if (root.localName === 'RDF') {                                 // RSS 1.0
-			const channel = childNamed(root, 'channel');
-			if (channel) return parseRss(channel, childrenNamed(root, 'item'));
+			const channel = child_named(root, 'channel');
+			if (channel) return parse_rss(channel, children_named(root, 'item'));
 		}
 
 		throw new Error('Format de flux non reconnu : <' + root.localName + '>');
 	}
 
-	function parseRss(channel, items = childrenNamed(channel, 'item')) {
+	function parse_rss(channel, items = children_named(channel, 'item')) {
 		return {
 			format: 'rss',
-			title: textOf(channel, 'title'),
-			link: textOf(channel, 'link'),
-			description: textOf(channel, 'description'),
+			title: text_of(channel, 'title'),
+			link: text_of(channel, 'link'),
+			description: text_of(channel, 'description'),
 			items: items.map((item) => {
-				const dateStr = textOf(item, 'pubDate', 'date');
-				const enclosure = childNamed(item, 'enclosure');
+				const dateStr = text_of(item, 'pubDate', 'date');
+				const enclosure = child_named(item, 'enclosure');
 				return {
-					title: textOf(item, 'title'),
-					link: textOf(item, 'link') || childNamed(item, 'guid')?.textContent.trim() || '',
+					title: text_of(item, 'title'),
+					link: text_of(item, 'link') || child_named(item, 'guid')?.textContent.trim() || '',
 					// encoded = <content:encoded>, souvent présent en plus de <description>
-					summary: textOf(item, 'description', 'encoded'),
-					author: textOf(item, 'creator', 'author'),
-					id: textOf(item, 'guid') || textOf(item, 'link'),
+					summary: text_of(item, 'description', 'encoded'),
+					author: text_of(item, 'creator', 'author'),
+					id: text_of(item, 'guid') || text_of(item, 'link'),
 					date: dateStr ? new Date(dateStr) : null,
-					categories: childrenNamed(item, 'category').map((c) => c.textContent.trim()),
+					categories: children_named(item, 'category').map((c) => c.textContent.trim()),
 					enclosure: enclosure
 						? { url: enclosure.getAttribute('url'), type: enclosure.getAttribute('type') }
 						: null,
@@ -108,14 +132,18 @@ function feeder(url, element) {
 		};
 	}
 
+	let promised = fetch_feed(url);
+	if (promised) {
+		promised.then( e => console.log(e));
+	}
 }
 
 function main() {
 	demail();
 	datasheets();
 	card();
+	feeder('https://dascritch.net/feed/category/Webdev/rss2', document.querySelector('#publications ul'))
 }
-
 
 if ( document.readyState === 'loading' ) {
 	document.addEventListener('DOMContentLoaded', main);
