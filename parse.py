@@ -2,7 +2,7 @@ import io, json
 from html.parser import HTMLParser
 from collections import OrderedDict
 
-listing = open('data/listing.json', 'w')
+listing = open('public/data/listing.json', 'w')
 
 articles = {}
 
@@ -79,7 +79,7 @@ class ArticlesExtractor(HTMLParser):
                 self.intro += '&'+name+';'
 
 for theme in ['webdev','self-business'] :
-    document = open('data/'+theme+'.html', 'r')
+    document = open('public/data/'+theme+'.html', 'r')
 
     parser = ArticlesExtractor()
     for line in document :
