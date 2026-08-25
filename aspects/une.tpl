@@ -33,7 +33,7 @@
 		<p>
 			<a id="a4" class="e" href="">m'écrire</a> <span>—</span> 
 			<a id="a1" class="l" href="https://www.linkedin.com/in/dascritch">mon cv</a> <span>—</span> 
-			<a id="a2" class="t" href="https://twitter.com/dascritch">twitter</a> <span>—</span> 
+			<a id="a2" class="t" href="https://bsky.app/profile/dascritch.net">bluesky</a> <span>—</span> 
 			<a id="a3" class="b" href="http://dascritch.net">mon blog</a>
 		</p>
 	</header>
