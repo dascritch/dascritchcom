@@ -219,16 +219,20 @@
 	.portrait::before{content:'FIG.00 — ÉLÉVATION';position:absolute; bottom:0; left:0; right:0; z-index:2; font-family:var(--mono); font-size:10px; letter-spacing:.1em; color:var(--ink); background:var(--amber); padding:5px 8px;}
 	.portrait-ticks{position:absolute; top:-9px; left:-9px; right:-9px; bottom:-9px; border:1px dashed var(--line); pointer-events:none;}
 
+
 	/* réalisations — schematic cards */
-	.proj-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap:1px; background:var(--muted); margin-top:10px;}
-	.proj{background:var(--ink); padding:clamp(20px,4vw,28px) clamp(18px,4vw,26px); display:grid; grid-template-columns:minmax(36px,64px) 1fr; gap:clamp(12px,3vw,20px);}
+	.proj-grid{display:grid; grid-template-columns:1fr; gap:1px; background:var(--muted); margin-top:10px;}
+	.proj{background:var(--ink); padding:clamp(20px,4vw,28px) clamp(18px,4vw,26px); display:grid; grid-template-columns:minmax(28px,40px) minmax(160px,240px) 1fr; gap:clamp(14px,3vw,24px); align-items:start;}
+	@media (max-width:680px){ .proj{grid-template-columns:minmax(28px,40px) 1fr;} .proj-img{grid-column:2; } .proj-content{grid-column:2;} }
 	.proj-fig{font-family:var(--mono); font-size:12px; color:var(--amber); writing-mode:vertical-rl; text-orientation:mixed; letter-spacing:.1em;}
 	.proj-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 16px; margin-bottom:6px;}
 	.proj-role{font-family:var(--mono); font-size:11.5px; color:var(--muted); letter-spacing:.05em;}
-	.proj-img{position:relative; overflow:hidden; aspect-ratio:16/10; margin-bottom:14px; border:1px solid var(--muted);}
+	.proj-img{position:relative; overflow:hidden; aspect-ratio:4/3; border:1px solid var(--muted);}
 	.proj-img img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(1) contrast(1.1) brightness(.9);}
 	.proj-img::after{content:'';position:absolute;inset:0;background:var(--line-bright);mix-blend-mode:color;opacity:.6;}
 	.proj-img::before{content:attr(data-fig);position:absolute;bottom:6px;right:8px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink);background:var(--amber);padding:2px 6px;}
+	.story-tag{display:inline-block; font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--amber); margin-right:8px;}
+
 
 	/* free projects list */
 	.lib-list{list-style:none; margin:0; padding:0;}
