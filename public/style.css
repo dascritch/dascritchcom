@@ -261,7 +261,10 @@
 	/* conférences — chaque entrée est un lien plein bloc vers la conférence */
 	.rev-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--line);}
 	.rev-list li{border-bottom:1px solid var(--ink-2);}
-	.rev-entry{display:block; padding:14px 6px; text-decoration:none; color:inherit;}
+	/* [Claude] vignette optionnelle par conférence, comme dans la version historique
+		du site (voir index.2014.html) : on réutilise tel quel le composant
+		.lib-thumb/.has-img de la section A-105 (DRY), pas besoin de nouvelle classe. */
+	.rev-entry{display:grid; grid-template-columns:48px 1fr; gap:clamp(12px,3vw,18px); align-items:start; padding:14px 6px; text-decoration:none; color:inherit;}
 	.rev-entry:hover, .rev-entry:focus-visible{background:var(--ink-2);}
 	.rev-top{display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 12px; font-family:var(--mono);}
 	.rev-year{color:var(--line-bright); font-size:13px; width:40px; flex-shrink:0;}
@@ -274,6 +277,7 @@
 		largeur de colonne alignée sur la règle `p` générique (62ch). */
 	.rev-summary{display:block; margin-left:52px; line-height:1.55; max-width:62ch;}
 	@media (max-width:480px){ .rev-loc, .rev-summary{margin-left:0;} }
+	@media (max-width:420px){ .rev-entry{grid-template-columns:1fr;} .rev-entry .lib-thumb{display:none;} }
 
 	/* publications */
 	.pub-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--ink-2);}
