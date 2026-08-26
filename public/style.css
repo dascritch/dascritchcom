@@ -264,7 +264,10 @@
 	.rev-title{font-family:var(--sans); font-weight:600; font-size:14.5px;}
 	.rev-title .ext{font-weight:400; font-size:.8em;}
 	.rev-loc{display:block; margin:4px 0 6px 52px; font-family:var(--mono); font-size:11px; color:var(--diazo-muted); text-transform:uppercase; letter-spacing:.04em;}
-	.rev-summary{display:block; margin-left:52px; font-size:13px; color:var(--diazo-muted); font-style:italic; line-height:1.5;}
+	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : même taille, même
+		interlignage, couleur héritée du texte principal (plus de gris muted
+		ni d'italique, qui la démarquaient des autres sous-textes du site). */
+	.rev-summary{display:block; margin-left:52px; font-size:14px; line-height:1.55;}
 	@media (max-width:480px){ .rev-loc, .rev-summary{margin-left:0;} }
 
 	/* publications */
@@ -277,7 +280,9 @@
 	.pub-thumb::after{content:'';position:absolute; inset:0; background:var(--line-bright); mix-blend-mode:color; opacity:.6;}
 	.pub-title{display:block; font-weight:600;}
 	.pub-title .ext{font-weight:400; font-size:.8em;}
-	.pub-desc{display:block; color:var(--muted); font-size:14px; margin-top:4px; max-width:64ch;}
+	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : couleur héritée du
+		texte principal (plus de gris muted) et même interlignage. */
+	.pub-desc{display:block; font-size:14px; line-height:1.55; margin-top:4px; max-width:64ch;}
 	@media (max-width:420px){ .pub-entry{grid-template-columns:1fr;} .pub-thumb{display:none;} }
 
 
@@ -307,7 +312,12 @@
 	:focus-visible{outline:2px solid var(--amber); outline-offset:2px;}
 
 	/* utilitaires ponctuels — anciennement des style="" en ligne, regroupés ici */
-	.hero-lead{margin-top:24px; font-size:18px; max-width:56ch;}
+	/* [Claude] uniformisation du texte principal : le hero utilisait une taille (18px)
+		et une largeur de ligne (56ch) propres à lui, différentes du corps de texte
+		commun aux autres chapitres (taille body en clamp, 62ch). On ne garde ici que
+		l'écart avant le premier paragraphe ; taille, police et couleur héritent
+		désormais de la règle `p` générique, identique partout ailleurs. */
+	.hero-lead:first-of-type{margin-top:24px;}
 	.stack-title{font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em;}
 	.tight{margin-bottom:6px;}
 	.no-underline{text-decoration:none;}
