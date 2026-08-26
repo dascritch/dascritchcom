@@ -263,27 +263,28 @@
 
 
 	/* free projects list */
-	.lib-list{list-style:none; margin:0; padding:0;}
-	/* [Claude] liseret séparateur unifié sur var(--muted), même valeur pour
-		toutes les listes du site (A-103, A-106, A-107) et pour la grille de
-		cartes de A-104. */
-	.lib-list li{padding:16px 0; border-top:1px solid var(--muted); display:grid; grid-template-columns:48px 1fr; gap:clamp(12px,3vw,18px); align-items:start;}
-	.lib-list li:last-child{border-bottom:1px solid var(--muted);}
+	/* [Claude] le lien englobe désormais toute l'entrée (vignette, titre et
+		description), comme pour .pub-entry (A-106) et .rev-entry (A-107) :
+		liseret séparateur sur la liste, .lib-entry porte la grille et le
+		survol, à l'identique des deux autres sections. */
+	.lib-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--muted);}
+	.lib-list li{border-bottom:1px solid var(--muted);}
+	.lib-entry{display:grid; grid-template-columns:48px 1fr; gap:clamp(12px,3vw,18px); align-items:start; padding:14px 6px; text-decoration:none; color:inherit;}
+	.lib-entry:hover, .lib-entry:focus-visible{background:var(--ink-2);}
 	.lib-thumb{width:48px; height:36px; flex-shrink:0;}
 	.lib-thumb.has-img{position:relative; overflow:hidden; border:1px solid var(--muted-dark);}
 	.lib-thumb.has-img img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(1) contrast(1.1) brightness(.95);}
 	.lib-thumb.has-img::after{content:'';position:absolute; inset:0; background:var(--line-bright); mix-blend-mode:color; opacity:.6;}
 	.lib-head{margin:0 0 4px; display:flex; flex-wrap:wrap; align-items:baseline; gap:0 10px;}
-	.lib-list a{text-decoration:none; font-weight:600;}
-	.lib-list a:hover, .lib-list a:focus-visible{color:var(--diazo-accent);}
-	.lib-list a .ext{font-weight:400; font-size:.85em;}
+	.lib-title{font-weight:600;}
+	.lib-title .ext{font-weight:400; font-size:.85em;}
 	.lib-tag{font-family:var(--mono); font-size:11px; color:var(--muted-dark); text-transform:uppercase; letter-spacing:.06em;}
 	/* [Claude] plus de taille fixe : hérite du corps de texte global, comme
 		le texte dépliable de A-104 (.story-context/.story-line/.story-action) ;
 		largeur de colonne alignée sur la règle `p` générique (62ch), commune
 		à tous les chapitres. */
 	.lib-desc{margin:0; line-height:1.55; max-width:62ch;}
-	@media (max-width:420px){.lib-list li{grid-template-columns:1fr;} .lib-thumb{display:none;}}
+	@media (max-width:420px){.lib-entry{grid-template-columns:1fr;} .lib-thumb{display:none;}}
 	.promote-title{margin-top:clamp(32px,6vw,44px);}
 	.promote-list{margin:0; padding-left:18px;}
 	.promote-list li{margin-bottom:8px;}
@@ -306,7 +307,7 @@
 		graphique des vignettes, pas pour du texte. */
 	.rev-year{color:var(--diazo-accent); font-size:13px; width:40px; flex-shrink:0;}
 	/* [Claude] plus de taille fixe (14.5px) : hérite du corps de texte global,
-		comme les titres des sections précédentes (.lib-list a en A-105,
+		comme les titres des sections précédentes (.lib-title en A-105,
 		.pub-title en A-106), qui n'ont eux-mêmes aucune taille propre. */
 	.rev-title{font-family:var(--sans); font-weight:600;}
 	.rev-title .ext{font-weight:400; font-size:.8em;}
