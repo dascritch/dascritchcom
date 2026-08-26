@@ -247,7 +247,9 @@
 	.lib-list a:hover, .lib-list a:focus-visible{color:var(--diazo-accent);}
 	.lib-list a .ext{font-weight:400; font-size:.85em;}
 	.lib-tag{font-family:var(--mono); font-size:11px; color:var(--muted-dark); text-transform:uppercase; letter-spacing:.06em;}
-	.lib-desc{margin:0; font-size:14px; line-height:1.55;}
+	/* [Claude] plus de taille fixe : hérite du corps de texte global, comme
+		le texte dépliable de A-104 (.story-context/.story-line/.story-action) */
+	.lib-desc{margin:0; line-height:1.55;}
 	@media (max-width:420px){.lib-list li{grid-template-columns:1fr;} .lib-thumb{display:none;}}
 	.promote-title{margin-top:clamp(32px,6vw,44px);}
 	.promote-list{margin:0; padding-left:18px;}
@@ -264,10 +266,10 @@
 	.rev-title{font-family:var(--sans); font-weight:600; font-size:14.5px;}
 	.rev-title .ext{font-weight:400; font-size:.8em;}
 	.rev-loc{display:block; margin:4px 0 6px 52px; font-family:var(--mono); font-size:11px; color:var(--diazo-muted); text-transform:uppercase; letter-spacing:.04em;}
-	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : même taille, même
-		interlignage, couleur héritée du texte principal (plus de gris muted
-		ni d'italique, qui la démarquaient des autres sous-textes du site). */
-	.rev-summary{display:block; margin-left:52px; font-size:14px; line-height:1.55;}
+	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : couleur héritée du texte
+		principal, sans italique ; taille héritée du corps de texte global, comme
+		le texte dépliable de A-104 (.story-context/.story-line/.story-action). */
+	.rev-summary{display:block; margin-left:52px; line-height:1.55;}
 	@media (max-width:480px){ .rev-loc, .rev-summary{margin-left:0;} }
 
 	/* publications */
@@ -280,9 +282,10 @@
 	.pub-thumb::after{content:'';position:absolute; inset:0; background:var(--line-bright); mix-blend-mode:color; opacity:.6;}
 	.pub-title{display:block; font-weight:600;}
 	.pub-title .ext{font-weight:400; font-size:.8em;}
-	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : couleur héritée du
-		texte principal (plus de gris muted) et même interlignage. */
-	.pub-desc{display:block; font-size:14px; line-height:1.55; margin-top:4px; max-width:64ch;}
+	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : couleur héritée du texte
+		principal ; taille héritée du corps de texte global, comme le texte
+		dépliable de A-104. */
+	.pub-desc{display:block; line-height:1.55; margin-top:4px; max-width:64ch;}
 	@media (max-width:420px){ .pub-entry{grid-template-columns:1fr;} .pub-thumb{display:none;} }
 
 
