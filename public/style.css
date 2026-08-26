@@ -236,8 +236,11 @@
 
 	/* free projects list */
 	.lib-list{list-style:none; margin:0; padding:0;}
-	.lib-list li{padding:16px 0; border-top:1px solid var(--muted-dark); display:grid; grid-template-columns:48px 1fr; gap:clamp(12px,3vw,18px); align-items:start;}
-	.lib-list li:last-child{border-bottom:1px solid var(--muted-dark);}
+	/* [Claude] liseret séparateur unifié sur var(--muted), même valeur pour
+		toutes les listes du site (A-103, A-106, A-107) et pour la grille de
+		cartes de A-104. */
+	.lib-list li{padding:16px 0; border-top:1px solid var(--muted); display:grid; grid-template-columns:48px 1fr; gap:clamp(12px,3vw,18px); align-items:start;}
+	.lib-list li:last-child{border-bottom:1px solid var(--muted);}
 	.lib-thumb{width:48px; height:36px; flex-shrink:0;}
 	.lib-thumb.has-img{position:relative; overflow:hidden; border:1px solid var(--muted-dark);}
 	.lib-thumb.has-img img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(1) contrast(1.1) brightness(.95);}
@@ -259,8 +262,11 @@
 
 
 	/* conférences — chaque entrée est un lien plein bloc vers la conférence */
-	.rev-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--line);}
-	.rev-list li{border-bottom:1px solid var(--ink-2);}
+	/* [Claude] liseret séparateur unifié sur var(--muted), même valeur pour
+		toutes les listes du site (A-103, A-105, A-106) et pour la grille de
+		cartes de A-104. */
+	.rev-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--muted);}
+	.rev-list li{border-bottom:1px solid var(--muted);}
 	/* [Claude] vignette optionnelle par conférence, comme dans la version historique
 		du site (voir index.2014.html) : on réutilise tel quel le composant
 		.lib-thumb/.has-img de la section A-105 (DRY), pas besoin de nouvelle classe. */
@@ -268,7 +274,10 @@
 	.rev-entry:hover, .rev-entry:focus-visible{background:var(--ink-2);}
 	.rev-top{display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 12px; font-family:var(--mono);}
 	.rev-year{color:var(--line-bright); font-size:13px; width:40px; flex-shrink:0;}
-	.rev-title{font-family:var(--sans); font-weight:600; font-size:14.5px;}
+	/* [Claude] plus de taille fixe (14.5px) : hérite du corps de texte global,
+		comme les titres des sections précédentes (.lib-list a en A-105,
+		.pub-title en A-106), qui n'ont eux-mêmes aucune taille propre. */
+	.rev-title{font-family:var(--sans); font-weight:600;}
 	.rev-title .ext{font-weight:400; font-size:.8em;}
 	.rev-loc{display:block; margin:4px 0 6px 52px; font-family:var(--mono); font-size:11px; color:var(--diazo-muted); text-transform:uppercase; letter-spacing:.04em;}
 	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : couleur héritée du texte
@@ -280,8 +289,12 @@
 	@media (max-width:420px){ .rev-entry{grid-template-columns:1fr;} .rev-entry .lib-thumb{display:none;} }
 
 	/* publications */
-	.pub-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--ink-2);}
-	.pub-list li{border-bottom:1px solid var(--ink-2);}
+	/* [Claude] liseret séparateur unifié sur var(--muted), même valeur pour
+		toutes les listes du site (A-103, A-105, A-107) et pour la grille de
+		cartes de A-104. Remplace var(--ink-2), quasi invisible sur cette
+		feuille sombre (#132C48 sur #0E2238). */
+	.pub-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--muted);}
+	.pub-list li{border-bottom:1px solid var(--muted);}
 	.pub-entry{display:grid; grid-template-columns:64px 1fr; gap:16px; align-items:center; padding:14px 6px; text-decoration:none; color:inherit;}
 	.pub-entry:hover, .pub-entry:focus-visible{background:var(--ink-2);}
 	.pub-thumb{position:relative; width:64px; height:48px; overflow:hidden; border:1px solid var(--ink-2); flex-shrink:0;}
@@ -338,8 +351,12 @@
 
 	/* expérience — timeline verticale */
 	.xp-list{margin-top:32px;}
-	.xp{display:grid; grid-template-columns:minmax(120px,150px) 1fr; gap:22px; padding:22px 0; border-top:1px solid var(--ink-2);}
-	.xp:last-child{border-bottom:1px solid var(--ink-2);}
+	/* [Claude] liseret séparateur unifié sur var(--muted) : ce token garde une
+		valeur lisible sur toutes les feuilles (sombres ou diazo), contrairement
+		à var(--ink-2) qui se fondait presque dans le fond des feuilles sombres
+		(#132C48 sur #0E2238). Même valeur que A-104/A-105/A-106/A-107. */
+	.xp{display:grid; grid-template-columns:minmax(120px,150px) 1fr; gap:22px; padding:22px 0; border-top:1px solid var(--muted);}
+	.xp:last-child{border-bottom:1px solid var(--muted);}
 	.xp-date{font-family:var(--mono); font-size:11.5px; color:var(--amber); line-height:1.5;}
 	.xp-duration{display:block; color:var(--muted); font-size:10.5px; margin-top:2px;}
 	.xp-body h3{margin-bottom:2px;}
