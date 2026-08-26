@@ -248,8 +248,10 @@
 	.lib-list a .ext{font-weight:400; font-size:.85em;}
 	.lib-tag{font-family:var(--mono); font-size:11px; color:var(--muted-dark); text-transform:uppercase; letter-spacing:.06em;}
 	/* [Claude] plus de taille fixe : hérite du corps de texte global, comme
-		le texte dépliable de A-104 (.story-context/.story-line/.story-action) */
-	.lib-desc{margin:0; line-height:1.55;}
+		le texte dépliable de A-104 (.story-context/.story-line/.story-action) ;
+		largeur de colonne alignée sur la règle `p` générique (62ch), commune
+		à tous les chapitres. */
+	.lib-desc{margin:0; line-height:1.55; max-width:62ch;}
 	@media (max-width:420px){.lib-list li{grid-template-columns:1fr;} .lib-thumb{display:none;}}
 	.promote-title{margin-top:clamp(32px,6vw,44px);}
 	.promote-list{margin:0; padding-left:18px;}
@@ -268,8 +270,9 @@
 	.rev-loc{display:block; margin:4px 0 6px 52px; font-family:var(--mono); font-size:11px; color:var(--diazo-muted); text-transform:uppercase; letter-spacing:.04em;}
 	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : couleur héritée du texte
 		principal, sans italique ; taille héritée du corps de texte global, comme
-		le texte dépliable de A-104 (.story-context/.story-line/.story-action). */
-	.rev-summary{display:block; margin-left:52px; line-height:1.55;}
+		le texte dépliable de A-104 (.story-context/.story-line/.story-action) ;
+		largeur de colonne alignée sur la règle `p` générique (62ch). */
+	.rev-summary{display:block; margin-left:52px; line-height:1.55; max-width:62ch;}
 	@media (max-width:480px){ .rev-loc, .rev-summary{margin-left:0;} }
 
 	/* publications */
@@ -284,8 +287,9 @@
 	.pub-title .ext{font-weight:400; font-size:.8em;}
 	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : couleur héritée du texte
 		principal ; taille héritée du corps de texte global, comme le texte
-		dépliable de A-104. */
-	.pub-desc{display:block; line-height:1.55; margin-top:4px; max-width:64ch;}
+		dépliable de A-104 ; largeur de colonne alignée sur la règle `p`
+		générique (62ch), au lieu de 64ch. */
+	.pub-desc{display:block; line-height:1.55; margin-top:4px; max-width:62ch;}
 	@media (max-width:420px){ .pub-entry{grid-template-columns:1fr;} .pub-thumb{display:none;} }
 
 
@@ -339,7 +343,9 @@
 	.xp-loc{font-family:var(--mono); font-size:11px; color:var(--muted); margin:0 0 8px; text-transform:uppercase; letter-spacing:.04em;}
 	.xp-body p:last-child{margin-bottom:0;}
 	.xp-bullets{margin:10px 0; padding-left:18px;}
-	.xp-bullets li{margin-bottom:5px; max-width:64ch;}
+	/* [Claude] largeur de colonne alignée sur la règle `p` générique (62ch),
+		au lieu de 64ch, pour uniformiser avec les autres sections. */
+	.xp-bullets li{margin-bottom:5px; max-width:62ch;}
 	.xp-skills{margin-top:12px; font-family:var(--mono); font-size:10.5px; color:var(--muted); font-style:italic;}
 	.xp-details{margin-top:10px;}
 	.xp-details summary{
