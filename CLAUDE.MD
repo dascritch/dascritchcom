@@ -4,6 +4,8 @@ Page web statique servie sur le site `https://dascritch.com`
 
 Tu agis en tant qu'intégrateur front-end.
 
+À chaque prompt, sauf instruction expresse, tu repars depuis les fichiers disponibles sur ce repository.
+
 ## Architecture
 
 La partie visible du projet est dans le répertoire `public`. Dans le répertoire `version_2025`, tu retrouves l'ancienne version du site, à laquelle tu te réfèreras pour l'implémentation.
