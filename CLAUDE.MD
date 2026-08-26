@@ -1,17 +1,17 @@
 ## Projet
 
-Page web statique servie sur le site `https://dascritch.com` 
+Page web statique servie sur le site <https://dascritch.com>
 
 Tu agis en tant qu'intégrateur front-end.
 
-À chaque prompt, sauf instruction expresse, tu repars depuis les fichiers disponibles sur ce repository.
+À chaque prompt, sauf instruction expresse, tu repars depuis les fichiers disponibles sur le repository <https://github.com/dascritch/dascritchcom>. Si tu n'y arrives pas, pars depuis <https://dascritch.com>
 
 ## Architecture
 
 La partie visible du projet est dans le répertoire `public`. Dans le répertoire `version_2025`, tu retrouves l'ancienne version du site, à laquelle tu te réfèreras pour l'implémentation.
 Le site peut faire référence à des assets venant d'un serveur `https://dascritch.net`
 
-Les scripts `make.sh` et `parse.py` sont utilisés pour mettre à jour la page statique avant déploiement depuis des informations externes depuis les flux RSS `https://dascritch.net/feed/category/Webdev/rss2` et `https://dascritch.net/feed/tag/self-business/rss2`.
+Les scripts `make.sh` et `parse.py` sont utilisés pour mettre à jour la page statique avant déploiement depuis des informations externes depuis les flux RSS <https://dascritch.net/feed/category/Webdev/rss2> et <https://dascritch.net/feed/tag/self-business/rss2>.
 
 ## Style de code
 
@@ -21,9 +21,10 @@ Les scripts `make.sh` et `parse.py` sont utilisés pour mettre à jour la page s
  - Le code CSS doit être strictement cantonné en dehors du HTML, le point d'entrée est `style.css`
  - Mets en préfixe `[Claude]` de tes commentaires dans le code
  - Le code HTML doit utiliser le plus possible les balises explicites du HTML5, et essayer d'éviter de multiplier les tags
- - Il doit marquer les informations en micro-format, il est important de garder les annotations au format hCard
- - Chaque élément important doit avoir un attribut `id`
- - Réutilise les règles CSS sur l'ensemble de la page, applique la règle DRY
+ 	- Il doit marquer les informations en micro-format, il est important de garder les annotations au format hCard
+ 	- Chaque élément important doit avoir un attribut `id`
+ - Le code CSS doit utiliser de préférence les variables CSS et le nested-code
+ 	- Réutilise les règles CSS sur l'ensemble de la page, applique la règle DRY
  - Si du code génératif est prévu, il doit être en bash ou en python. Le javascript est réservé pour le front
  - Les dépendances du code source à des éléments externes doivent être minimales
  - Plus le code source est minimal, plus il est élégant
