@@ -49,34 +49,58 @@
 		--diazo-text:var(--paper);
 		--diazo-muted:var(--muted);
 		--diazo-accent:var(--line-bright);
+		/* [Claude] couleur d'accentuation textuelle (.accent, liens CTA) : en
+			thème sombre le bleu clair --line-bright reste très lisible sur le
+			fond quasi noir, donc pas de valeur dédiée nécessaire ici. */
+		--ink-accent:var(--line-bright);
 		}
 
-/* Système en préférence claire : les feuilles "cyanotype" passent d'un bleu
-	quasi noir à un bleu clair, et le papier "diazo" s'éclaircit encore —
-	même rythme de planche à dessin, ambiance générale plus lumineuse.
-	Le texte courant y passe du blanc au noir : sur le bleu foncé d'origine,
-	du texte noir serait illisible, mais une fois le bleu éclairci à ~#4A7CA6,
-	du noir pur dessus tient un ratio de contraste d'environ 4,7:1 (norme
-	WCAG AA, seuil 4,5:1) — alors que du blanc y tomberait sous ce seuil. */
+/* [Claude] Système en préférence claire, feuille "dark" et feuille "diazo"
+	rapprochées : la feuille sombre est nettement éclaircie (#4A7CA6 →
+	#9BBAD4, un bleu pastel) et le papier diazo est rapproché de cette même
+	teinte bleutée en s'assombrissant (#EDF0F2 → #CBDAE6) — les deux fonds
+	sont désormais proches en clarté et en teinte, au lieu de trancher
+	nettement entre bleu moyen et quasi-blanc. --ink-2 (le calque de survol)
+	est éclairci d'autant pour rester au-dessus d'--ink, sans quoi le survol
+	aurait paru plus sombre que le fond.
+	Cette proximité oblige à revoir tous les textes/accents qui comptaient
+	sur l'écart de clarté entre les deux fonds :
+	- --dark-text (noir) et --diazo-text (#243F56) restent tels quels : leur
+	  ratio de contraste augmente ou reste très confortable (~5,9:1 et
+	  ~7,5:1) puisqu'ils sont sombres sur des fonds désormais clairs.
+	- --muted-dark (texte discret sur feuille diazo, ex. A-102/A-105) est
+	  assombri (#5B6B75 → #3F4C56) pour rester au-dessus de 4,5:1 sur le
+	  nouveau papier, plus sombre qu'avant.
+	- --amber (dates, repères FIG.xx sur feuille sombre) devient un ambre
+	  foncé/caramel (#E8A94E → #5A3B0D) : sur un fond désormais clair, un
+	  ambre vif n'offrait quasiment plus de contraste ; il fallait l'assombrir
+	  fortement (~4,5:1) plutôt que l'éclaircir davantage.
+	- --line-bright reste vif : il sert surtout d'effet graphique (duotone
+	  des vignettes, repères d'imprimeur, réglures), pas de texte de lecture.
+	  Pour le texte d'accentuation réel (.accent, liens CTA, survols), une
+	  nouvelle variable --ink-accent prend un bleu foncé dédié (#1F4A63),
+	  qui reste lisible sur le fond désormais clair. --diazo-accent utilise
+	  la même teinte (#2E6B93 → #1F4A63), unifiant l'accent de lecture entre
+	  les deux thèmes de feuille en mode clair. */
 	@media (prefers-color-scheme: light){
 		:root{
 			color-scheme: light;
-			--ink:#4A7CA6;
-			--ink-2:#5C8DB6;
+			--ink:#9BBAD4;
+			--ink-2:#AFCEE8;
 			--line:#4C7A9C;
 			--line-bright:#8FD3F4;
 			--paper:#FCFAF3;
 			--paper-2:#F1ECDE;
-			--amber:#E49F3F;
+			--amber:#5A3B0D;
 			--muted:#2C3A44;
-			--muted-dark:#5B6B75;
+			--muted-dark:#3F4C56;
 			--dark-text:#000000;
-			/* en clair, le diazo redevient du papier — c'est le mode sombre qui a besoin d'être adouci */
-			--diazo-bg:var(--paper);
-			--diazo-grid:var(--paper-2);
+			--diazo-bg:#CBDAE6;
+			--diazo-grid:#BCCBDA;
 			--diazo-text:#243F56;
 			--diazo-muted:var(--muted-dark);
-			--diazo-accent:#2E6B93;
+			--diazo-accent:#1F4A63;
+			--ink-accent:#1F4A63;
 		}
 	}
 	*{box-sizing:border-box;}
@@ -164,7 +188,11 @@
 	h3{font-size:clamp(17px,2.2vw,19px); text-transform:none;}
 	p{margin:0 0 1em; max-width:62ch;}
 	a{color:inherit;}
-	.accent{color:var(--line-bright);}
+	/* [Claude] --ink-accent plutôt que --line-bright directement : en mode
+		clair, --line-bright reste un cyan vif calibré pour les effets
+		graphiques (duotone, repères), pas pour du texte de lecture — voir
+		la note sur le rapprochement des fonds plus haut dans ce fichier. */
+	.accent{color:var(--ink-accent);}
 	.sheet.diazo .accent{color:var(--diazo-accent);}
 
 	/* dimension-line divider */
@@ -181,7 +209,7 @@
 	}
 	.hero-meta{display:flex; flex-wrap:wrap; gap:10px 26px; font-family:var(--mono); font-size:13px; margin-top:34px; color:var(--muted);}
 	.hero-meta a{text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:1px;}
-	.hero-meta a:hover, .hero-meta a:focus-visible{color:var(--line-bright); border-color:var(--line-bright);}
+	.hero-meta a:hover, .hero-meta a:focus-visible{color:var(--ink-accent); border-color:var(--ink-accent);}
 
 	.note-calque{
 		margin-top:56px; padding:16px 18px; border:1px dashed var(--line); font-family:var(--mono);
@@ -273,7 +301,10 @@
 	.rev-entry{display:grid; grid-template-columns:48px 1fr; gap:clamp(12px,3vw,18px); align-items:start; padding:14px 6px; text-decoration:none; color:inherit;}
 	.rev-entry:hover, .rev-entry:focus-visible{background:var(--ink-2);}
 	.rev-top{display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 12px; font-family:var(--mono);}
-	.rev-year{color:var(--line-bright); font-size:13px; width:40px; flex-shrink:0;}
+	/* [Claude] --diazo-accent plutôt que --line-bright : cette étiquette vit
+		sur une feuille diazo, --line-bright n'y est calibré que pour l'effet
+		graphique des vignettes, pas pour du texte. */
+	.rev-year{color:var(--diazo-accent); font-size:13px; width:40px; flex-shrink:0;}
 	/* [Claude] plus de taille fixe (14.5px) : hérite du corps de texte global,
 		comme les titres des sections précédentes (.lib-list a en A-105,
 		.pub-title en A-106), qui n'ont eux-mêmes aucune taille propre. */
@@ -313,12 +344,15 @@
 	/* footer / contact */
 	#contact .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px;}
 	.stamp{width:64px; height:64px; margin-top:56px; opacity:.85; filter:grayscale(1) invert(1) brightness(1.4);}
+	/* [Claude] --ink-accent plutôt que --line-bright : ce bouton vit sur une
+		feuille sombre, --line-bright n'y est calibré que pour l'effet
+		graphique, pas pour du texte/contour lisible. */
 	.cta{
 		font-family:var(--mono); font-size:13px; text-transform:uppercase; letter-spacing:.08em;
-		border:1px solid var(--line-bright); color:var(--line-bright); text-decoration:none;
+		border:1px solid var(--ink-accent); color:var(--ink-accent); text-decoration:none;
 		padding:10px 16px; display:inline-block;
 	}
-	.cta:hover, .cta:focus-visible{background:var(--line-bright); color:var(--ink);}
+	.cta:hover, .cta:focus-visible{background:var(--ink-accent); color:var(--ink);}
 
 	/* sticky title block */
 	#titleblock{
