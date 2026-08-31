@@ -1,6 +1,6 @@
 ## Projet
 
-Page web statique servie sur le site <https://dascritch.com>
+Page web statique, servie sur le site <https://dascritch.com>
 
 Tu agis en tant qu'intégrateur front-end.
 
@@ -20,12 +20,19 @@ Les scripts `make.sh` et `parse.py` sont utilisés pour mettre à jour la page s
  - Le code javascript doit être strictement cantonné en dehors du HTML dans un javascript à part, le point d'entrée est `interactions.js`
  - Le code CSS doit être strictement cantonné en dehors du HTML, le point d'entrée est `style.css`
  - Mets en préfixe `[Claude]` de tes commentaires dans le code
- - Le code HTML doit utiliser le plus possible les balises explicites du HTML5, et essayer d'éviter de multiplier les tags
- 	- Il doit marquer les informations en micro-format, il est important de garder les annotations au format hCard
+ - Le code HTML doit utiliser le plus possible les balises explicites du HTML5
+ 	- Essaye d'éviter de multiplier les tags et les classnames
  	- Chaque élément important doit avoir un attribut `id`
+ 	- Des informations doivent être en micro-format, il est important de garder les annotations au format hCard
+ 	- Les dates doivent être exprimées avec la balise standard `<date>`
+ 	- Chaque élément liant vers un lien externe doit être un lien sur l'ensemble de l'élément
+ 	- Les entrées d'articles et de conférences doivent être des `<article>`
+ 	- Au lieu d'utiliser les majuscules pour uu mot qui n'est pas une abréviation, utilise la CSS pour passer la casse en majuscules ou small-caps.
  - Le code CSS doit utiliser de préférence les variables CSS et le nested-code
  	- Réutilise les règles CSS sur l'ensemble de la page, applique la règle DRY
- - Si du code génératif est prévu, il doit être en bash ou en python. Le javascript est réservé pour le front
+ 	- L'aspect des vignettes doit être cohérent, notamment en dimensions sur toute la page
+ 	- Ne teinte pas la couleur des vignettes
+ - Si du code génératif est prévu, il doit être en bash ou en python. Le javascript est réservé pour le front qui est statique
  - Les dépendances du code source à des éléments externes doivent être minimales
  - Plus le code source est minimal, plus il est élégant
 
@@ -40,10 +47,9 @@ L'aspect général est un rendu de plan technique sur fond bleu, avec un fond de
  - Les ratios de contrastes, de dimension et de couleurs doivent être vérifiés afin de satisfaire les contraintes de lisibilité d'accessibilité.
  - Ne pas modifier du tout l'élément graphique `#carte`
 
-
 ## Notes importantes
 
- - Tu ne commites jamais le code git, tu envoies les modifications exclusivement en réponse du prompt, avec les fichiers complets et un `diff`
+ - Tu ne commites jamais le code git, tu m'envoies les modifications exclusivement en réponse de mon prompt, avec les fichiers complets et un fichier `diff`
  - Tu ne modifies jamais les textes, ceux-ci doivent rester absolument verbatim
  - Tu ne modifies jamais les liens, ceux-ci sont très importants
- - Tu ne modifies jamais les images, ni y appliqer un étirement, ni y appliquer un filtre sauf demande expresse dans mon prompt
+ - Tu ne modifies jamais les images, ni y appliquer un étirement, ni y appliquer un filtre sauf sur demande expresse dans mon prompt
