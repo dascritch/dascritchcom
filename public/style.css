@@ -250,14 +250,18 @@
 
 	/* réalisations — schematic cards */
 	.proj-grid{display:grid; grid-template-columns:1fr; gap:1px; background:var(--muted); margin-top:10px;}
-	.proj{background:var(--ink); padding:clamp(20px,4vw,28px) clamp(18px,4vw,26px); display:grid; grid-template-columns:minmax(28px,40px) minmax(160px,240px) 1fr; gap:clamp(14px,3vw,24px); align-items:start;}
+	/* [Claude] colonne image ramenée à 96px : dimension unifiée avec les
+		vignettes de A-105/A-106/A-107 (voir .proj-img plus bas). */
+	.proj{background:var(--ink); padding:clamp(20px,4vw,28px) clamp(18px,4vw,26px); display:grid; grid-template-columns:minmax(28px,40px) 96px 1fr; gap:clamp(14px,3vw,24px); align-items:start;}
 	@media (max-width:680px){ .proj{grid-template-columns:minmax(28px,40px) 1fr;} .proj-img{grid-column:2; } .proj-content{grid-column:2;} }
 	.proj-fig{font-family:var(--mono); font-size:12px; color:var(--amber); writing-mode:vertical-rl; text-orientation:mixed; letter-spacing:.1em;}
 	.proj-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 16px; margin-bottom:6px;}
 	.proj-role{font-family:var(--mono); font-size:11.5px; color:var(--muted); letter-spacing:.05em;}
-	.proj-img{position:relative; overflow:hidden; aspect-ratio:4/3; border:1px solid var(--muted);}
+	/* [Claude] dimension unifiée avec les vignettes de A-105/A-106/A-107
+		(96×72, même ratio 4:3 qu'auparavant) ; teinte ::after retirée —
+		seul le filtre niveaux de gris/contraste subsiste. */
+	.proj-img{position:relative; overflow:hidden; width:96px; height:72px; border:1px solid var(--muted);}
 	.proj-img img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(1) contrast(1.1) brightness(.9);}
-	.proj-img::after{content:'';position:absolute;inset:0;background:var(--line-bright);mix-blend-mode:color;opacity:.6;}
 	.proj-img::before{content:attr(data-fig);position:absolute;bottom:6px;right:8px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink);background:var(--amber);padding:2px 6px;}
 	.story-tag{display:inline-block; font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--amber); margin-right:8px;}
 
@@ -269,21 +273,21 @@
 		survol, à l'identique des deux autres sections. */
 	.lib-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--muted);}
 	.lib-list li{border-bottom:1px solid var(--muted);}
-	.lib-entry{display:grid; grid-template-columns:48px 1fr; gap:clamp(12px,3vw,18px); align-items:start; padding:14px 6px; text-decoration:none; color:inherit;}
+	.lib-entry{display:grid; grid-template-columns:96px 1fr; gap:clamp(12px,3vw,18px); align-items:start; padding:14px 6px; text-decoration:none; color:inherit;}
 	.lib-entry:hover, .lib-entry:focus-visible{background:var(--ink-2);}
-	.lib-thumb{width:48px; height:36px; flex-shrink:0;}
+	/* [Claude] dimension unifiée avec .proj-img (A-104) et .pub-thumb (A-106) :
+		96×72, même ratio 4:3 qu'auparavant ; teinte ::after retirée — seul le
+		filtre niveaux de gris/contraste subsiste. */
+	.lib-thumb{width:96px; height:72px; flex-shrink:0;}
 	.lib-thumb.has-img{position:relative; overflow:hidden; border:1px solid var(--muted-dark);}
 	.lib-thumb.has-img img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(1) contrast(1.1) brightness(.95);}
-	.lib-thumb.has-img::after{content:'';position:absolute; inset:0; background:var(--line-bright); mix-blend-mode:color; opacity:.6;}
 	/* [Claude] placeholder d'image manquante : rectangle en traits fins avec
 		ses deux diagonales, partagé par toute vignette sans image réelle
 		(A-105, A-106, A-107 — mêmes classes .lib-thumb/.pub-thumb, avec ou
-		sans .has-img). Pas de teinte, contrairement au traitement duotone
-		des vraies vignettes ci-dessus : var(--muted) reste lisible sur
-		feuille sombre comme sur feuille diazo, comme pour les liserets
-		séparateurs des listes. Les deux linear-gradient() tracent chacun
-		une diagonale plein cadre, quel que soit le ratio largeur/hauteur
-		de la vignette. */
+		sans .has-img). var(--muted) reste lisible sur feuille sombre comme
+		sur feuille diazo, comme pour les liserets séparateurs des listes.
+		Les deux linear-gradient() tracent chacun une diagonale plein cadre,
+		quel que soit le ratio largeur/hauteur de la vignette. */
 	.lib-thumb:not(.has-img),
 	.pub-thumb:not(.has-img){
 		border:1px solid var(--muted);
@@ -315,7 +319,7 @@
 	/* [Claude] vignette optionnelle par conférence, comme dans la version historique
 		du site (voir index.2014.html) : on réutilise tel quel le composant
 		.lib-thumb/.has-img de la section A-105 (DRY), pas besoin de nouvelle classe. */
-	.rev-entry{display:grid; grid-template-columns:48px 1fr; gap:clamp(12px,3vw,18px); align-items:start; padding:14px 6px; text-decoration:none; color:inherit;}
+	.rev-entry{display:grid; grid-template-columns:96px 1fr; gap:clamp(12px,3vw,18px); align-items:start; padding:14px 6px; text-decoration:none; color:inherit;}
 	.rev-entry:hover, .rev-entry:focus-visible{background:var(--ink-2);}
 	/* [Claude] .rev-year retiré : il doublonnait l'année déjà présente,
 		avec plus de précision (mois inclus la plupart du temps), dans
@@ -344,15 +348,16 @@
 		feuille sombre (#132C48 sur #0E2238). */
 	.pub-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--muted);}
 	.pub-list li{border-bottom:1px solid var(--muted);}
-	.pub-entry{display:grid; grid-template-columns:64px 1fr; gap:16px; align-items:center; padding:14px 6px; text-decoration:none; color:inherit;}
+	.pub-entry{display:grid; grid-template-columns:96px 1fr; gap:16px; align-items:center; padding:14px 6px; text-decoration:none; color:inherit;}
 	.pub-entry:hover, .pub-entry:focus-visible{background:var(--ink-2);}
 	/* [Claude] même distinction has-img que .lib-thumb (A-105) : la base ne
-		fixe que la taille, le traitement image (bordure, recadrage, teinte
-		duotone) ne s'applique qu'avec une image réelle. */
-	.pub-thumb{width:64px; height:48px; flex-shrink:0;}
+		fixe que la taille, le traitement image (bordure, recadrage) ne
+		s'applique qu'avec une image réelle. Dimension unifiée avec
+		.proj-img (A-104) et .lib-thumb (A-105/A-107) : 96×72, même ratio
+		4:3 qu'auparavant ; teinte ::after retirée. */
+	.pub-thumb{width:96px; height:72px; flex-shrink:0;}
 	.pub-thumb.has-img{position:relative; overflow:hidden; border:1px solid var(--ink-2);}
 	.pub-thumb.has-img img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(1) contrast(1.1) brightness(.95);}
-	.pub-thumb.has-img::after{content:'';position:absolute; inset:0; background:var(--line-bright); mix-blend-mode:color; opacity:.6;}
 	.pub-title{display:block; font-weight:600;}
 	.pub-title .ext{font-weight:400; font-size:.8em;}
 	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : couleur héritée du texte
