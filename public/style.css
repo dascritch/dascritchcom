@@ -522,3 +522,7 @@
 		h3{font-size:clamp(19px, 1vw, 24px);}
 		.sheet-label{font-size:clamp(12px, .55vw, 15px);}
 	}
+
+.logo_in_text {
+	height: 1cap; width: 1.31cap;
+}
