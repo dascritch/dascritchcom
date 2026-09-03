@@ -722,6 +722,16 @@ J'ai mis mon plus beau costard à Sud Web pour en tailler un beau.
 En Mars 2009, une drôle de proposition a été faite au Consortium Unicode par Apple et Google. Les ennemis du smartphone s'étaient unis dans une cause pour ajouter des entrées au lexique des caractères universels.
 
 
+Liens connexes
+--------------
+
+ - [LinkedIn](https://www.linkedin.com/in/dascritch)
+ - [Ponos](https://ponos.fr/u/dascritch)
+ - [GitHub](https://github.com/dascritch)
+ - [Bluesky](https://bsky.app/profile/dascritch.net)
+ - [Blog](https://dascritch.net/)
+ - [Podcast](https://cpu.pm)
+
 
 Mentions légales en pied de page
 --------------------------------
