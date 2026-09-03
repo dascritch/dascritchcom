@@ -317,23 +317,24 @@
 		.lib-thumb/.has-img de la section A-105 (DRY), pas besoin de nouvelle classe. */
 	.rev-entry{display:grid; grid-template-columns:48px 1fr; gap:clamp(12px,3vw,18px); align-items:start; padding:14px 6px; text-decoration:none; color:inherit;}
 	.rev-entry:hover, .rev-entry:focus-visible{background:var(--ink-2);}
-	.rev-top{display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 12px; font-family:var(--mono);}
-	/* [Claude] --diazo-accent plutôt que --line-bright : cette étiquette vit
-		sur une feuille diazo, --line-bright n'y est calibré que pour l'effet
-		graphique des vignettes, pas pour du texte. */
-	.rev-year{color:var(--diazo-accent); font-size:13px; width:40px; flex-shrink:0;}
+	/* [Claude] .rev-year retiré : il doublonnait l'année déjà présente,
+		avec plus de précision (mois inclus la plupart du temps), dans
+		.rev-loc. .rev-top ne servait qu'à aligner ce label avec le titre,
+		il devient inutile une fois le titre seul dans .rev-body. */
 	/* [Claude] plus de taille fixe (14.5px) : hérite du corps de texte global,
 		comme les titres des sections précédentes (.lib-title en A-105,
 		.pub-title en A-106), qui n'ont eux-mêmes aucune taille propre. */
 	.rev-title{font-family:var(--sans); font-weight:600;}
 	.rev-title .ext{font-weight:400; font-size:.8em;}
-	.rev-loc{display:block; margin:4px 0 6px 52px; font-family:var(--mono); font-size:11px; color:var(--diazo-muted); text-transform:uppercase; letter-spacing:.04em;}
+	/* [Claude] plus de retrait de 52px : il alignait ce texte sous le titre en
+		sautant la colonne de l'année (40px + 12px de gap), disparue avec
+		.rev-year ci-dessus. */
+	.rev-loc{display:block; margin:4px 0 6px; font-family:var(--mono); font-size:11px; color:var(--diazo-muted); text-transform:uppercase; letter-spacing:.04em;}
 	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : couleur héritée du texte
 		principal, sans italique ; taille héritée du corps de texte global, comme
 		le texte dépliable de A-104 (.story-context/.story-line/.story-action) ;
 		largeur de colonne alignée sur la règle `p` générique (62ch). */
-	.rev-summary{display:block; margin-left:52px; line-height:1.55; max-width:62ch;}
-	@media (max-width:480px){ .rev-loc, .rev-summary{margin-left:0;} }
+	.rev-summary{display:block; line-height:1.55; max-width:62ch;}
 	@media (max-width:420px){ .rev-entry{grid-template-columns:1fr;} .rev-entry .lib-thumb{display:none;} }
 
 	/* publications */
