@@ -8,7 +8,7 @@ Tu agis en tant qu'intégrateur front-end.
 
 ## Architecture
 
-La partie visible du projet est dans le répertoire `public`. Dans le répertoire `version_2025`, tu retrouves l'ancienne version du site, à laquelle tu te réfèreras pour l'implémentation.
+La partie visible du projet est dans le répertoire `public`. Dans le répertoire `version_2025`, tu retrouves l'ancienne version du site, à laquelle tu te réfèreras pour l'implémentation. Les textes à mettre sont dans le document `REFERENCE.md`.
 Le site peut faire référence à des assets venant d'un serveur `https://dascritch.net`
 
 Les scripts `make.sh` et `parse.py` sont utilisés pour mettre à jour la page statique avant déploiement depuis des informations externes depuis les flux RSS <https://dascritch.net/feed/category/Webdev/rss2> et <https://dascritch.net/feed/tag/self-business/rss2>.
@@ -25,16 +25,16 @@ Les scripts `make.sh` et `parse.py` sont utilisés pour mettre à jour la page s
  	- Chaque élément important doit avoir un attribut `id`
  	- Des informations doivent être en micro-format, il est important de garder les annotations au format hCard
  	- Les dates doivent être exprimées avec la balise standard `<time>` comprenant l'attribut `datetime=""`. Les syntaxes valides pour cet attribut sont `YYYY` et `YYYY-MM`
- 	- N'utilise pas de `<table>`, aucun élément ne s'y prête vraiment dans cette page
  	- Chaque élément liant vers un lien externe doit être un lien sur l'ensemble de l'élément
+ 	- N'utilise pas de `<table>` : aucun élément ne s'y prête vraiment dans cette page, et impossible à concilier avec la règle précédente
  	- Les entrées d'articles et de conférences doivent être des `<article>`
- 	- Au lieu d'utiliser les majuscules pour uu mot qui n'est pas une abréviation, utilise la CSS pour passer la casse en majuscules ou small-caps.
  	- Mets une copie du patron des éléments répétables dans une balise `<template>` pour te faciliter les mises à jour ultérieures
  	- Sauf instruction inverse dans le prompt, ou après acceptation de ta suggestion, respecte verbatim les balises autres que `<template>` dans le `<head>`
  - Le code CSS doit utiliser de préférence les variables CSS et le nested-code
  	- Réutilise les règles CSS sur l'ensemble de la page, applique la règle DRY
  	- L'aspect des vignettes doit être cohérent, notamment en dimensions sur toute la page
  	- Ne teinte pas la couleur des vignettes
+ 	- Si une image d'un élément est manquant, mets en placeholder un rectangle vide avec ses diagonales
  - Si du code génératif est prévu, il doit être en bash ou en python. Le javascript est réservé pour le front qui est statique
  - Les dépendances du code source à des éléments externes doivent être minimales
  - Plus le code source est minimal, plus il est élégant

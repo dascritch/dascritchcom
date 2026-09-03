@@ -161,7 +161,7 @@ Ayant une expérience technique et métier dans la presse et l'édition, je tran
 
 JavaScript, Web Development, PostgreSQL, Python, SVG, HTML5, Bash, Linux, LAMP, HTML, JSON, XML, 
 Git, GitHub,  Project Management, Test-Driven Development, Data Security, Internal audits, Jira, Confluence, Ansible, 
-Accessibility, PDF, PDF Creator, User Interface, Open-Source Software, Application Programming Interfaces (API), Web 2.0, Web Services, Mobile Internet
+Accessibility, PDF, PDF Creator, User Interface, Open-Source Software, Application Programming Interfaces (API), SSO, Web 2.0, Web Services, Mobile Internet, PRA
 
 
 ### Senior Software Project Manager @ Human's connexion (de février 2025 à juin 2025)
@@ -193,7 +193,7 @@ Paarly est une entreprise spécialisée dans la veille tarifaire pour les marque
 #### Compétences mises en œuvre
 
 Bash, Linux, LAMP, HTML, XML, PHP, Java, Apache SolR,
-Git, Data Security, Ansible
+Git, Data Security, Ansible, PRA
 
 
 ### Lead web developer @ Human's connexion  (de mars 2022 à octobre 2022)
@@ -208,7 +208,7 @@ Consultant senior sur le développement d'applications web back et front-office,
 
 #### Compétences mises en œuvre
 
-Web Development, PostgreSQL, Git, GitHub, SVG, User Interface, HTML5, Apache, Bash, Linux, Open-Source Software, LAMP, Speaker, HTML, Test-Driven Development, JSON, Application Programming Interfaces (API), CSS, XML, Mobile Internet, Data Security,  React.JS
+Web Development, PostgreSQL, Git, GitHub, SVG, User Interface, HTML5, Apache, Bash, Linux, Open-Source Software, LAMP, Speaker, HTML, Test-Driven Development, JSON, Application Programming Interfaces (API), CSS, XML, Mobile Internet, Data Security, React.JS
 
 
 ### Lead web developer @ MDA Électroménager (de avril 2017 à mars 2022)
@@ -234,7 +234,7 @@ Le service est piloté par différentes équipes commerciales (une par business 
 #### Compétences mises en œuvre
 
 Web Development, PostgreSQL, Git, Project Management, GitHub, User Interface, HTML5, Apache, Bash, Linux
-LAMP, Speaker, HTML, Test-Driven Development, JSON, Application Programming Interfaces (API), Cascading Style Sheets (CSS), XML, Web Services
+LAMP, Speaker, HTML, Test-Driven Development, JSON, Application Programming Interfaces (API), Cascading Style Sheets (CSS), XML, Web Services, PRA, SST
 
 
 ### Software Engineer @ Adaptive  Channel (de septembre 2017 à avril 2017)
