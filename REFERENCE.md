@@ -311,6 +311,22 @@ Je développe aussi en showcase un CMS en SaaS d'e-commerce en marque blanche, d
 Web Development, PostgreSQL, API Development, Git, Project Management, GitHub, User Interface, HTML5, Apache, Bash, Linux, Open-Source Software, LAMP, Speaker, XHTML, HTML, Test-Driven Development, JSON, Application Programming Interfaces (API), Cascading Style Sheets (CSS), XML, Mobile Internet, Data Security, Symfony Framework, Technical Documentation
 
 
+### Nwws editor @ ActuaBD.com (de août 2003 à août 2012)
+
+#### Contexte
+
+ActuaBD.com est le site d'information spécialisé de référence pour les amateurs et professionnels de la bande-dessinée.
+
+#### Description
+
+Plusieurs des interviewes de notre émission radio *Supplément Week-End* y sont transcrites. Je rédige aussi des sujets spéciaux, des critiques et assure la correspondance locale.
+
+#### Compétences mises en œuvre
+
+Web Development, HTML, documentation
+
+
+
 ### Concepteur rédacteur multimédia @ Index Multimédia (de août 2000 à avril 2007)
 
 #### Contexte
