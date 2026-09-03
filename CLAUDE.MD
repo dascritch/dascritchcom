@@ -24,10 +24,13 @@ Les scripts `make.sh` et `parse.py` sont utilisés pour mettre à jour la page s
  	- Essaye d'éviter de multiplier les tags et les classnames
  	- Chaque élément important doit avoir un attribut `id`
  	- Des informations doivent être en micro-format, il est important de garder les annotations au format hCard
- 	- Les dates doivent être exprimées avec la balise standard `<date>`
+ 	- Les dates doivent être exprimées avec la balise standard `<time>` comprenant l'attribut `datetime=""`. Les syntaxes valides pour cet attribut sont `YYYY` et `YYYY-MM`
+ 	- N'utilise pas de `<table>`, aucun élément ne s'y prête vraiment dans cette page
  	- Chaque élément liant vers un lien externe doit être un lien sur l'ensemble de l'élément
  	- Les entrées d'articles et de conférences doivent être des `<article>`
  	- Au lieu d'utiliser les majuscules pour uu mot qui n'est pas une abréviation, utilise la CSS pour passer la casse en majuscules ou small-caps.
+ 	- Mets une copie du patron des éléments répétables dans une balise `<template>` pour te faciliter les mises à jour ultérieures
+ 	- Sauf instruction inverse dans le prompt, ou après acceptation de ta suggestion, respecte verbatim les balises autres que `<template>` dans le `<head>`
  - Le code CSS doit utiliser de préférence les variables CSS et le nested-code
  	- Réutilise les règles CSS sur l'ensemble de la page, applique la règle DRY
  	- L'aspect des vignettes doit être cohérent, notamment en dimensions sur toute la page
@@ -50,6 +53,6 @@ L'aspect général est un rendu de plan technique sur fond bleu, avec un fond de
 ## Notes importantes
 
  - Tu ne commites jamais le code git, tu m'envoies les modifications exclusivement en réponse de mon prompt, avec les fichiers complets et un fichier `diff`
- - Tu ne modifies jamais les textes, ceux-ci doivent rester absolument verbatim
+ - Tu ne modifies jamais les textes, ceux-ci doivent rester absolument verbatim. Les textes sont disponibles dans `REFERENCE.md`
  - Tu ne modifies jamais les liens, ceux-ci sont très importants
  - Tu ne modifies jamais les images, ni y appliquer un étirement, ni y appliquer un filtre sauf sur demande expresse dans mon prompt
