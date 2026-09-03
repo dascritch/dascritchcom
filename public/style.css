@@ -195,10 +195,9 @@
 	.accent{color:var(--ink-accent);}
 	.sheet.diazo .accent{color:var(--diazo-accent);}
 
-	/* dimension-line divider */
-	.dim{display:flex; align-items:center; gap:8px; margin:40px 0; font-family:var(--mono); font-size:11px; opacity:.6; letter-spacing:.08em;}
-	.dim .tick{width:1px; height:8px; background:currentColor;}
-	.dim .line{flex:1; height:1px; background:currentColor;}
+	/* [Claude] marqueur chronologique .dim retiré (A-104) : le liseret déjà
+		présent entre chaque carte via .proj-grid{gap:1px; background:var(--muted);}
+		sépare désormais Touchalize et Dagence exactement comme les autres. */
 
 	/* HERO */
 	#hero{padding-top:110px;}
@@ -408,7 +407,10 @@
 	.stack-title{font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em;}
 	.tight{margin-bottom:6px;}
 	.no-underline{text-decoration:none;}
-	.proj-grid-single{grid-template-columns:1fr;}
+	/* [Claude] .proj-grid-single retiré : la dernière carte (Dagence) est
+		désormais un élément de la grille commune .proj-grid, pour partager
+		le même liseret séparateur et les mêmes marges que les précédentes,
+		au lieu d'une grille et de marges à part. */
 	.contact-wrap{padding-bottom:40px;}
 	.copyright{margin-top:16px; font-size:12.5px;}
 
