@@ -275,6 +275,22 @@
 	.lib-thumb.has-img{position:relative; overflow:hidden; border:1px solid var(--muted-dark);}
 	.lib-thumb.has-img img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(1) contrast(1.1) brightness(.95);}
 	.lib-thumb.has-img::after{content:'';position:absolute; inset:0; background:var(--line-bright); mix-blend-mode:color; opacity:.6;}
+	/* [Claude] placeholder d'image manquante : rectangle en traits fins avec
+		ses deux diagonales, partagé par toute vignette sans image réelle
+		(A-105, A-106, A-107 — mêmes classes .lib-thumb/.pub-thumb, avec ou
+		sans .has-img). Pas de teinte, contrairement au traitement duotone
+		des vraies vignettes ci-dessus : var(--muted) reste lisible sur
+		feuille sombre comme sur feuille diazo, comme pour les liserets
+		séparateurs des listes. Les deux linear-gradient() tracent chacun
+		une diagonale plein cadre, quel que soit le ratio largeur/hauteur
+		de la vignette. */
+	.lib-thumb:not(.has-img),
+	.pub-thumb:not(.has-img){
+		border:1px solid var(--muted);
+		background-image:
+			linear-gradient(to top right, transparent calc(50% - .5px), var(--muted) calc(50% - .5px) calc(50% + .5px), transparent calc(50% + .5px)),
+			linear-gradient(to top left, transparent calc(50% - .5px), var(--muted) calc(50% - .5px) calc(50% + .5px), transparent calc(50% + .5px));
+	}
 	.lib-head{margin:0 0 4px; display:flex; flex-wrap:wrap; align-items:baseline; gap:0 10px;}
 	.lib-title{font-weight:600;}
 	.lib-title .ext{font-weight:400; font-size:.85em;}
@@ -329,9 +345,13 @@
 	.pub-list li{border-bottom:1px solid var(--muted);}
 	.pub-entry{display:grid; grid-template-columns:64px 1fr; gap:16px; align-items:center; padding:14px 6px; text-decoration:none; color:inherit;}
 	.pub-entry:hover, .pub-entry:focus-visible{background:var(--ink-2);}
-	.pub-thumb{position:relative; width:64px; height:48px; overflow:hidden; border:1px solid var(--ink-2); flex-shrink:0;}
-	.pub-thumb img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(1) contrast(1.1) brightness(.95);}
-	.pub-thumb::after{content:'';position:absolute; inset:0; background:var(--line-bright); mix-blend-mode:color; opacity:.6;}
+	/* [Claude] même distinction has-img que .lib-thumb (A-105) : la base ne
+		fixe que la taille, le traitement image (bordure, recadrage, teinte
+		duotone) ne s'applique qu'avec une image réelle. */
+	.pub-thumb{width:64px; height:48px; flex-shrink:0;}
+	.pub-thumb.has-img{position:relative; overflow:hidden; border:1px solid var(--ink-2);}
+	.pub-thumb.has-img img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(1) contrast(1.1) brightness(.95);}
+	.pub-thumb.has-img::after{content:'';position:absolute; inset:0; background:var(--line-bright); mix-blend-mode:color; opacity:.6;}
 	.pub-title{display:block; font-weight:600;}
 	.pub-title .ext{font-weight:400; font-size:.8em;}
 	/* [Claude] sous-texte aligné sur .lib-desc (A-105) : couleur héritée du texte
