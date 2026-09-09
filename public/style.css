@@ -21,6 +21,7 @@
 @font-face {
 	font-family: 'IBM Plex Mono';
 	font-style: normal;
+	font-weight: 700;
 	src: url("./aspects/IBM Plex Mono Var-Roman.woff2") format('woff2');
 }
 
