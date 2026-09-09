@@ -121,6 +121,8 @@ Compétences clés
 	- Créativité
 	- Project management
 	- Team leading
+	- Franchise
+	- Honnêteté
  - Langues :
 	- Français
 	- Anglais
